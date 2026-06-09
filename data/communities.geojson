@@ -1,0 +1,1205 @@
+{
+  "type": "FeatureCollection",
+  "metadata": {
+    "generated_from": {
+      "graph_manifest": "data/graph-manifest.json",
+      "census_subdivision_shapefile": "C:/Users/Teej/Downloads/lcsd000b21a_e/lcsd000b21a_e.shp"
+    },
+    "feature_count": 46,
+    "coordinate_reference_system": "WGS84 lon/lat, transformed from NAD83 Statistics Canada Lambert"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Armstrong",
+        "slug": "armstrong",
+        "population": 5323,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Armstrong, City (CY)",
+        "graph": "graphs/armstrong.png",
+        "census_subdivision_id": "5937028",
+        "census_subdivision_name": "Armstrong",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 5.2185,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055937028",
+        "source_census_geo_code": "5937028",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.19785,
+          50.444851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cache Creek",
+        "slug": "cache-creek",
+        "population": 969,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Cache Creek, Village (VL)",
+        "graph": "graphs/cache-creek.png",
+        "census_subdivision_id": "5933024",
+        "census_subdivision_name": "Cache Creek",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 10.3976,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055933024",
+        "source_census_geo_code": "5933024",
+        "data_quality_flag": "00020"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.319038,
+          50.797918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Campbell River",
+        "slug": "campbell-river",
+        "population": 35519,
+        "population_rank": 25,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Campbell River",
+        "graph": "graphs/campbell-river.png",
+        "census_subdivision_id": "5924034",
+        "census_subdivision_name": "Campbell River",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 144.3782,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 74
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.297416,
+          50.00165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Castlegar",
+        "slug": "castlegar",
+        "population": 8338,
+        "population_rank": 60,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Castlegar",
+        "graph": "graphs/castlegar.png",
+        "census_subdivision_id": "5903045",
+        "census_subdivision_name": "Castlegar",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 19.8709,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 43
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.671457,
+          49.300935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chase",
+        "slug": "chase",
+        "population": 2399,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Chase, Village (VL)",
+        "graph": "graphs/chase.png",
+        "census_subdivision_id": "5933054",
+        "census_subdivision_name": "Chase",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 3.7528,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055933054",
+        "source_census_geo_code": "5933054",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.689354,
+          50.843815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chilliwack",
+        "slug": "chilliwack",
+        "population": 93203,
+        "population_rank": 12,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Chilliwack",
+        "graph": "graphs/chilliwack.png",
+        "census_subdivision_id": "5909020",
+        "census_subdivision_name": "Chilliwack",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 261.3431,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 166
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.929499,
+          49.142623
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clearwater",
+        "slug": "clearwater",
+        "population": 2388,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Clearwater, District municipality (DM)",
+        "graph": "graphs/clearwater.png",
+        "census_subdivision_id": "5933067",
+        "census_subdivision_name": "Clearwater",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 55.6508,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055933067",
+        "source_census_geo_code": "5933067",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.009103,
+          51.644334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Courtenay",
+        "slug": "courtenay",
+        "population": 28420,
+        "population_rank": 28,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Courtenay",
+        "graph": "graphs/courtenay.png",
+        "census_subdivision_id": "5926010",
+        "census_subdivision_name": "Courtenay",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 32.4176,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 73
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.977003,
+          49.697925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duncan",
+        "slug": "duncan",
+        "population": 5047,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Duncan, City (CY)",
+        "graph": "graphs/duncan.png",
+        "census_subdivision_id": "5919012",
+        "census_subdivision_name": "Duncan",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 2.0646,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055919012",
+        "source_census_geo_code": "5919012",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.702148,
+          48.779396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Golden",
+        "slug": "golden",
+        "population": 3986,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Golden, Town (T)",
+        "graph": "graphs/golden.png",
+        "census_subdivision_id": "5939007",
+        "census_subdivision_name": "Golden",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 11.3255,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055939007",
+        "source_census_geo_code": "5939007",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.963204,
+          51.298382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Forks",
+        "slug": "grand-forks",
+        "population": 4112,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Grand Forks, City (CY)",
+        "graph": "graphs/grand-forks.png",
+        "census_subdivision_id": "5905032",
+        "census_subdivision_name": "Grand Forks",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 10.3741,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055905032",
+        "source_census_geo_code": "5905032",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.446657,
+          49.030661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hope",
+        "slug": "hope",
+        "population": 6686,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Hope, District municipality (DM)",
+        "graph": "graphs/hope.png",
+        "census_subdivision_id": "5909009",
+        "census_subdivision_name": "Hope",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 40.8706,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055909009",
+        "source_census_geo_code": "5909009",
+        "data_quality_flag": "00010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.454672,
+          49.379946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Houston",
+        "slug": "houston",
+        "population": 3052,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Houston, District municipality (DM)",
+        "graph": "graphs/houston.png",
+        "census_subdivision_id": "5951034",
+        "census_subdivision_name": "Houston",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 72.8761,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055951034",
+        "source_census_geo_code": "5951034",
+        "data_quality_flag": "00010"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.666479,
+          54.396918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kamloops",
+        "slug": "kamloops",
+        "population": 97902,
+        "population_rank": 11,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Kamloops",
+        "graph": "graphs/kamloops.png",
+        "census_subdivision_id": "5933042",
+        "census_subdivision_name": "Kamloops",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 297.9262,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 36
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.327649,
+          50.694169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kelowna",
+        "slug": "kelowna",
+        "population": 144576,
+        "population_rank": 7,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Kelowna",
+        "graph": "graphs/kelowna.png",
+        "census_subdivision_id": "5935010",
+        "census_subdivision_name": "Kelowna",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 211.8491,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 38
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.440254,
+          49.88497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kitimat",
+        "slug": "kitimat",
+        "population": 8236,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Kitimat, District municipality (DM)",
+        "graph": "graphs/kitimat.png",
+        "census_subdivision_id": "5949005",
+        "census_subdivision_name": "Kitimat",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 239.28,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055949005",
+        "source_census_geo_code": "5949005",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.714341,
+          53.989093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lake Cowichan",
+        "slug": "lake-cowichan",
+        "population": 3325,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Lake Cowichan, Town (T)",
+        "graph": "graphs/lake-cowichan.png",
+        "census_subdivision_id": "5919016",
+        "census_subdivision_name": "Lake Cowichan",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 8.2412,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055919016",
+        "source_census_geo_code": "5919016",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.060453,
+          48.823376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Langford",
+        "slug": "langford",
+        "population": 46584,
+        "population_rank": 19,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Langford",
+        "graph": "graphs/langford.png",
+        "census_subdivision_id": "5917044",
+        "census_subdivision_name": "Langford",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 41.4315,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 125
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.529888,
+          48.449804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Merritt",
+        "slug": "merritt",
+        "population": 7051,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Merritt, City (CY)",
+        "graph": "graphs/merritt.png",
+        "census_subdivision_id": "5933006",
+        "census_subdivision_name": "Merritt",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 26.043,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055933006",
+        "source_census_geo_code": "5933006",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.775262,
+          50.112844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nanaimo",
+        "slug": "nanaimo",
+        "population": 99863,
+        "population_rank": 10,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Nanaimo",
+        "graph": "graphs/nanaimo.png",
+        "census_subdivision_id": "5921007",
+        "census_subdivision_name": "Nanaimo",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 90.4488,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 67
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.967275,
+          49.180132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nelson",
+        "slug": "nelson",
+        "population": 11106,
+        "population_rank": 54,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Nelson",
+        "graph": "graphs/nelson.png",
+        "census_subdivision_id": "5903015",
+        "census_subdivision_name": "Nelson",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 11.9338,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 42
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.366432,
+          49.480206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oliver",
+        "slug": "oliver",
+        "population": 5094,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Oliver, Town (T)",
+        "graph": "graphs/oliver.png",
+        "census_subdivision_id": "5907014",
+        "census_subdivision_name": "Oliver",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 5.4899,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055907014",
+        "source_census_geo_code": "5907014",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.550015,
+          49.184443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parksville",
+        "slug": "parksville",
+        "population": 13642,
+        "population_rank": 45,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Parksville",
+        "graph": "graphs/parksville.png",
+        "census_subdivision_id": "5921018",
+        "census_subdivision_name": "Parksville",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 14.5205,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 66
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.30442,
+          49.317395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pemberton",
+        "slug": "pemberton",
+        "population": 3407,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Pemberton, Village (VL)",
+        "graph": "graphs/pemberton.png",
+        "census_subdivision_id": "5931012",
+        "census_subdivision_name": "Pemberton",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 61.3552,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055931012",
+        "source_census_geo_code": "5931012",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.872779,
+          50.315111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Penticton",
+        "slug": "penticton",
+        "population": 36885,
+        "population_rank": 24,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Penticton",
+        "graph": "graphs/penticton.png",
+        "census_subdivision_id": "5907041",
+        "census_subdivision_name": "Penticton",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 43.0259,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 40
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.569709,
+          49.494722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Alberni",
+        "slug": "port-alberni",
+        "population": 18259,
+        "population_rank": 36,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Port Alberni",
+        "graph": "graphs/port-alberni.png",
+        "census_subdivision_id": "5923008",
+        "census_subdivision_name": "Port Alberni",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 19.657,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 71
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.80209,
+          49.247551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Hardy",
+        "slug": "port-hardy",
+        "population": 3902,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Port Hardy, District municipality (DM)",
+        "graph": "graphs/port-hardy.png",
+        "census_subdivision_id": "5943023",
+        "census_subdivision_name": "Port Hardy",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 38.5522,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055943023",
+        "source_census_geo_code": "5943023",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.441236,
+          50.694665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port McNeill",
+        "slug": "port-mcneill",
+        "population": 2356,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Port McNeill, Town (T)",
+        "graph": "graphs/port-mcneill.png",
+        "census_subdivision_id": "5943012",
+        "census_subdivision_name": "Port McNeill",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 13.7675,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055943012",
+        "source_census_geo_code": "5943012",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.121554,
+          50.588131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Powell River",
+        "slug": "powell-river",
+        "population": 13943,
+        "population_rank": 44,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Powell River",
+        "graph": "graphs/powell-river.png",
+        "census_subdivision_id": "5927008",
+        "census_subdivision_name": "Powell River",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 28.905,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 72
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.533739,
+          49.861533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prince George",
+        "slug": "prince-george",
+        "population": 76708,
+        "population_rank": 16,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Prince George",
+        "graph": "graphs/prince-george.png",
+        "census_subdivision_id": "5953023",
+        "census_subdivision_name": "Prince George",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 316.7408,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 24
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.775726,
+          53.923807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prince Rupert",
+        "slug": "prince-rupert",
+        "population": 12300,
+        "population_rank": 48,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Prince Rupert",
+        "graph": "graphs/prince-rupert.png",
+        "census_subdivision_id": "5947012",
+        "census_subdivision_name": "Prince Rupert",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 66.0033,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 20
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.29712,
+          54.290093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Princeton",
+        "slug": "princeton",
+        "population": 2894,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Princeton, Town (T)",
+        "graph": "graphs/princeton.png",
+        "census_subdivision_id": "5907024",
+        "census_subdivision_name": "Princeton",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 59.2806,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055907024",
+        "source_census_geo_code": "5907024",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.518009,
+          49.361058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Quesnel",
+        "slug": "quesnel",
+        "population": 9889,
+        "population_rank": 57,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Quesnel",
+        "graph": "graphs/quesnel.png",
+        "census_subdivision_id": "5941013",
+        "census_subdivision_name": "Quesnel",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 35.3483,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 30
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.475693,
+          52.987692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salmon Arm",
+        "slug": "salmon-arm",
+        "population": 19432,
+        "population_rank": 33,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Salmon Arm DM",
+        "graph": "graphs/salmon-arm.png",
+        "census_subdivision_id": "5939032",
+        "census_subdivision_name": "Salmon Arm",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 155.1886,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 35
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.284638,
+          50.699673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sechelt",
+        "slug": "sechelt",
+        "population": 10847,
+        "population_rank": 56,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Sechelt",
+        "graph": "graphs/sechelt.png",
+        "census_subdivision_id": "5929011",
+        "census_subdivision_name": "Sechelt",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 39.018,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 87
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.761201,
+          49.481072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sidney",
+        "slug": "sidney",
+        "population": 12318,
+        "population_rank": 47,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Sidney",
+        "graph": "graphs/sidney.png",
+        "census_subdivision_id": "5917010",
+        "census_subdivision_name": "Sidney",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 5.1052,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 69
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.406996,
+          48.651916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smithers",
+        "slug": "smithers",
+        "population": 5378,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Smithers, Town (T)",
+        "graph": "graphs/smithers.png",
+        "census_subdivision_id": "5951043",
+        "census_subdivision_name": "Smithers",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 15.259,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055951043",
+        "source_census_geo_code": "5951043",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.164903,
+          54.786142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squamish",
+        "slug": "squamish",
+        "population": 23819,
+        "population_rank": 29,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Squamish",
+        "graph": "graphs/squamish.png",
+        "census_subdivision_id": "5931006",
+        "census_subdivision_name": "Squamish",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 104.7075,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 64
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.137346,
+          49.749254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Terrace",
+        "slug": "terrace",
+        "population": 12017,
+        "population_rank": 51,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Terrace",
+        "graph": "graphs/terrace.png",
+        "census_subdivision_id": "5949011",
+        "census_subdivision_name": "Terrace",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 57.3268,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 19
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.591785,
+          54.478274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tofino",
+        "slug": "tofino",
+        "population": 2516,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Tofino, District municipality (DM)",
+        "graph": "graphs/tofino.png",
+        "census_subdivision_id": "5923025",
+        "census_subdivision_name": "Tofino",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 10.557,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055923025",
+        "source_census_geo_code": "5923025",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.885289,
+          49.1275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail",
+        "slug": "trail",
+        "population": 7920,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Trail, City (CY)",
+        "graph": "graphs/trail.png",
+        "census_subdivision_id": "5905014",
+        "census_subdivision_name": "Trail",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 34.9039,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055905014",
+        "source_census_geo_code": "5905014",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.713172,
+          49.089523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vancouver",
+        "slug": "vancouver",
+        "population": 662248,
+        "population_rank": 1,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Vancouver",
+        "graph": "graphs/vancouver.png",
+        "census_subdivision_id": "5915022",
+        "census_subdivision_name": "Vancouver",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 115.1756,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 63
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.10785,
+          49.249094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vanderhoof",
+        "slug": "vanderhoof",
+        "population": 4346,
+        "population_rank": null,
+        "population_source": "Statistics Canada 2021 Census of Population",
+        "matched_population_name": "Vanderhoof, District municipality (DM)",
+        "graph": "graphs/vanderhoof.png",
+        "census_subdivision_id": "5951007",
+        "census_subdivision_name": "Vanderhoof",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 53.9276,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_census_dguid": "2021A00055951007",
+        "source_census_geo_code": "5951007",
+        "data_quality_flag": "00000"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.025645,
+          54.015794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Victoria",
+        "slug": "victoria",
+        "population": 91867,
+        "population_rank": 13,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Victoria",
+        "graph": "graphs/victoria.png",
+        "census_subdivision_id": "5917034",
+        "census_subdivision_name": "Victoria",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 19.4539,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 70
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.356417,
+          48.428355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whistler",
+        "slug": "whistler",
+        "population": 13982,
+        "population_rank": 43,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Whistler",
+        "graph": "graphs/whistler.png",
+        "census_subdivision_id": "5931020",
+        "census_subdivision_name": "Whistler",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 239.9956,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 65
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.994235,
+          50.090347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Williams Lake",
+        "slug": "williams-lake",
+        "population": 10947,
+        "population_rank": 55,
+        "population_source": "2021 census fuzzy match",
+        "matched_population_name": "Williams Lake",
+        "graph": "graphs/williams-lake.png",
+        "census_subdivision_id": "5941009",
+        "census_subdivision_name": "Williams Lake",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 33.1202,
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "source_csv_city_id": 31
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.126305,
+          52.135974
+        ]
+      }
+    }
+  ]
+}

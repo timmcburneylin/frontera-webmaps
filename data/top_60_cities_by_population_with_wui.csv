@@ -1,0 +1,61 @@
+city_id,city_name_raw,city_pop,population_source,matched_pop_name_raw,pop_name_dist
+63,Vancouver,662248,2021 census fuzzy match,Vancouver,0
+56,Surrey,568322,2021 census fuzzy match,Surrey,0
+114,Burnaby,249125,2021 census fuzzy match,Burnaby,0
+59,Richmond,209937,2021 census fuzzy match,Richmond,0
+53,Abbotsford,153524,2021 census fuzzy match,Abbotsford,0
+85,Coquitlam,148625,2021 census fuzzy match,Coquitlam,0
+38,Kelowna,144576,2021 census fuzzy match,Kelowna,0
+120,Saanich,117735,2021 census fuzzy match,Saanich,0
+58,Delta,108455,2021 census fuzzy match,Delta,0
+67,Nanaimo,99863,2021 census fuzzy match,Nanaimo,0
+36,Kamloops,97902,2021 census fuzzy match,Kamloops,0
+166,Chilliwack,93203,2021 census fuzzy match,Chilliwack,0
+70,Victoria,91867,2021 census fuzzy match,Victoria,0
+81,Maple Ridge,90990,2021 census fuzzy match,Maple Ridge,0
+60,New Westminster,78916,2021 census fuzzy match,New Westminster,0
+24,Prince George,76708,2021 census fuzzy match,Prince George,0
+84,Port Coquitlam,61498,2021 census fuzzy match,Port Coquitlam,0
+61,North Vancouver (City),58120,2021 census fuzzy match,North Vancouver C,0.022222222
+125,Langford,46584,2021 census fuzzy match,Langford,0
+37,Vernon,44519,2021 census fuzzy match,Vernon,0
+80,West Vancouver,44122,2021 census fuzzy match,West Vancouver,0
+55,Langley (City),41519,2021 census fuzzy match,Langley C,0.041666667
+82,Mission,41519,2021 census fuzzy match,Mission,0
+40,Penticton,36885,2021 census fuzzy match,Penticton,0
+74,Campbell River,35519,2021 census fuzzy match,Campbell River,0
+86,Port Moody,33535,2021 census fuzzy match,Port Moody,0
+128,North Cowichan,31990,2021 census fuzzy match,North Cowichan,0
+73,Courtenay,28420,2021 census fuzzy match,Courtenay,0
+64,Squamish,23819,2021 census fuzzy match,Squamish,0
+57,White Rock,21939,2021 census fuzzy match,White Rock,0
+26,Fort St. John,21465,2021 census fuzzy match,Fort St. John,0
+47,Cranbrook,20499,2021 census fuzzy match,Cranbrook,0
+35,Salmon Arm,19432,2021 census fuzzy match,Salmon Arm DM,0.060606061
+83,Pitt Meadows,19146,2021 census fuzzy match,Pitt Meadows,0
+123,Colwood,18961,2021 census fuzzy match,Colwood,0
+71,Port Alberni,18259,2021 census fuzzy match,Port Alberni,0
+121,Oak Bay,17990,2021 census fuzzy match,Oak Bay,0
+122,Esquimalt,17533,2021 census fuzzy match,Esquimalt,0
+119,Central Saanich,17385,2021 census fuzzy match,Central Saanich,0
+143,Lake Country,15817,2021 census fuzzy match,Lake Country,0
+162,Sooke,15086,2021 census fuzzy match,Sooke,0
+132,Comox,14806,2021 census fuzzy match,Comox,0
+65,Whistler,13982,2021 census fuzzy match,Whistler,0
+72,Powell River,13943,2021 census fuzzy match,Powell River,0
+66,Parksville,13642,2021 census fuzzy match,Parksville,0
+27,Dawson Creek,12323,2021 census fuzzy match,Dawson Creek,0
+69,Sidney,12318,2021 census fuzzy match,Sidney,0
+20,Prince Rupert,12300,2021 census fuzzy match,Prince Rupert,0
+118,North Saanich,12235,2021 census fuzzy match,North Saanich,0
+39,Summerland,12042,2021 census fuzzy match,Summerland,0
+19,Terrace,12017,2021 census fuzzy match,Terrace,0
+126,View Royal,11575,2021 census fuzzy match,View Royal,0
+146,Coldstream,11171,2021 census fuzzy match,Coldstream,0
+42,Nelson,11106,2021 census fuzzy match,Nelson,0
+31,Williams Lake,10947,2021 census fuzzy match,Williams Lake,0
+87,Sechelt,10847,2021 census fuzzy match,Sechelt,0
+30,Quesnel,9889,2021 census fuzzy match,Quesnel,0
+131,Qualicum Beach,9303,2021 census fuzzy match,Qualicum Beach,0
+130,Ladysmith,8990,2021 census fuzzy match,Ladysmith,0
+43,Castlegar,8338,2021 census fuzzy match,Castlegar,0
