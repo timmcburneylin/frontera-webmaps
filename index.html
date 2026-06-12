@@ -11,19 +11,31 @@
   <body>
     <main class="app-shell">
       <section class="map-panel" aria-label="Interactive wildfire risk map">
-        <div class="search-panel">
-          <label for="community-search">Community</label>
-          <div class="search-row">
-            <input
-              id="community-search"
-              type="search"
-              autocomplete="off"
-              list="community-options"
-              placeholder="Search BC communities"
-            />
-            <button id="clear-search" type="button" aria-label="Clear selected community">Clear</button>
+        <div class="map-search-panel">
+          <div class="search-panel">
+            <label for="community-search">Community</label>
+            <div class="search-row">
+              <input
+                id="community-search"
+                type="search"
+                autocomplete="off"
+                list="community-options"
+                placeholder="Search BC communities"
+              />
+              <button id="clear-search" type="button" aria-label="Clear selected community">Clear</button>
+            </div>
+            <datalist id="community-options"></datalist>
           </div>
-          <datalist id="community-options"></datalist>
+
+          <div class="fire-panel">
+            <label for="fire-select">Search for Active Wildfires</label>
+            <div class="fire-row">
+              <select id="fire-select">
+                <option value="">Select a fire perimeter</option>
+              </select>
+              <button id="clear-fire" type="button" aria-label="Clear selected wildfire">Clear</button>
+            </div>
+          </div>
         </div>
 
         <div id="map" aria-label="BC community wildfire risk map"></div>

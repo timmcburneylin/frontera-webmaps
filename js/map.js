@@ -3,11 +3,13 @@
 // and place its graph PNG in graphs/<slug>.png.
 
 const COMMUNITY_DATA_URL = "data/communities.geojson";
+const CURRENT_FIRE_DATA_URL = "data/current-fire-perimeters.geojson";
 const HILLSHADE_IMAGE_URL = "data/hillshade.png";
 const BURN_PROBABILITY_TILE_URL = "tiles/burn-probability/{z}/{x}/{y}.png";
 const BC_CENTER = [54.3, -125.2];
 const DEFAULT_ZOOM = 5;
 const SELECTED_ZOOM = 10;
+const SELECTED_FIRE_ZOOM = 11;
 const RASTER_BOUNDS = [
   [47.68780370640384, -139.0523932936093],
   [61.3704441896773, -110.4227492482696]
@@ -20,8 +22,14 @@ const map = L.map("map", {
 
 map.createPane("hillshadePane");
 map.createPane("burnProbabilityPane");
+map.createPane("firePerimeterPane");
+map.createPane("communityPane");
+map.createPane("fireMarkerPane");
 map.getPane("hillshadePane").style.zIndex = 350;
 map.getPane("burnProbabilityPane").style.zIndex = 360;
+map.getPane("firePerimeterPane").style.zIndex = 420;
+map.getPane("communityPane").style.zIndex = 460;
+map.getPane("fireMarkerPane").style.zIndex = 520;
 
 const streetBasemap = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
@@ -95,18 +103,50 @@ burnLegend.onAdd = () => {
 };
 burnLegend.addTo(map);
 
+const fireStatusLegend = L.control({ position: "bottomleft" });
+fireStatusLegend.onAdd = () => {
+  const container = L.DomUtil.create("div", "fire-status-legend leaflet-control");
+  container.innerHTML = `
+    <div class="fire-status-legend-title">Fire status</div>
+    <div class="fire-status-legend-item">
+      <span class="fire-status-swatch is-under-control" aria-hidden="true"></span>
+      <span>Under Control</span>
+    </div>
+    <div class="fire-status-legend-item">
+      <span class="fire-status-swatch is-being-held" aria-hidden="true"></span>
+      <span>Being Held</span>
+    </div>
+    <div class="fire-status-legend-item">
+      <span class="fire-status-swatch is-out-of-control" aria-hidden="true"></span>
+      <span>Out of Control</span>
+    </div>
+    <div class="fire-status-legend-item">
+      <span class="fire-status-swatch is-unknown-status" aria-hidden="true"></span>
+      <span>Unknown</span>
+    </div>
+  `;
+  L.DomEvent.disableClickPropagation(container);
+  L.DomEvent.disableScrollPropagation(container);
+  return container;
+};
+fireStatusLegend.addTo(map);
+
 const sidebar = document.querySelector("#community-sidebar");
 const searchInput = document.querySelector("#community-search");
 const searchOptions = document.querySelector("#community-options");
 const clearButton = document.querySelector("#clear-search");
+const fireSelect = document.querySelector("#fire-select");
+const clearFireButton = document.querySelector("#clear-fire");
 const graphModal = document.querySelector("#graph-modal");
 const graphModalContent = document.querySelector("#graph-modal-content");
 
 const communitiesBySlug = new Map();
 const communitiesByName = new Map();
 const layersBySlug = new Map();
+const fireLayersById = new Map();
 let selectedLayer = null;
 let selectedFeature = null;
+let selectedFireMarker = null;
 
 function normalize(value) {
   return String(value || "")
@@ -114,18 +154,223 @@ function normalize(value) {
     .toLowerCase();
 }
 
-function markerForFeature(feature, latlng) {
+function communityMarkerForFeature(feature, latlng) {
   const rank = feature.properties.population_rank;
-  const radius = rank <= 2 ? 10 : 8;
+  const size = rank <= 2 ? 24 : 20;
 
-  return L.circleMarker(latlng, {
-    radius,
-    className: "community-marker",
-    color: "#ffffff",
-    weight: 2,
-    fillColor: "#c2410c",
-    fillOpacity: 0.92
+  return L.marker(latlng, {
+    pane: "communityPane",
+    icon: L.divIcon({
+      className: "community-marker-icon",
+      html: `
+        <svg class="community-marker-symbol" viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z" />
+        </svg>
+      `,
+      iconSize: [size, size],
+      iconAnchor: [size / 2, size / 2],
+      popupAnchor: [0, -size / 2]
+    }),
+    title: feature.properties.name
   });
+}
+
+function setCommunitySelected(layer, isSelected) {
+  const element = layer.getElement();
+  element?.classList.toggle("is-selected", isSelected);
+
+  if (layer.setStyle) {
+    layer.setStyle({ fillColor: isSelected ? "#2d6a4f" : "#2563eb" });
+  }
+}
+
+function formatFireDate(value) {
+  if (!value) {
+    return "Unknown";
+  }
+
+  const dateOnly = String(value).replace("Z", "");
+  const parsed = new Date(`${dateOnly}T00:00:00Z`);
+  if (Number.isNaN(parsed.getTime())) {
+    return value;
+  }
+
+  return parsed.toLocaleDateString("en-CA", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC"
+  });
+}
+
+function firePerimeterStyle(feature) {
+  const status = feature.properties?.FIRE_STATUS;
+  const isOutOfControl = status === "Out of Control";
+
+  return {
+    pane: "firePerimeterPane",
+    color: isOutOfControl ? "#991b1b" : "#b45309",
+    weight: 2,
+    opacity: 0.95,
+    fillColor: isOutOfControl ? "#ef4444" : "#f97316",
+    fillOpacity: 0.28
+  };
+}
+
+function fireId(feature) {
+  const properties = feature.properties || {};
+  return String(properties.FIRE_NUMBER || properties.OBJECTID || "");
+}
+
+function fireLabel(feature) {
+  const properties = feature.properties || {};
+  const fireNumber = properties.FIRE_NUMBER || "Unknown";
+  const incidentName = properties.INCIDENT_NAME;
+  const displayName = incidentName && incidentName !== fireNumber ? incidentName : `Fire ${fireNumber}`;
+  const status = properties.FIRE_STATUS || "Unknown status";
+  const size =
+    typeof properties.FIRE_SIZE_HECTARES === "number"
+      ? `${properties.FIRE_SIZE_HECTARES.toLocaleString(undefined, {
+          maximumFractionDigits: 1
+        })} ha`
+      : "Unknown size";
+
+  return `${displayName} - ${status} - ${size}`;
+}
+
+function firePopupHtml(feature) {
+  const properties = feature.properties || {};
+  const fireNumber = properties.FIRE_NUMBER || "Unknown";
+  const incidentName = properties.INCIDENT_NAME;
+  const displayName = incidentName && incidentName !== fireNumber ? incidentName : `Fire ${fireNumber}`;
+  const size =
+    typeof properties.FIRE_SIZE_HECTARES === "number"
+      ? properties.FIRE_SIZE_HECTARES.toLocaleString(undefined, {
+          maximumFractionDigits: 1
+        })
+      : "Unknown";
+  const fireUrl = properties.FIRE_URL
+    ? `<a href="${properties.FIRE_URL}" target="_blank" rel="noopener">BCWS incident page</a>`
+    : "";
+
+  return `
+    <div class="fire-popup">
+      <strong>${displayName}</strong>
+      <span>Fire Number: ${fireNumber}</span><br />
+      <span>Status: ${properties.FIRE_STATUS || "Unknown"}</span><br />
+      <span>Size: ${size} ha</span><br />
+      <span>Tracked ${formatFireDate(properties.TRACK_DATE)}</span>
+      ${fireUrl ? `<div>${fireUrl}</div>` : ""}
+    </div>
+  `;
+}
+
+function fireMarkerIcon(feature) {
+  const status = feature.properties?.FIRE_STATUS || "";
+  const statusClassByName = {
+    "Out of Control": "is-out-of-control",
+    "Being Held": "is-being-held",
+    "Under Control": "is-under-control"
+  };
+  const className = statusClassByName[status] || "is-unknown-status";
+
+  return L.divIcon({
+    className: `fire-marker-icon ${className}`,
+    html: `
+      <svg class="fire-marker-symbol" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15" />
+      </svg>
+    `,
+    iconSize: [24, 24],
+    iconAnchor: [12, 12],
+    popupAnchor: [0, -13]
+  });
+}
+
+function selectFireById(id) {
+  const fireRecord = fireLayersById.get(id);
+  if (!fireRecord) {
+    return;
+  }
+
+  if (selectedFireMarker) {
+    selectedFireMarker.getElement()?.classList.remove("is-selected");
+  }
+
+  selectedFireMarker = fireRecord.marker;
+  selectedFireMarker.getElement()?.classList.add("is-selected");
+
+  const latlng = fireRecord.marker.getLatLng();
+  const targetZoom = Math.max(map.getZoom(), SELECTED_FIRE_ZOOM);
+  map.stop();
+  map.setView(latlng, targetZoom, { animate: true });
+  fireRecord.marker.openPopup();
+  fireSelect.value = id;
+}
+
+function clearSelectedFire() {
+  fireSelect.value = "";
+
+  if (selectedFireMarker) {
+    selectedFireMarker.getElement()?.classList.remove("is-selected");
+    selectedFireMarker.closePopup();
+    selectedFireMarker = null;
+  }
+}
+
+function loadCurrentFirePerimeters() {
+  fetch(`${CURRENT_FIRE_DATA_URL}?updated=${Date.now()}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Could not load ${CURRENT_FIRE_DATA_URL}`);
+      }
+
+      return response.json();
+    })
+    .then((geojson) => {
+      const fireMarkerLayer = L.layerGroup();
+      const firePerimeterLayer = L.geoJSON(geojson, {
+        pane: "firePerimeterPane",
+        style: firePerimeterStyle,
+        onEachFeature: (feature, layer) => {
+          const id = fireId(feature);
+          const popup = firePopupHtml(feature);
+          const marker = L.marker(layer.getBounds().getCenter(), {
+            pane: "fireMarkerPane",
+            icon: fireMarkerIcon(feature),
+            title: fireLabel(feature)
+          });
+
+          layer.bindPopup(popup, {
+            autoPan: false,
+            keepInView: false
+          });
+          marker.bindPopup(popup, {
+            autoPan: false,
+            keepInView: false
+          });
+          marker.on("click", () => selectFireById(id));
+          marker.addTo(fireMarkerLayer);
+
+          fireLayersById.set(id, {
+            feature,
+            marker,
+            perimeter: layer
+          });
+
+          const option = document.createElement("option");
+          option.value = id;
+          option.textContent = fireLabel(feature);
+          fireSelect.appendChild(option);
+        }
+      });
+      const fireLayer = L.layerGroup([firePerimeterLayer, fireMarkerLayer]).addTo(map);
+
+      layerControl.addOverlay(fireLayer, "Current Fire Perimeters");
+    })
+    .catch((error) => {
+      console.warn(error);
+    });
 }
 
 function formatCommunity(feature) {
@@ -211,14 +456,12 @@ function showCommunity(feature, layer) {
   const latlng = layer.getLatLng();
 
   if (selectedLayer) {
-    selectedLayer.setStyle({ fillColor: "#c2410c" });
-    selectedLayer.getElement()?.classList.remove("is-selected");
+    setCommunitySelected(selectedLayer, false);
   }
 
   selectedFeature = feature;
   selectedLayer = layer;
-  selectedLayer.setStyle({ fillColor: "#2d6a4f" });
-  selectedLayer.getElement()?.classList.add("is-selected");
+  setCommunitySelected(selectedLayer, true);
 
   const targetZoom = Math.max(map.getZoom(), SELECTED_ZOOM);
   map.stop();
@@ -272,7 +515,7 @@ function loadCommunities() {
     })
     .then((geojson) => {
       const communityLayer = L.geoJSON(geojson, {
-        pointToLayer: markerForFeature,
+        pointToLayer: communityMarkerForFeature,
         onEachFeature: (feature, layer) => {
           registerCommunity(feature, layer);
           layer.bindPopup(popupHtml(feature), {
@@ -314,8 +557,7 @@ clearButton.addEventListener("click", () => {
   map.setView(BC_CENTER, DEFAULT_ZOOM);
 
   if (selectedLayer) {
-    selectedLayer.setStyle({ fillColor: "#c2410c" });
-    selectedLayer.getElement()?.classList.remove("is-selected");
+    setCommunitySelected(selectedLayer, false);
     selectedLayer.closePopup();
     selectedLayer = null;
   }
@@ -328,6 +570,18 @@ clearButton.addEventListener("click", () => {
       <p>Select a community on the map or search by name to view its graph.</p>
     </div>
   `;
+});
+
+fireSelect.addEventListener("change", () => {
+  if (fireSelect.value) {
+    selectFireById(fireSelect.value);
+  } else {
+    clearSelectedFire();
+  }
+});
+
+clearFireButton.addEventListener("click", () => {
+  clearSelectedFire();
 });
 
 sidebar.addEventListener("click", (event) => {
@@ -354,6 +608,7 @@ window.addEventListener("keydown", (event) => {
 });
 
 loadCommunities();
+loadCurrentFirePerimeters();
 
 window.addEventListener("resize", () => {
   map.invalidateSize();

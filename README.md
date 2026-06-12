@@ -10,6 +10,7 @@ index.html
 css/styles.css
 js/map.js
 data/communities.geojson
+data/current-fire-perimeters.geojson
 data/graph-manifest.json
 graphs/
   kamloops.png
@@ -58,6 +59,29 @@ top-60 population CSV is copied to `data/top_60_cities_by_population_with_wui.cs
 The generated `data/graph-manifest.json` records which graph files already match
 that CSV and which populations were filled from the Statistics Canada Census
 profile CSV.
+
+## Current Wildfire Perimeters
+
+Active wildfire perimeters are pulled from the BC Data Catalogue dataset
+`BC Wildfire Fire Perimeters - Current`:
+
+```text
+https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-current
+```
+
+The map displays current-season perimeters where `FIRE_STATUS` is not `Out`.
+This includes statuses such as `Out of Control`, `Being Held`, and
+`Under Control`. The webmap draws both perimeter polygons and high-contrast fire
+markers, and the wildfire dropdown jumps to individual perimeters.
+
+Refresh the local GeoJSON snapshot with:
+
+```powershell
+python scripts\fetch_current_fire_perimeters.py
+```
+
+The script writes `data/current-fire-perimeters.geojson`, which keeps the
+GitHub Pages site static and avoids browser CORS issues with the live WFS.
 
 ## Local Preview
 
