@@ -1,0 +1,34 @@
+name: Update current fire perimeters
+
+on:
+  schedule:
+    # Refresh twice daily. GitHub Actions schedules run in UTC.
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-current-fires:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Fetch current fire perimeters
+        run: python scripts/fetch_current_fire_perimeters.py
+
+      - name: Commit updated fire data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/current-fire-perimeters.geojson
+          git diff --cached --quiet || git commit -m "Update current fire perimeters"
+          git push
