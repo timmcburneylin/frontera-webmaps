@@ -125,6 +125,12 @@ fireStatusLegend.onAdd = () => {
       <span class="fire-status-swatch is-unknown-status" aria-hidden="true"></span>
       <span>Unknown</span>
     </div>
+    <div class="fire-status-legend-item is-perimeter">
+      <svg class="fire-perimeter-swatch" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true">
+        <path d="M1 7h16" fill="none" stroke="#0891b2" stroke-width="3" />
+      </svg>
+      <span>Current fire perimeter</span>
+    </div>
   `;
   L.DomEvent.disableClickPropagation(container);
   L.DomEvent.disableScrollPropagation(container);
@@ -148,6 +154,7 @@ const fireLayersById = new Map();
 let selectedLayer = null;
 let selectedFeature = null;
 let selectedFireMarker = null;
+let selectedFireFeature = null;
 
 function normalize(value) {
   return String(value || "")
@@ -155,9 +162,22 @@ function normalize(value) {
     .toLowerCase();
 }
 
+function communityMarkerSize(population) {
+  const minimumSize = 16;
+  const maximumSize = 30;
+
+  if (typeof population !== "number" || population <= 0) {
+    return minimumSize;
+  }
+
+  // A logarithmic scale keeps smaller communities distinct without allowing
+  // the largest population centres to overwhelm the map.
+  const scaledSize = minimumSize + Math.log10(population / 1000) * 5;
+  return Math.round(Math.min(maximumSize, Math.max(minimumSize, scaledSize)));
+}
+
 function communityMarkerForFeature(feature, latlng) {
-  const rank = feature.properties.population_rank;
-  const size = rank <= 2 ? 24 : 20;
+  const size = communityMarkerSize(feature.properties.population);
 
   return L.marker(latlng, {
     pane: "communityPane",
@@ -204,17 +224,13 @@ function formatFireDate(value) {
   });
 }
 
-function firePerimeterStyle(feature) {
-  const status = feature.properties?.FIRE_STATUS;
-  const isOutOfControl = status === "Out of Control";
-
+function firePerimeterStyle() {
   return {
     pane: "firePerimeterPane",
-    color: isOutOfControl ? "#991b1b" : "#b45309",
+    color: "#0891b2",
     weight: 2,
     opacity: 0.95,
-    fillColor: isOutOfControl ? "#ef4444" : "#f97316",
-    fillOpacity: 0.28
+    fill: false
   };
 }
 
@@ -272,12 +288,7 @@ function firePopupHtml(feature) {
 
 function fireMarkerIcon(feature) {
   const status = feature.properties?.FIRE_STATUS || "";
-  const statusClassByName = {
-    "Out of Control": "is-out-of-control",
-    "Being Held": "is-being-held",
-    "Under Control": "is-under-control"
-  };
-  const className = statusClassByName[status] || "is-unknown-status";
+  const className = fireStatusClass(status);
 
   return L.divIcon({
     className: `fire-marker-icon ${className}`,
@@ -292,6 +303,81 @@ function fireMarkerIcon(feature) {
   });
 }
 
+function fireStatusClass(status) {
+  const statusClassByName = {
+    "Out of Control": "is-out-of-control",
+    "Being Held": "is-being-held",
+    "Under Control": "is-under-control"
+  };
+
+  return statusClassByName[status] || "is-unknown-status";
+}
+
+function clearSelectedCommunity() {
+  searchInput.value = "";
+
+  if (selectedLayer) {
+    setCommunitySelected(selectedLayer, false);
+    selectedLayer.closePopup();
+    selectedLayer = null;
+  }
+
+  selectedFeature = null;
+  closeGraphModal();
+}
+
+function renderDefaultSidebar() {
+  sidebar.innerHTML = `
+    <div class="sidebar-empty">
+      <h1>Frontera Wildfire Risk</h1>
+      <p>Select a community or active wildfire to view its details.</p>
+    </div>
+  `;
+}
+
+function renderFireSidebar(feature) {
+  const properties = feature.properties || {};
+  const fireNumber = properties.FIRE_NUMBER || "Unknown";
+  const incidentName = properties.INCIDENT_NAME;
+  const displayName = incidentName && incidentName !== fireNumber ? incidentName : `Fire ${fireNumber}`;
+  const status = properties.FIRE_STATUS || "Unknown";
+  const sizeLabel =
+    typeof properties.FIRE_SIZE_HECTARES === "number"
+      ? `${properties.FIRE_SIZE_HECTARES.toLocaleString(undefined, {
+          maximumFractionDigits: 1
+        })} ha`
+      : "Not available";
+  const isIncidentPoint = properties.DATA_SOURCE === "incident-point";
+  const dataType = isIncidentPoint ? "Incident location only" : "Published perimeter";
+  const trackingDate = isIncidentPoint ? "Not available" : formatFireDate(properties.TRACK_DATE);
+  const fireYear = properties.INCIDENT_FIRE_YEAR || properties.FIRE_YEAR || "Unknown";
+  const source = isIncidentPoint ? "BCWS active incident feed" : properties.SOURCE || "BCWS current fire perimeters";
+  const fireLink = properties.FIRE_URL
+    ? `<a class="sidebar-action fire-detail-link" href="${properties.FIRE_URL}" target="_blank" rel="noopener">Open BCWS incident page</a>`
+    : "";
+
+  sidebar.innerHTML = `
+    <article class="fire-detail">
+      <div class="fire-detail-heading">
+        <div>
+          <h1>${displayName}</h1>
+          <p>Fire Number: ${fireNumber}</p>
+        </div>
+        <span class="fire-status-badge ${fireStatusClass(status)}">${status}</span>
+      </div>
+      ${isIncidentPoint ? '<p class="fire-detail-notice">BCWS has published an incident location, but no perimeter yet.</p>' : ""}
+      <dl class="fire-detail-list">
+        <div><dt>Size</dt><dd>${sizeLabel}</dd></div>
+        <div><dt>Fire year</dt><dd>${fireYear}</dd></div>
+        <div><dt>Map data</dt><dd>${dataType}</dd></div>
+        <div><dt>Perimeter tracked</dt><dd>${trackingDate}</dd></div>
+        <div><dt>Source</dt><dd>${source}</dd></div>
+      </dl>
+      ${fireLink}
+    </article>
+  `;
+}
+
 function selectFireById(id) {
   const fireRecord = fireLayersById.get(id);
   if (!fireRecord) {
@@ -303,7 +389,9 @@ function selectFireById(id) {
   }
 
   selectedFireMarker = fireRecord.marker;
+  selectedFireFeature = fireRecord.feature;
   selectedFireMarker.getElement()?.classList.add("is-selected");
+  clearSelectedCommunity();
 
   const latlng = fireRecord.marker.getLatLng();
   const targetZoom = Math.max(map.getZoom(), SELECTED_FIRE_ZOOM);
@@ -311,6 +399,7 @@ function selectFireById(id) {
   map.setView(latlng, targetZoom, { animate: true });
   fireRecord.marker.openPopup();
   fireSelect.value = id;
+  renderFireSidebar(fireRecord.feature);
 }
 
 function clearSelectedFire() {
@@ -321,6 +410,8 @@ function clearSelectedFire() {
     selectedFireMarker.closePopup();
     selectedFireMarker = null;
   }
+
+  selectedFireFeature = null;
 }
 
 function loadCurrentFirePerimeters() {
@@ -357,6 +448,7 @@ function loadCurrentFirePerimeters() {
             autoPan: false,
             keepInView: false
           });
+          layer.on("click", () => selectFireById(id));
           perimeterLayersById.set(id, layer);
         }
       });
@@ -485,6 +577,8 @@ function showCommunity(feature, layer) {
   const details = formatCommunity(feature);
   const latlng = layer.getLatLng();
 
+  clearSelectedFire();
+
   if (selectedLayer) {
     setCommunitySelected(selectedLayer, false);
   }
@@ -583,35 +677,33 @@ searchInput.addEventListener("keydown", (event) => {
 });
 
 clearButton.addEventListener("click", () => {
-  searchInput.value = "";
-  map.setView(BC_CENTER, DEFAULT_ZOOM);
+  const hadSelectedCommunity = Boolean(selectedFeature);
+  clearSelectedCommunity();
 
-  if (selectedLayer) {
-    setCommunitySelected(selectedLayer, false);
-    selectedLayer.closePopup();
-    selectedLayer = null;
+  if (hadSelectedCommunity) {
+    map.setView(BC_CENTER, DEFAULT_ZOOM);
+    renderDefaultSidebar();
   }
-
-  selectedFeature = null;
-  closeGraphModal();
-  sidebar.innerHTML = `
-    <div class="sidebar-empty">
-      <h1>Frontera Wildfire Risk</h1>
-      <p>Select a community on the map or search by name to view its graph.</p>
-    </div>
-  `;
 });
 
 fireSelect.addEventListener("change", () => {
   if (fireSelect.value) {
     selectFireById(fireSelect.value);
   } else {
+    const hadSelectedFire = Boolean(selectedFireFeature);
     clearSelectedFire();
+    if (hadSelectedFire) {
+      renderDefaultSidebar();
+    }
   }
 });
 
 clearFireButton.addEventListener("click", () => {
+  const hadSelectedFire = Boolean(selectedFireFeature);
   clearSelectedFire();
+  if (hadSelectedFire) {
+    renderDefaultSidebar();
+  }
 });
 
 sidebar.addEventListener("click", (event) => {

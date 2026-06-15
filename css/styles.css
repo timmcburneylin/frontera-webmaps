@@ -216,22 +216,96 @@ input {
 }
 
 .sidebar-empty,
-.community-detail {
+.community-detail,
+.fire-detail {
   padding: 28px;
 }
 
 .sidebar-empty h1,
-.community-detail h1 {
+.community-detail h1,
+.fire-detail h1 {
   margin: 0 0 10px;
   font-size: 1.4rem;
   line-height: 1.2;
 }
 
 .sidebar-empty p,
-.community-detail p {
+.community-detail p,
+.fire-detail p {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
+}
+
+.fire-detail-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.fire-status-badge {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  padding: 6px 9px;
+  color: #ffffff;
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.fire-status-badge.is-under-control {
+  background: #ca8a04;
+}
+
+.fire-status-badge.is-being-held {
+  background: #ea580c;
+}
+
+.fire-status-badge.is-out-of-control {
+  background: #b91c1c;
+}
+
+.fire-status-badge.is-unknown-status {
+  background: #64748b;
+}
+
+.fire-detail .fire-detail-notice {
+  margin-top: 18px;
+  border-left: 3px solid #0891b2;
+  padding: 9px 11px;
+  background: #ecfeff;
+  color: #155e75;
+}
+
+.fire-detail-list {
+  margin: 20px 0;
+}
+
+.fire-detail-list div {
+  display: grid;
+  grid-template-columns: minmax(105px, 0.8fr) minmax(0, 1.2fr);
+  gap: 14px;
+  border-top: 1px solid var(--line);
+  padding: 11px 0;
+}
+
+.fire-detail-list dt {
+  color: var(--muted);
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.fire-detail-list dd {
+  margin: 0;
+  color: var(--ink);
+  font-weight: 650;
+  overflow-wrap: anywhere;
+}
+
+.fire-detail-link {
+  display: inline-block;
+  text-decoration: none;
 }
 
 .detail-meta {
@@ -382,6 +456,19 @@ input {
 
 .fire-status-swatch.is-unknown-status {
   background: #64748b;
+}
+
+.fire-status-legend-item.is-perimeter {
+  margin-top: 9px;
+  padding-top: 9px;
+  border-top: 1px solid var(--line);
+}
+
+.fire-perimeter-swatch {
+  width: 18px;
+  height: 14px;
+  flex: 0 0 18px;
+  display: block;
 }
 
 .burn-legend-title {
