@@ -3,73 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.G90285",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -123.94038,
-              58.35562
-            ],
-            [
-              -123.94126,
-              58.35537
-            ],
-            [
-              -123.94179,
-              58.35489
-            ],
-            [
-              -123.9416,
-              58.35436
-            ],
-            [
-              -123.94106,
-              58.35426
-            ],
-            [
-              -123.94024,
-              58.35443
-            ],
-            [
-              -123.9395,
-              58.35472
-            ],
-            [
-              -123.93942,
-              58.35525
-            ],
-            [
-              -123.94038,
-              58.35562
-            ]
-          ]
-        ]
-      },
-      "geometry_name": "SHAPE",
-      "properties": {
-        "FIRE_NUMBER": "G90285",
-        "VERSION_NUMBER": 2026050801,
-        "FIRE_YEAR": 2026,
-        "FIRE_SIZE_HECTARES": 1.4,
-        "SOURCE": "Non-corrected airborne GPS",
-        "TRACK_DATE": "2026-05-08Z",
-        "LOAD_DATE": "2026-05-08Z",
-        "FIRE_STATUS": "Being Held",
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G90285",
-        "FEATURE_CODE": "JA70003000",
-        "FEATURE_AREA_SQM": 14468.8093,
-        "FEATURE_LENGTH_M": 448.5383,
-        "OBJECTID": 26774200,
-        "SE_ANNO_CAD_DATA": null,
-        "INCIDENT_NAME": "G90285",
-        "INCIDENT_NUMBER_LABEL": "G90285",
-        "INCIDENT_FIRE_YEAR": 2026
-      }
-    },
-    {
-      "type": "Feature",
       "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.N10427",
       "geometry": {
         "type": "Polygon",
@@ -3428,7 +3361,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 59026.4952,
         "FEATURE_LENGTH_M": 1951.9811,
-        "OBJECTID": 26774215,
+        "OBJECTID": 26779354,
         "SE_ANNO_CAD_DATA": null,
         "INCIDENT_NAME": "N10427",
         "INCIDENT_NUMBER_LABEL": "N10427",
@@ -5175,10 +5108,77 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 566184.722,
         "FEATURE_LENGTH_M": 6910.313,
-        "OBJECTID": 26774216,
+        "OBJECTID": 26779355,
         "SE_ANNO_CAD_DATA": null,
         "INCIDENT_NAME": "N10435",
         "INCIDENT_NUMBER_LABEL": "N10435",
+        "INCIDENT_FIRE_YEAR": 2026
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.G90285",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -123.94038,
+              58.35562
+            ],
+            [
+              -123.94126,
+              58.35537
+            ],
+            [
+              -123.94179,
+              58.35489
+            ],
+            [
+              -123.9416,
+              58.35436
+            ],
+            [
+              -123.94106,
+              58.35426
+            ],
+            [
+              -123.94024,
+              58.35443
+            ],
+            [
+              -123.9395,
+              58.35472
+            ],
+            [
+              -123.93942,
+              58.35525
+            ],
+            [
+              -123.94038,
+              58.35562
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "SHAPE",
+      "properties": {
+        "FIRE_NUMBER": "G90285",
+        "VERSION_NUMBER": 2026050801,
+        "FIRE_YEAR": 2026,
+        "FIRE_SIZE_HECTARES": 1.4,
+        "SOURCE": "Non-corrected airborne GPS",
+        "TRACK_DATE": "2026-05-08Z",
+        "LOAD_DATE": "2026-05-08Z",
+        "FIRE_STATUS": "Being Held",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G90285",
+        "FEATURE_CODE": "JA70003000",
+        "FEATURE_AREA_SQM": 14468.8093,
+        "FEATURE_LENGTH_M": 448.5383,
+        "OBJECTID": 26779339,
+        "SE_ANNO_CAD_DATA": null,
+        "INCIDENT_NAME": "G90285",
+        "INCIDENT_NUMBER_LABEL": "G90285",
         "INCIDENT_FIRE_YEAR": 2026
       }
     },
@@ -8586,7 +8586,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 17749707.0148,
         "FEATURE_LENGTH_M": 28161.8656,
-        "OBJECTID": 26774165,
+        "OBJECTID": 26779285,
         "SE_ANNO_CAD_DATA": null,
         "INCIDENT_NAME": "Swede Creek",
         "INCIDENT_NUMBER_LABEL": "C10467",
@@ -10517,7 +10517,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 299250.336,
         "FEATURE_LENGTH_M": 3302.7391,
-        "OBJECTID": 26774171,
+        "OBJECTID": 26779291,
         "SE_ANNO_CAD_DATA": null
       }
     },
@@ -11045,7 +11045,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 133420.6162,
         "FEATURE_LENGTH_M": 1737.4242,
-        "OBJECTID": 26774219,
+        "OBJECTID": 26779358,
         "SE_ANNO_CAD_DATA": null,
         "INCIDENT_NAME": "N40233",
         "INCIDENT_NUMBER_LABEL": "N40233",
@@ -11244,7 +11244,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 207422.4927,
         "FEATURE_LENGTH_M": 1690.2749,
-        "OBJECTID": 26774222,
+        "OBJECTID": 26779361,
         "SE_ANNO_CAD_DATA": null,
         "INCIDENT_NAME": "N50313",
         "INCIDENT_NUMBER_LABEL": "N50313",
@@ -11467,7 +11467,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 615598.4459,
         "FEATURE_LENGTH_M": 3233.9856,
-        "OBJECTID": 26774230,
+        "OBJECTID": 26779369,
         "SE_ANNO_CAD_DATA": null,
         "INCIDENT_NAME": "Ferrabee",
         "INCIDENT_NUMBER_LABEL": "V10108",
@@ -11478,7 +11478,7 @@
   "totalFeatures": 8,
   "numberMatched": 8,
   "numberReturned": 8,
-  "timeStamp": "2026-06-14T14:06:53.941Z",
+  "timeStamp": "2026-06-15T04:27:01.786Z",
   "crs": {
     "type": "name",
     "properties": {
@@ -11491,7 +11491,7 @@
     "incident_names_url": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_names_enriched_count": 7,
     "excluded_status": "Out",
-    "generated_at_utc": "2026-06-14T14:06:55+00:00",
+    "generated_at_utc": "2026-06-15T04:27:02+00:00",
     "note": "Reference only. BC wildfire perimeters are dynamic and update frequency varies."
   }
 }
