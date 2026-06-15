@@ -2,8 +2,9 @@ name: Update current fire perimeters
 
 on:
   schedule:
-    # Refresh twice daily. GitHub Actions schedules run in UTC.
-    - cron: "0 */12 * * *"
+    # Refresh every three hours, offset from the busy start of the hour.
+    - cron: "17 */3 * * *"
+      timezone: "America/Vancouver"
   workflow_dispatch:
 
 permissions:
