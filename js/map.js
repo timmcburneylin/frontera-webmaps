@@ -4,6 +4,7 @@
 
 const COMMUNITY_DATA_URL = "data/communities.geojson";
 const CURRENT_FIRE_DATA_URL = "data/current-fire-perimeters.geojson";
+const CURRENT_FIRE_INCIDENT_DATA_URL = "data/current-fire-incidents.geojson";
 const HILLSHADE_IMAGE_URL = "data/hillshade.png";
 const BURN_PROBABILITY_TILE_URL = "tiles/burn-probability/{z}/{x}/{y}.png";
 const BC_CENTER = [54.3, -125.2];
@@ -323,15 +324,26 @@ function clearSelectedFire() {
 }
 
 function loadCurrentFirePerimeters() {
-  fetch(`${CURRENT_FIRE_DATA_URL}?updated=${Date.now()}`)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Could not load ${CURRENT_FIRE_DATA_URL}`);
-      }
+  const cacheKey = Date.now();
+  Promise.all(
+    [CURRENT_FIRE_DATA_URL, CURRENT_FIRE_INCIDENT_DATA_URL].map((url) =>
+      fetch(`${url}?updated=${cacheKey}`).then((response) => {
+        if (!response.ok) {
+          throw new Error(`Could not load ${url}`);
+        }
 
-      return response.json();
-    })
-    .then((geojson) => {
+        return response.json();
+      })
+    )
+  )
+    .then(([perimeterGeojson, incidentGeojson]) => {
+      const geojson = {
+        type: "FeatureCollection",
+        features: [
+          ...(perimeterGeojson.features || []),
+          ...(incidentGeojson.features || [])
+        ]
+      };
       const fireMarkerLayer = L.layerGroup();
       const perimeterLayersById = new Map();
       const firePerimeterLayer = L.geoJSON(geojson, {

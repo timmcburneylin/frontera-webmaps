@@ -17,6 +17,7 @@ from pathlib import Path
 
 
 DEFAULT_OUTPUT = Path("data/current-fire-perimeters.geojson")
+DEFAULT_INCIDENT_OUTPUT = Path("data/current-fire-incidents.geojson")
 LAYER_NAME = "pub:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP"
 CATALOGUE_URL = "https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-current"
 WFS_ENDPOINT = "https://openmaps.gov.bc.ca/geo/pub/ows"
@@ -150,6 +151,7 @@ def incident_point_features(incidents: dict[str, dict], perimeter_fire_numbers: 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--incident-output", type=Path, default=DEFAULT_INCIDENT_OUTPUT)
     args = parser.parse_args()
 
     url = build_wfs_url()
@@ -157,22 +159,34 @@ def main() -> None:
     incidents = fetch_active_incidents()
     enriched_count, perimeter_fire_numbers = enrich_perimeters(geojson, incidents)
     point_features = incident_point_features(incidents, perimeter_fire_numbers)
-    geojson.setdefault("features", []).extend(point_features)
     geojson["metadata"] = {
         "source": CATALOGUE_URL,
         "wfs_url": url,
         "incident_names_url": WFNEWS_ENDPOINT,
         "incident_names_enriched_count": enriched_count,
-        "incident_point_count": len(point_features),
         "excluded_status": EXCLUDED_FIRE_STATUS,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "note": "Reference only. Active incidents without published perimeters are shown as points.",
+        "note": "Reference only. This file contains published current-fire perimeters.",
+    }
+
+    incident_geojson = {
+        "type": "FeatureCollection",
+        "features": point_features,
+        "metadata": {
+            "source": WFNEWS_ENDPOINT,
+            "incident_point_count": len(point_features),
+            "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+            "note": "Active BCWS incidents without a published perimeter.",
+        },
     }
 
     args.output.write_text(json.dumps(geojson, indent=2) + "\n", encoding="utf-8")
+    args.incident_output.write_text(
+        json.dumps(incident_geojson, indent=2) + "\n", encoding="utf-8"
+    )
     print(
-        f"Wrote {len(perimeter_fire_numbers)} not-out fire perimeters and "
-        f"{len(point_features)} incident-only points to {args.output}"
+        f"Wrote {len(perimeter_fire_numbers)} not-out fire perimeters to {args.output} "
+        f"and {len(point_features)} incident-only points to {args.incident_output}"
     )
 
 

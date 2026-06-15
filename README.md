@@ -81,9 +81,11 @@ Refresh the local GeoJSON snapshot with:
 python scripts\fetch_current_fire_perimeters.py
 ```
 
-The script writes both polygons and fallback points to
-`data/current-fire-perimeters.geojson`, which keeps the GitHub Pages site static
-and avoids browser CORS issues with the live services.
+The script writes polygons to `data/current-fire-perimeters.geojson` and
+fallback points to `data/current-fire-incidents.geojson`. Keeping these files
+separate also prevents an older cached map script from misreading point data as
+perimeters. Both snapshots keep the GitHub Pages site static and avoid browser
+CORS issues with the live services.
 
 ## Local Preview
 

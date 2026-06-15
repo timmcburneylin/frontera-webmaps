@@ -30,6 +30,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/current-fire-perimeters.geojson
+          git add data/current-fire-perimeters.geojson data/current-fire-incidents.geojson
           git diff --cached --quiet || git commit -m "Update current fire perimeters"
           git push
