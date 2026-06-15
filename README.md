@@ -60,7 +60,7 @@ The generated `data/graph-manifest.json` records which graph files already match
 that CSV and which populations were filled from the Statistics Canada Census
 profile CSV.
 
-## Current Wildfire Perimeters
+## Current Wildfires
 
 Active wildfire perimeters are pulled from the BC Data Catalogue dataset
 `BC Wildfire Fire Perimeters - Current`:
@@ -69,10 +69,11 @@ Active wildfire perimeters are pulled from the BC Data Catalogue dataset
 https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-current
 ```
 
-The map displays current-season perimeters where `FIRE_STATUS` is not `Out`.
-This includes statuses such as `Out of Control`, `Being Held`, and
-`Under Control`. The webmap draws both perimeter polygons and high-contrast fire
-markers, and the wildfire dropdown jumps to individual perimeters.
+The map displays current-season fires that are `Out of Control`, `Being Held`,
+or `Under Control`. Published perimeter polygons come from BC Open Maps. Active
+fires that BCWS has published without a perimeter are added from the public
+incident point feed, then automatically replaced by their polygon location when
+a perimeter becomes available. The wildfire dropdown searches both types.
 
 Refresh the local GeoJSON snapshot with:
 
@@ -80,8 +81,9 @@ Refresh the local GeoJSON snapshot with:
 python scripts\fetch_current_fire_perimeters.py
 ```
 
-The script writes `data/current-fire-perimeters.geojson`, which keeps the
-GitHub Pages site static and avoids browser CORS issues with the live WFS.
+The script writes both polygons and fallback points to
+`data/current-fire-perimeters.geojson`, which keeps the GitHub Pages site static
+and avoids browser CORS issues with the live services.
 
 ## Local Preview
 

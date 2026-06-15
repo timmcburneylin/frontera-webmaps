@@ -1,4 +1,4 @@
-"""Fetch active BC wildfire perimeters for the static Leaflet map.
+"""Fetch active BC wildfire perimeters and incident points for the webmap.
 
 The BC Open Maps WFS endpoint can return GeoJSON directly, but browser CORS
 headers are not reliable for GitHub Pages. This script snapshots the active
@@ -21,7 +21,11 @@ LAYER_NAME = "pub:WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP"
 CATALOGUE_URL = "https://catalogue.data.gov.bc.ca/dataset/bc-wildfire-fire-perimeters-current"
 WFS_ENDPOINT = "https://openmaps.gov.bc.ca/geo/pub/ows"
 WFNEWS_ENDPOINT = "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features"
-STAGE_OF_CONTROL_CODES = ("OUT_CNTRL", "HOLDING", "UNDR_CNTRL")
+STAGE_OF_CONTROL = {
+    "OUT_CNTRL": "Out of Control",
+    "HOLDING": "Being Held",
+    "UNDR_CNTRL": "Under Control",
+}
 
 # Include current-season perimeters that are not out. BCWS status values
 # observed include Out, Under Control, Being Held, Out of Control, and
@@ -57,10 +61,10 @@ def fetch_geojson(url: str) -> dict:
         return json.loads(body.decode("utf-8"))
 
 
-def fetch_incident_names() -> dict[str, dict[str, str | int]]:
-    incident_names = {}
+def fetch_active_incidents() -> dict[str, dict]:
+    incidents = {}
 
-    for stage_code in STAGE_OF_CONTROL_CODES:
+    for stage_code, status in STAGE_OF_CONTROL.items():
         url = f"{WFNEWS_ENDPOINT}?{urllib.parse.urlencode({'stageOfControl': stage_code})}"
         geojson = fetch_geojson(url)
 
@@ -70,31 +74,77 @@ def fetch_incident_names() -> dict[str, dict[str, str | int]]:
             if not fire_number:
                 continue
 
-            incident_names[fire_number] = {
+            incidents[fire_number] = {
+                "feature": feature,
                 "incident_name": properties.get("incident_name"),
                 "incident_number_label": fire_number,
                 "incident_fire_year": properties.get("fire_year"),
+                "fire_status": status,
             }
 
-    return incident_names
+    return incidents
 
 
-def enrich_perimeters_with_incident_names(geojson: dict, incident_names: dict[str, dict[str, str | int]]) -> int:
+def enrich_perimeters(geojson: dict, incidents: dict[str, dict]) -> tuple[int, set[str]]:
     enriched_count = 0
+    perimeter_fire_numbers = set()
 
     for feature in geojson.get("features", []):
         properties = feature.get("properties", {})
         fire_number = properties.get("FIRE_NUMBER")
-        incident = incident_names.get(fire_number)
+        if fire_number:
+            perimeter_fire_numbers.add(fire_number)
+
+        properties["DATA_SOURCE"] = "perimeter"
+        incident = incidents.get(fire_number)
         if not incident:
             continue
 
         properties["INCIDENT_NAME"] = incident.get("incident_name")
         properties["INCIDENT_NUMBER_LABEL"] = incident.get("incident_number_label")
         properties["INCIDENT_FIRE_YEAR"] = incident.get("incident_fire_year")
+        properties["FIRE_STATUS"] = incident.get("fire_status") or properties.get("FIRE_STATUS")
         enriched_count += 1
 
-    return enriched_count
+    return enriched_count, perimeter_fire_numbers
+
+
+def incident_point_features(incidents: dict[str, dict], perimeter_fire_numbers: set[str]) -> list[dict]:
+    point_features = []
+
+    for fire_number, incident in incidents.items():
+        if fire_number in perimeter_fire_numbers:
+            continue
+
+        source_feature = incident.get("feature", {})
+        geometry = source_feature.get("geometry")
+        if not geometry or geometry.get("type") != "Point":
+            continue
+
+        fire_year = incident.get("incident_fire_year")
+        point_features.append(
+            {
+                "type": "Feature",
+                "id": f"bcws-incident-{fire_number}",
+                "geometry": geometry,
+                "properties": {
+                    "FIRE_NUMBER": fire_number,
+                    "INCIDENT_NAME": incident.get("incident_name"),
+                    "INCIDENT_NUMBER_LABEL": fire_number,
+                    "INCIDENT_FIRE_YEAR": fire_year,
+                    "FIRE_STATUS": incident.get("fire_status"),
+                    "FIRE_SIZE_HECTARES": None,
+                    "TRACK_DATE": None,
+                    "FIRE_URL": (
+                        "https://wildfiresituation.nrs.gov.bc.ca/incidents"
+                        f"?fireYear={fire_year}&incidentNumber={fire_number}"
+                    ),
+                    "DATA_SOURCE": "incident-point",
+                },
+            }
+        )
+
+    return point_features
 
 
 def main() -> None:
@@ -104,20 +154,26 @@ def main() -> None:
 
     url = build_wfs_url()
     geojson = fetch_geojson(url)
-    incident_names = fetch_incident_names()
-    enriched_count = enrich_perimeters_with_incident_names(geojson, incident_names)
+    incidents = fetch_active_incidents()
+    enriched_count, perimeter_fire_numbers = enrich_perimeters(geojson, incidents)
+    point_features = incident_point_features(incidents, perimeter_fire_numbers)
+    geojson.setdefault("features", []).extend(point_features)
     geojson["metadata"] = {
         "source": CATALOGUE_URL,
         "wfs_url": url,
         "incident_names_url": WFNEWS_ENDPOINT,
         "incident_names_enriched_count": enriched_count,
+        "incident_point_count": len(point_features),
         "excluded_status": EXCLUDED_FIRE_STATUS,
         "generated_at_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "note": "Reference only. BC wildfire perimeters are dynamic and update frequency varies.",
+        "note": "Reference only. Active incidents without published perimeters are shown as points.",
     }
 
     args.output.write_text(json.dumps(geojson, indent=2) + "\n", encoding="utf-8")
-    print(f"Wrote {len(geojson.get('features', []))} not-out fire perimeters to {args.output}")
+    print(
+        f"Wrote {len(perimeter_fire_numbers)} not-out fire perimeters and "
+        f"{len(point_features)} incident-only points to {args.output}"
+    )
 
 
 if __name__ == "__main__":

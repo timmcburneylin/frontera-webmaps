@@ -243,23 +243,27 @@ function firePopupHtml(feature) {
   const fireNumber = properties.FIRE_NUMBER || "Unknown";
   const incidentName = properties.INCIDENT_NAME;
   const displayName = incidentName && incidentName !== fireNumber ? incidentName : `Fire ${fireNumber}`;
-  const size =
+  const sizeLabel =
     typeof properties.FIRE_SIZE_HECTARES === "number"
-      ? properties.FIRE_SIZE_HECTARES.toLocaleString(undefined, {
+      ? `${properties.FIRE_SIZE_HECTARES.toLocaleString(undefined, {
           maximumFractionDigits: 1
-        })
+        })} ha`
       : "Unknown";
   const fireUrl = properties.FIRE_URL
     ? `<a href="${properties.FIRE_URL}" target="_blank" rel="noopener">BCWS incident page</a>`
     : "";
+  const isIncidentPoint = properties.DATA_SOURCE === "incident-point";
+  const spatialNote = isIncidentPoint
+    ? "<span>Perimeter not yet published</span><br />"
+    : `<span>Tracked ${formatFireDate(properties.TRACK_DATE)}</span><br />`;
 
   return `
     <div class="fire-popup">
       <strong>${displayName}</strong>
       <span>Fire Number: ${fireNumber}</span><br />
       <span>Status: ${properties.FIRE_STATUS || "Unknown"}</span><br />
-      <span>Size: ${size} ha</span><br />
-      <span>Tracked ${formatFireDate(properties.TRACK_DATE)}</span>
+      <span>Size: ${sizeLabel}</span><br />
+      ${spatialNote}
       ${fireUrl ? `<div>${fireUrl}</div>` : ""}
     </div>
   `;
@@ -329,44 +333,58 @@ function loadCurrentFirePerimeters() {
     })
     .then((geojson) => {
       const fireMarkerLayer = L.layerGroup();
+      const perimeterLayersById = new Map();
       const firePerimeterLayer = L.geoJSON(geojson, {
         pane: "firePerimeterPane",
+        filter: (feature) => feature.geometry?.type !== "Point",
         style: firePerimeterStyle,
         onEachFeature: (feature, layer) => {
           const id = fireId(feature);
           const popup = firePopupHtml(feature);
-          const marker = L.marker(layer.getBounds().getCenter(), {
-            pane: "fireMarkerPane",
-            icon: fireMarkerIcon(feature),
-            title: fireLabel(feature)
-          });
-
           layer.bindPopup(popup, {
             autoPan: false,
             keepInView: false
           });
-          marker.bindPopup(popup, {
-            autoPan: false,
-            keepInView: false
-          });
-          marker.on("click", () => selectFireById(id));
-          marker.addTo(fireMarkerLayer);
-
-          fireLayersById.set(id, {
-            feature,
-            marker,
-            perimeter: layer
-          });
-
-          const option = document.createElement("option");
-          option.value = id;
-          option.textContent = fireLabel(feature);
-          fireSelect.appendChild(option);
+          perimeterLayersById.set(id, layer);
         }
+      });
+
+      geojson.features.forEach((feature) => {
+        const id = fireId(feature);
+        const popup = firePopupHtml(feature);
+        const perimeter = perimeterLayersById.get(id) || null;
+        const coordinates = feature.geometry?.coordinates;
+        const markerLocation =
+          feature.geometry?.type === "Point"
+            ? L.latLng(coordinates[1], coordinates[0])
+            : perimeter.getBounds().getCenter();
+        const marker = L.marker(markerLocation, {
+            pane: "fireMarkerPane",
+            icon: fireMarkerIcon(feature),
+            title: fireLabel(feature)
+        });
+
+        marker.bindPopup(popup, {
+          autoPan: false,
+          keepInView: false
+        });
+        marker.on("click", () => selectFireById(id));
+        marker.addTo(fireMarkerLayer);
+
+        fireLayersById.set(id, {
+          feature,
+          marker,
+          perimeter
+        });
+
+        const option = document.createElement("option");
+        option.value = id;
+        option.textContent = fireLabel(feature);
+        fireSelect.appendChild(option);
       });
       const fireLayer = L.layerGroup([firePerimeterLayer, fireMarkerLayer]).addTo(map);
 
-      layerControl.addOverlay(fireLayer, "Current Fire Perimeters");
+      layerControl.addOverlay(fireLayer, "Current Wildfires");
     })
     .catch((error) => {
       console.warn(error);
