@@ -59,62 +59,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-V70559",
-      "geometry": {
-        "bbox": [
-          -123.9591,
-          49.066183,
-          -123.9591,
-          49.066183
-        ],
-        "type": "Point",
-        "coordinates": [
-          -123.9591,
-          49.066183
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "V70559",
-        "INCIDENT_NAME": "V70559",
-        "INCIDENT_NUMBER_LABEL": "V70559",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Under Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V70559",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-V60555",
-      "geometry": {
-        "bbox": [
-          -124.565133,
-          48.93745,
-          -124.565133,
-          48.93745
-        ],
-        "type": "Point",
-        "coordinates": [
-          -124.565133,
-          48.93745
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "V60555",
-        "INCIDENT_NAME": "V70555",
-        "INCIDENT_NUMBER_LABEL": "V60555",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Under Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V60555",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-G80488",
       "geometry": {
         "bbox": [
@@ -144,8 +88,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 5,
-    "generated_at_utc": "2026-06-15T21:49:41+00:00",
+    "incident_point_count": 3,
+    "generated_at_utc": "2026-06-16T00:02:07+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
