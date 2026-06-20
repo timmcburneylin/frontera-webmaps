@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": "bcws-incident-K50608",
+      "geometry": {
+        "bbox": [
+          -119.448333,
+          49.271667,
+          -119.448333,
+          49.271667
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.448333,
+          49.271667
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K50608",
+        "INCIDENT_NAME": "K50608",
+        "INCIDENT_NUMBER_LABEL": "K50608",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K50608",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "bcws-incident-C30602",
       "geometry": {
         "bbox": [
@@ -22,38 +50,10 @@
         "INCIDENT_NAME": "C30602",
         "INCIDENT_NUMBER_LABEL": "C30602",
         "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C30602",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-V50592",
-      "geometry": {
-        "bbox": [
-          -123.848083,
-          49.517333,
-          -123.848083,
-          49.517333
-        ],
-        "type": "Point",
-        "coordinates": [
-          -123.848083,
-          49.517333
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "V50592",
-        "INCIDENT_NAME": "Crowston Lake",
-        "INCIDENT_NUMBER_LABEL": "V50592",
-        "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Being Held",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V50592",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C30602",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -87,6 +87,62 @@
     },
     {
       "type": "Feature",
+      "id": "bcws-incident-V50611",
+      "geometry": {
+        "bbox": [
+          -123.979666,
+          49.710083,
+          -123.979666,
+          49.710083
+        ],
+        "type": "Point",
+        "coordinates": [
+          -123.979666,
+          49.710083
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "V50611",
+        "INCIDENT_NAME": "V50611",
+        "INCIDENT_NUMBER_LABEL": "V50611",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V50611",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-V30609",
+      "geometry": {
+        "bbox": [
+          -123.126867,
+          50.04295,
+          -123.126867,
+          50.04295
+        ],
+        "type": "Point",
+        "coordinates": [
+          -123.126867,
+          50.04295
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "V30609",
+        "INCIDENT_NAME": "V30609",
+        "INCIDENT_NUMBER_LABEL": "V30609",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Under Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V30609",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "bcws-incident-C40603",
       "geometry": {
         "bbox": [
@@ -115,29 +171,29 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-C10605",
+      "id": "bcws-incident-V50592",
       "geometry": {
         "bbox": [
-          -122.511283,
-          52.605967,
-          -122.511283,
-          52.605967
+          -123.848083,
+          49.517333,
+          -123.848083,
+          49.517333
         ],
         "type": "Point",
         "coordinates": [
-          -122.511283,
-          52.605967
+          -123.848083,
+          49.517333
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "C10605",
-        "INCIDENT_NAME": "C10605",
-        "INCIDENT_NUMBER_LABEL": "C10605",
+        "FIRE_NUMBER": "V50592",
+        "INCIDENT_NAME": "Crowston Lake",
+        "INCIDENT_NUMBER_LABEL": "V50592",
         "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Under Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C10605",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V50592",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -228,8 +284,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 8,
-    "generated_at_utc": "2026-06-20T20:41:44+00:00",
+    "incident_point_count": 10,
+    "generated_at_utc": "2026-06-20T23:36:15+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
