@@ -31,34 +31,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-V90624",
-      "geometry": {
-        "bbox": [
-          -127.105333,
-          50.562167,
-          -127.105333,
-          50.562167
-        ],
-        "type": "Point",
-        "coordinates": [
-          -127.105333,
-          50.562167
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "V90624",
-        "INCIDENT_NAME": "V90624",
-        "INCIDENT_NUMBER_LABEL": "V90624",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V90624",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-G90400",
       "geometry": {
         "bbox": [
@@ -87,34 +59,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-K40620",
-      "geometry": {
-        "bbox": [
-          -119.088283,
-          51.065967,
-          -119.088283,
-          51.065967
-        ],
-        "type": "Point",
-        "coordinates": [
-          -119.088283,
-          51.065967
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "K40620",
-        "INCIDENT_NAME": "K40620",
-        "INCIDENT_NUMBER_LABEL": "K40620",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K40620",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-K50608",
       "geometry": {
         "bbox": [
@@ -138,6 +82,34 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K50608",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-V90624",
+      "geometry": {
+        "bbox": [
+          -127.105533,
+          50.56295,
+          -127.105533,
+          50.56295
+        ],
+        "type": "Point",
+        "coordinates": [
+          -127.105533,
+          50.56295
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "V90624",
+        "INCIDENT_NAME": "V90624",
+        "INCIDENT_NUMBER_LABEL": "V90624",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V90624",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -222,6 +194,34 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G40613",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-K40620",
+      "geometry": {
+        "bbox": [
+          -119.088283,
+          51.065967,
+          -119.088283,
+          51.065967
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.088283,
+          51.065967
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K40620",
+        "INCIDENT_NAME": "K40620",
+        "INCIDENT_NUMBER_LABEL": "K40620",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Under Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K40620",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -313,7 +313,7 @@
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_point_count": 11,
-    "generated_at_utc": "2026-06-22T13:06:22+00:00",
+    "generated_at_utc": "2026-06-22T17:50:22+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
