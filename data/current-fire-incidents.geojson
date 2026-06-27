@@ -199,6 +199,34 @@
     },
     {
       "type": "Feature",
+      "id": "bcws-incident-K40710",
+      "geometry": {
+        "bbox": [
+          -119.185366,
+          50.577667,
+          -119.185366,
+          50.577667
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.185366,
+          50.577667
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K40710",
+        "INCIDENT_NAME": "K40710",
+        "INCIDENT_NUMBER_LABEL": "K40710",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Under Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K40710",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "bcws-incident-G80488",
       "geometry": {
         "bbox": [
@@ -284,8 +312,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 10,
-    "generated_at_utc": "2026-06-27T05:03:55+00:00",
+    "incident_point_count": 11,
+    "generated_at_utc": "2026-06-27T09:35:01+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
