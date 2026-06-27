@@ -199,62 +199,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-G10693",
-      "geometry": {
-        "bbox": [
-          -122.964967,
-          54.986417,
-          -122.964967,
-          54.986417
-        ],
-        "type": "Point",
-        "coordinates": [
-          -122.964967,
-          54.986417
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "G10693",
-        "INCIDENT_NAME": "G10693",
-        "INCIDENT_NUMBER_LABEL": "G10693",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Under Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G10693",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-G90705",
-      "geometry": {
-        "bbox": [
-          -123.0645,
-          58.785617,
-          -123.0645,
-          58.785617
-        ],
-        "type": "Point",
-        "coordinates": [
-          -123.0645,
-          58.785617
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "G90705",
-        "INCIDENT_NAME": "G90705",
-        "INCIDENT_NUMBER_LABEL": "G90705",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Under Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G90705",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-C20653",
       "geometry": {
         "bbox": [
@@ -284,8 +228,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 10,
-    "generated_at_utc": "2026-06-27T17:31:04+00:00",
+    "incident_point_count": 8,
+    "generated_at_utc": "2026-06-27T20:20:06+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
