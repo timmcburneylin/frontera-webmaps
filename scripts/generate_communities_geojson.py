@@ -1,4 +1,4 @@
-"""Generate Leaflet-ready community points from the graph manifest and CSD polygons.
+"""Generate Leaflet-ready WUI community points from the top-100 workbook.
 
 This script intentionally uses only the Python standard library so the static
 webmap can be maintained without installing GDAL, geopandas, or pyproj.
@@ -11,12 +11,17 @@ import json
 import math
 import re
 import struct
+import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
 DEFAULT_CSD_PREFIX = Path(r"C:\Users\Teej\Downloads\lcsd000b21a_e\lcsd000b21a_e")
-DEFAULT_MANIFEST = Path("data/graph-manifest.json")
+DEFAULT_WUI_WORKBOOK = Path(r"C:\Users\Teej\Downloads\wuis_top100.xlsx")
+DEFAULT_GEOCODED_POINTS = Path("data/wui-geocoded-points.json")
+DEFAULT_GRAPH_DIR = Path("graphs")
 DEFAULT_OUTPUT = Path("data/communities.geojson")
+XLSX_NS = {"a": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
 
 # NAD83 / Statistics Canada Lambert parameters from lcsd000b21a_e.prj.
 SEMI_MAJOR_AXIS = 6378137.0
@@ -31,6 +36,90 @@ FALSE_NORTHING = 3000000
 
 def normalize_name(value: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", value.lower()).strip()
+
+
+def slugify(value: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", value.lower()).strip("-")
+
+
+def clean_wui_display_name(value: str) -> str:
+    display_aliases = {
+        "Queen Charlotte, Village Of": "Village of Queen Charlotte",
+        "Hudson'S Hope": "Hudson's Hope",
+        "Hudson’s Hope": "Hudson's Hope",
+    }
+    if value in display_aliases:
+        return display_aliases[value]
+
+    return re.sub(r"_\d+$", "", value)
+
+
+def coordinate_lookup_name(value: str) -> str:
+    coordinate_aliases = {
+        "100 Mile House": "One Hundred Mile House",
+        "Queen Charlotte, Village Of": "Queen Charlotte",
+        "Village of Queen Charlotte": "Queen Charlotte",
+        "Sun Peaks": "Sun Peaks Mountain",
+        "Hudson'S Hope": "Hudson's Hope",
+        "Hudson’s Hope": "Hudson's Hope",
+    }
+    cleaned = re.sub(r"_\d+$", "", value)
+    return coordinate_aliases.get(value, coordinate_aliases.get(cleaned, cleaned))
+
+
+def xlsx_col_index(cell_reference: str) -> int:
+    letters = re.match(r"[A-Z]+", cell_reference).group(0)
+    index = 0
+    for letter in letters:
+        index = index * 26 + ord(letter) - 64
+
+    return index - 1
+
+
+def read_wui_workbook(path: Path) -> list[dict[str, str | int | float | list[str]]]:
+    with zipfile.ZipFile(path) as workbook:
+        shared_strings = []
+        shared_root = ET.fromstring(workbook.read("xl/sharedStrings.xml"))
+        for item in shared_root.findall("a:si", XLSX_NS):
+            shared_strings.append("".join(text.text or "" for text in item.findall(".//a:t", XLSX_NS)))
+
+        sheet_root = ET.fromstring(workbook.read("xl/worksheets/sheet1.xml"))
+        rows = []
+        for row in sheet_root.findall(".//a:sheetData/a:row", XLSX_NS):
+            values = []
+            for cell in row.findall("a:c", XLSX_NS):
+                index = xlsx_col_index(cell.attrib["r"])
+                while len(values) <= index:
+                    values.append(None)
+
+                value_node = cell.find("a:v", XLSX_NS)
+                value = None if value_node is None else value_node.text
+                if cell.attrib.get("t") == "s" and value is not None:
+                    value = shared_strings[int(value)]
+
+                values[index] = value
+            rows.append(values)
+
+    header = rows[0]
+    records = []
+    for row in rows[1:]:
+        record = dict(zip(header, row + [None] * (len(header) - len(row))))
+        if not record.get("WUI_POLYGON_NAME") or not record.get("POPULATION"):
+            continue
+
+        record["population"] = int(round(float(record["POPULATION"])))
+        record["places"] = [
+            place.strip()
+            for place in str(record.get("COMMUNITIES") or "").split(",")
+            if place.strip()
+        ]
+        records.append(record)
+
+    records.sort(key=lambda item: int(item["population"]), reverse=True)
+    for index, record in enumerate(records, start=1):
+        record["population_rank"] = index
+
+    return records
 
 
 def read_dbf(path: Path) -> list[dict[str, str | int]]:
@@ -166,62 +255,96 @@ def inverse_statscan_lambert(x: float, y: float) -> tuple[float, float]:
     return math.degrees(longitude), math.degrees(latitude)
 
 
-def match_csd_record(community: dict, by_code: dict[str, dict], by_name: dict[str, list[dict]]) -> dict:
-    source_code = community.get("source_census_geo_code")
-    if source_code and source_code in by_code:
-        return by_code[source_code]
-
-    matches = by_name.get(normalize_name(community["name"]), [])
+def match_csd_record(wui_name: str, by_name: dict[str, list[dict]]) -> dict | None:
+    matches = by_name.get(normalize_name(coordinate_lookup_name(wui_name)), [])
     if len(matches) == 1:
         return matches[0]
 
     if matches:
         candidates = ", ".join(f"{row['CSDNAME']} ({row['CSDUID']})" for row in matches)
-        raise ValueError(f"Ambiguous Census subdivision match for {community['name']}: {candidates}")
+        raise ValueError(f"Ambiguous Census subdivision match for {wui_name}: {candidates}")
 
-    raise ValueError(f"No Census subdivision match for {community['name']}")
+    return None
 
 
-def build_geojson(csd_prefix: Path, manifest_path: Path) -> dict:
-    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+def graph_for_slug(graph_dir: Path, slug: str) -> str | None:
+    graph_path = graph_dir / f"{slug}.png"
+    if graph_path.exists():
+        return graph_path.as_posix()
+
+    return None
+
+
+def build_geojson(
+    csd_prefix: Path,
+    wui_workbook_path: Path,
+    geocoded_points_path: Path,
+    graph_dir: Path,
+) -> dict:
+    wui_records = read_wui_workbook(wui_workbook_path)
+    geocoded_points = json.loads(geocoded_points_path.read_text(encoding="utf-8"))
     rows = read_dbf(csd_prefix.with_suffix(".dbf"))
     shx_offsets = read_shx_offsets(csd_prefix.with_suffix(".shx"), len(rows))
 
-    by_code = {str(row["CSDUID"]): row for row in rows}
     by_name: dict[str, list[dict]] = {}
     for row in rows:
         if row.get("PRUID") == "59":
             by_name.setdefault(normalize_name(str(row["CSDNAME"])), []).append(row)
 
     features = []
-    for community in manifest["communities"]:
-        csd_record = match_csd_record(community, by_code, by_name)
-        x, y = polygon_centroid(csd_prefix.with_suffix(".shp"), shx_offsets, int(csd_record["_index"]))
-        longitude, latitude = inverse_statscan_lambert(x, y)
+    for record in wui_records:
+        raw_wui_name = str(record["WUI_POLYGON_NAME"])
+        display_name = clean_wui_display_name(raw_wui_name)
+        slug = slugify(display_name)
+        csd_record = match_csd_record(raw_wui_name, by_name)
+        coordinate_source = ""
+        coordinate_metadata = {}
+
+        if csd_record:
+            x, y = polygon_centroid(csd_prefix.with_suffix(".shp"), shx_offsets, int(csd_record["_index"]))
+            longitude, latitude = inverse_statscan_lambert(x, y)
+            coordinate_source = "2021 Statistics Canada Census subdivision polygon centroid"
+            coordinate_metadata = {
+                "census_subdivision_id": csd_record["CSDUID"],
+                "census_subdivision_name": csd_record["CSDNAME"],
+                "census_subdivision_type": csd_record["CSDTYPE"],
+                "land_area_sq_km": float(csd_record["LANDAREA"]),
+            }
+        else:
+            geocoded_point = geocoded_points.get(raw_wui_name)
+            if not geocoded_point:
+                raise ValueError(f"No coordinate source for {raw_wui_name}")
+
+            longitude, latitude = geocoded_point["coordinates"]
+            coordinate_source = geocoded_point.get("source", "BC Geocoder API")
+            coordinate_metadata = {
+                "geocoder_query": geocoded_point.get("query"),
+                "geocoder_full_address": geocoded_point.get("full_address"),
+                "geocoder_match_precision": geocoded_point.get("match_precision"),
+                "geocoder_score": geocoded_point.get("score"),
+            }
+
+        graph = graph_for_slug(graph_dir, slug)
 
         properties = {
-            "name": community["name"],
-            "slug": community["slug"],
-            "population": community.get("population"),
-            "population_rank": community.get("population_rank"),
-            "population_source": community.get("population_source"),
-            "matched_population_name": community.get("matched_population_name"),
-            "graph": community["graph"],
-            "census_subdivision_id": csd_record["CSDUID"],
-            "census_subdivision_name": csd_record["CSDNAME"],
-            "census_subdivision_type": csd_record["CSDTYPE"],
-            "land_area_sq_km": float(csd_record["LANDAREA"]),
-            "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+            "name": display_name,
+            "slug": slug,
+            "wui_name": raw_wui_name,
+            "wui_population": record["population"],
+            "wui_population_rank": record["population_rank"],
+            "wui_places": record["places"],
+            "population": record["population"],
+            "population_rank": record["population_rank"],
+            "population_source": record.get("SOURCE") or "2021 census",
+            "graph": graph,
+            "has_graph": graph is not None,
+            "mean_bp": float(record["mean_bp"]) if record.get("mean_bp") is not None else None,
+            "median_bp": float(record["median_bp"]) if record.get("median_bp") is not None else None,
+            "ecodivision_name": record.get("ECODIVISION_NAME"),
+            "natural_disturbance_type_code": record.get("NATURAL_DISTURBANCE_TYPE_CODE"),
+            "coordinate_source": coordinate_source,
+            **coordinate_metadata,
         }
-
-        if community.get("source_census_dguid"):
-            properties["source_census_dguid"] = community["source_census_dguid"]
-        if community.get("source_census_geo_code"):
-            properties["source_census_geo_code"] = community["source_census_geo_code"]
-        if community.get("source_csv_city_id") is not None:
-            properties["source_csv_city_id"] = community["source_csv_city_id"]
-        if community.get("data_quality_flag"):
-            properties["data_quality_flag"] = community["data_quality_flag"]
 
         features.append(
             {
@@ -238,11 +361,15 @@ def build_geojson(csd_prefix: Path, manifest_path: Path) -> dict:
         "type": "FeatureCollection",
         "metadata": {
             "generated_from": {
-                "graph_manifest": str(manifest_path).replace("\\", "/"),
+                "wui_workbook": str(wui_workbook_path).replace("\\", "/"),
+                "geocoded_points": str(geocoded_points_path).replace("\\", "/"),
+                "graph_dir": str(graph_dir).replace("\\", "/"),
                 "census_subdivision_shapefile": str(csd_prefix.with_suffix(".shp")).replace("\\", "/"),
             },
             "feature_count": len(features),
-            "coordinate_reference_system": "WGS84 lon/lat, transformed from NAD83 Statistics Canada Lambert",
+            "graph_count": sum(1 for feature in features if feature["properties"]["has_graph"]),
+            "population_source": "wuis_top100.xlsx; WUI population is the total population of listed populated places within each WUI.",
+            "coordinate_reference_system": "WGS84 lon/lat",
         },
         "features": features,
     }
@@ -251,11 +378,18 @@ def build_geojson(csd_prefix: Path, manifest_path: Path) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--csd-prefix", type=Path, default=DEFAULT_CSD_PREFIX)
-    parser.add_argument("--manifest", type=Path, default=DEFAULT_MANIFEST)
+    parser.add_argument("--wui-workbook", type=Path, default=DEFAULT_WUI_WORKBOOK)
+    parser.add_argument("--geocoded-points", type=Path, default=DEFAULT_GEOCODED_POINTS)
+    parser.add_argument("--graph-dir", type=Path, default=DEFAULT_GRAPH_DIR)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     args = parser.parse_args()
 
-    geojson = build_geojson(args.csd_prefix, args.manifest)
+    geojson = build_geojson(
+        args.csd_prefix,
+        args.wui_workbook,
+        args.geocoded_points,
+        args.graph_dir,
+    )
     args.output.write_text(json.dumps(geojson, indent=2) + "\n", encoding="utf-8")
     print(f"Wrote {len(geojson['features'])} communities to {args.output}")
 

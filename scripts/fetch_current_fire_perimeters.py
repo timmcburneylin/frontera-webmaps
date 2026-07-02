@@ -10,6 +10,8 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
+import time
+import urllib.error
 import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
@@ -32,6 +34,9 @@ STAGE_OF_CONTROL = {
 # observed include Out, Under Control, Being Held, Out of Control, and
 # sometimes blank.
 EXCLUDED_FIRE_STATUS = "Out"
+FETCH_ATTEMPTS = 5
+FETCH_TIMEOUT_SECONDS = 45
+RETRY_STATUS_CODES = {429, 500, 502, 503, 504}
 
 
 def build_wfs_url() -> str:
@@ -47,19 +52,43 @@ def build_wfs_url() -> str:
     return f"{WFS_ENDPOINT}?{urllib.parse.urlencode(params)}"
 
 
-def fetch_geojson(url: str) -> dict:
+def fetch_bytes(url: str, attempts: int = FETCH_ATTEMPTS, timeout: int = FETCH_TIMEOUT_SECONDS) -> bytes:
     request = urllib.request.Request(
         url,
         headers={
             "User-Agent": "frontera-webmaps/1.0 (+https://github.com/timmcburneylin/frontera-webmaps)"
         },
     )
-    with urllib.request.urlopen(request, timeout=60) as response:
-        body = response.read()
-        if response.headers.get("Content-Encoding") == "gzip" or body.startswith(b"\x1f\x8b"):
-            body = gzip.decompress(body)
 
-        return json.loads(body.decode("utf-8"))
+    for attempt in range(1, attempts + 1):
+        try:
+            print(f"Fetching {url} (attempt {attempt}/{attempts})", flush=True)
+            with urllib.request.urlopen(request, timeout=timeout) as response:
+                return response.read()
+        except urllib.error.HTTPError as error:
+            should_retry = error.code in RETRY_STATUS_CODES and attempt < attempts
+            print(f"HTTP {error.code} fetching {url}", flush=True)
+            if not should_retry:
+                raise
+        except (urllib.error.URLError, TimeoutError, OSError) as error:
+            should_retry = attempt < attempts
+            print(f"Error fetching {url}: {error}", flush=True)
+            if not should_retry:
+                raise
+
+        sleep_seconds = min(60, 2 ** (attempt - 1) * 5)
+        print(f"Retrying in {sleep_seconds} seconds", flush=True)
+        time.sleep(sleep_seconds)
+
+    raise RuntimeError(f"Failed to fetch {url} after {attempts} attempts")
+
+
+def fetch_geojson(url: str) -> dict:
+    body = fetch_bytes(url)
+    if body.startswith(b"\x1f\x8b"):
+        body = gzip.decompress(body)
+
+    return json.loads(body.decode("utf-8"))
 
 
 def fetch_active_incidents() -> dict[str, dict]:

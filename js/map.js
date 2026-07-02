@@ -177,7 +177,7 @@ function communityMarkerSize(population) {
 }
 
 function communityMarkerForFeature(feature, latlng) {
-  const size = communityMarkerSize(feature.properties.population);
+  const size = communityMarkerSize(feature.properties.wui_population || feature.properties.population);
 
   return L.marker(latlng, {
     pane: "communityPane",
@@ -499,22 +499,38 @@ function formatCommunity(feature) {
   const {
     name,
     slug,
-    population,
-    population_rank: populationRank,
-    graph
+    wui_name: wuiName,
+    wui_population: wuiPopulation,
+    wui_population_rank: wuiPopulationRank,
+    wui_places: wuiPlaces = [],
+    graph,
+    has_graph: hasGraph
   } = feature.properties;
 
   return {
     name,
     slug,
+    wuiName,
     graph,
+    hasGraph: Boolean(hasGraph && graph),
+    places: wuiPlaces,
+    placesLabel: wuiPlaces.length ? wuiPlaces.join(", ") : "Not listed",
     populationLabel:
-      typeof population === "number" ? population.toLocaleString() : "Needs lookup",
-    rankLabel: populationRank ? `#${populationRank}` : "Unavailable"
+      typeof wuiPopulation === "number" ? wuiPopulation.toLocaleString() : "Needs lookup",
+    rankLabel: wuiPopulationRank ? `#${wuiPopulationRank} of 100` : "Unavailable"
   };
 }
 
 function graphImageHtml(details, className = "") {
+  if (!details.hasGraph) {
+    return `
+      <div class="graph-missing">
+        <strong>Graph pending</strong>
+        <span>No wildfire risk graph PNG has been added for this WUI yet.</span>
+      </div>
+    `;
+  }
+
   return `
     <div class="graph-frame ${className}">
       <img src="${details.graph}" alt="Wildfire risk graph for ${details.name}" />
@@ -528,8 +544,8 @@ function popupHtml(feature) {
   return `
     <div class="community-popup">
       <strong>${details.name}</strong>
-      <span>Population ${details.populationLabel}</span><br />
-      <span>Population rank ${details.rankLabel}</span>
+      <span>WUI population ${details.populationLabel}</span><br />
+      <span>WUI rank ${details.rankLabel}</span>
     </div>
   `;
 }
@@ -539,13 +555,17 @@ function renderSidebar(feature) {
   sidebar.innerHTML = `
     <article class="community-detail">
       <h1>${details.name}</h1>
-      <p>Wildfire risk graph for this community.</p>
+      <p>Wildfire risk information for this WUI community.</p>
       <div class="detail-meta" aria-label="Community metadata">
-        <span>Population: ${details.populationLabel}</span>
-        <span>Population rank: ${details.rankLabel}</span>
+        <span>WUI population: ${details.populationLabel}</span>
+        <span>WUI rank: ${details.rankLabel}</span>
       </div>
+      <section class="wui-places" aria-label="Populated places included in this WUI">
+        <h2>Included places</h2>
+        <p>${details.placesLabel}</p>
+      </section>
       ${graphImageHtml(details, "is-clickable")}
-      <button class="sidebar-action" type="button" data-open-modal="${details.slug}">View larger</button>
+      ${details.hasGraph ? `<button class="sidebar-action" type="button" data-open-modal="${details.slug}">View larger</button>` : ""}
     </article>
   `;
 }
@@ -558,7 +578,7 @@ function openGraphModal(feature) {
       <div class="graph-card-header">
         <div>
           <h1 id="graph-modal-title">${details.name}</h1>
-          <p>Population ${details.populationLabel} | Rank ${details.rankLabel}</p>
+          <p>WUI population ${details.populationLabel} | WUI rank ${details.rankLabel}</p>
         </div>
       </div>
       ${graphImageHtml(details)}

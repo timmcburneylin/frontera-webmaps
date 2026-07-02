@@ -52,13 +52,25 @@ the extension:
 python scripts\generate_communities_geojson.py --csd-prefix C:\path\to\lcsd000b21a_e
 ```
 
-## Graph And Population Data
+## WUI Population And Graph Data
 
-Community graph PNGs are stored in `graphs/` with slug filenames. The original
-top-60 population CSV is copied to `data/top_60_cities_by_population_with_wui.csv`.
-The generated `data/graph-manifest.json` records which graph files already match
-that CSV and which populations were filled from the Statistics Canada Census
-profile CSV.
+Community graph PNGs are stored in `graphs/` with slug filenames. The
+source-of-truth population table is `C:\Users\Teej\Downloads\wuis_top100.xlsx`,
+which ranks the 100 most populous WUI communities by 2021 Census population.
+Some WUI populations aggregate multiple populated places, such as Vancouver or
+Chilliwack, so the sidebar labels these as `WUI population` rather than city
+population.
+
+Regenerate `data/communities.geojson` with:
+
+```powershell
+python scripts\generate_communities_geojson.py
+```
+
+The generator uses the 2021 Statistics Canada Census subdivision shapefile for
+most map points. WUI titles that are localities rather than Census subdivisions
+are cached in `data/wui-geocoded-points.json` from the BC Geocoder API. The map
+has graph PNGs for all 100 WUI communities.
 
 ## Current Wildfires
 

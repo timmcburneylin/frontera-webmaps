@@ -1,0 +1,182 @@
+{
+  "Appledale": {
+    "query": "Appledale",
+    "coordinates": [
+      -117.5344444,
+      49.6497223
+    ],
+    "full_address": "Appledale, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Cherryville_145": {
+    "query": "Cherryville",
+    "coordinates": [
+      -118.6177777,
+      50.2413889
+    ],
+    "full_address": "Cherryville, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Edgewater": {
+    "query": "Edgewater",
+    "coordinates": [
+      -116.1355556,
+      50.6994444
+    ],
+    "full_address": "Edgewater, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "New Aiyansh": {
+    "query": "New Aiyansh",
+    "coordinates": [
+      -129.0808333,
+      55.2038889
+    ],
+    "full_address": "New Aiyansh in Gitlaxt'aamiks, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Marktosis": {
+    "query": "Marktosis",
+    "coordinates": [
+      -126.0569444,
+      49.2769445
+    ],
+    "full_address": "Marktosis in Ahousaht, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Fairmont Hot Springs": {
+    "query": "Fairmont Hot Springs",
+    "coordinates": [
+      -115.8566667,
+      50.3358334
+    ],
+    "full_address": "Fairmont Hot Springs, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Recreational Community",
+    "source": "BC Geocoder API"
+  },
+  "Falkland": {
+    "query": "Falkland",
+    "coordinates": [
+      -119.5580556,
+      50.5011111
+    ],
+    "full_address": "Falkland, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Cobble Hill": {
+    "query": "Cobble Hill",
+    "coordinates": [
+      -123.6033334,
+      48.6861111
+    ],
+    "full_address": "Cobble Hill, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Nicola": {
+    "query": "Nicola",
+    "coordinates": [
+      -120.6655556,
+      50.1636112
+    ],
+    "full_address": "Nicola in Upper Nicola, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Big White": {
+    "query": "Big White",
+    "coordinates": [
+      -118.9277777,
+      49.7211111
+    ],
+    "full_address": "Big White, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Recreational Community",
+    "source": "BC Geocoder API"
+  },
+  "Garibaldi Estates": {
+    "query": "Garibaldi Estates",
+    "coordinates": [
+      -123.1355556,
+      49.7405555
+    ],
+    "full_address": "Garibaldi Estates in Squamish, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Sorrento": {
+    "query": "Sorrento",
+    "coordinates": [
+      -119.4666667,
+      50.8766667
+    ],
+    "full_address": "Sorrento, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Christina Lake": {
+    "query": "Christina Lake",
+    "coordinates": [
+      -118.2094444,
+      49.0427777
+    ],
+    "full_address": "Christina Lake, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Bella Coola": {
+    "query": "Bella Coola",
+    "coordinates": [
+      -126.7533334,
+      52.3727778
+    ],
+    "full_address": "Bella Coola, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Fort Nelson": {
+    "query": "Fort Nelson",
+    "coordinates": [
+      -122.6969444,
+      58.8052778
+    ],
+    "full_address": "Fort Nelson, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  }
+}

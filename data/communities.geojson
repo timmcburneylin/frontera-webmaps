@@ -2,1094 +2,63 @@
   "type": "FeatureCollection",
   "metadata": {
     "generated_from": {
-      "graph_manifest": "data/graph-manifest.json",
+      "wui_workbook": "C:/Users/Teej/Downloads/wuis_top100.xlsx",
+      "geocoded_points": "data/wui-geocoded-points.json",
+      "graph_dir": "graphs",
       "census_subdivision_shapefile": "C:/Users/Teej/Downloads/lcsd000b21a_e/lcsd000b21a_e.shp"
     },
-    "feature_count": 46,
-    "coordinate_reference_system": "WGS84 lon/lat, transformed from NAD83 Statistics Canada Lambert"
+    "feature_count": 100,
+    "graph_count": 100,
+    "population_source": "wuis_top100.xlsx; WUI population is the total population of listed populated places within each WUI.",
+    "coordinate_reference_system": "WGS84 lon/lat"
   },
   "features": [
     {
       "type": "Feature",
       "properties": {
-        "name": "Armstrong",
-        "slug": "armstrong",
-        "population": 5323,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Armstrong, City (CY)",
-        "graph": "graphs/armstrong.png",
-        "census_subdivision_id": "5937028",
-        "census_subdivision_name": "Armstrong",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 5.2185,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055937028",
-        "source_census_geo_code": "5937028",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.19785,
-          50.444851
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Cache Creek",
-        "slug": "cache-creek",
-        "population": 969,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Cache Creek, Village (VL)",
-        "graph": "graphs/cache-creek.png",
-        "census_subdivision_id": "5933024",
-        "census_subdivision_name": "Cache Creek",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 10.3976,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055933024",
-        "source_census_geo_code": "5933024",
-        "data_quality_flag": "00020"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.319038,
-          50.797918
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Campbell River",
-        "slug": "campbell-river",
-        "population": 35519,
-        "population_rank": 25,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Campbell River",
-        "graph": "graphs/campbell-river.png",
-        "census_subdivision_id": "5924034",
-        "census_subdivision_name": "Campbell River",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 144.3782,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 74
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -125.297416,
-          50.00165
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Castlegar",
-        "slug": "castlegar",
-        "population": 8338,
-        "population_rank": 60,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Castlegar",
-        "graph": "graphs/castlegar.png",
-        "census_subdivision_id": "5903045",
-        "census_subdivision_name": "Castlegar",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 19.8709,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 43
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -117.671457,
-          49.300935
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Chase",
-        "slug": "chase",
-        "population": 2399,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Chase, Village (VL)",
-        "graph": "graphs/chase.png",
-        "census_subdivision_id": "5933054",
-        "census_subdivision_name": "Chase",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 3.7528,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055933054",
-        "source_census_geo_code": "5933054",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.689354,
-          50.843815
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Chilliwack",
-        "slug": "chilliwack",
-        "population": 93203,
-        "population_rank": 12,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Chilliwack",
-        "graph": "graphs/chilliwack.png",
-        "census_subdivision_id": "5909020",
-        "census_subdivision_name": "Chilliwack",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 261.3431,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 166
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.929499,
-          49.142623
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Clearwater",
-        "slug": "clearwater",
-        "population": 2388,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Clearwater, District municipality (DM)",
-        "graph": "graphs/clearwater.png",
-        "census_subdivision_id": "5933067",
-        "census_subdivision_name": "Clearwater",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 55.6508,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055933067",
-        "source_census_geo_code": "5933067",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -120.009103,
-          51.644334
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Courtenay",
-        "slug": "courtenay",
-        "population": 28420,
-        "population_rank": 28,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Courtenay",
-        "graph": "graphs/courtenay.png",
-        "census_subdivision_id": "5926010",
-        "census_subdivision_name": "Courtenay",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 32.4176,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 73
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -124.977003,
-          49.697925
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Duncan",
-        "slug": "duncan",
-        "population": 5047,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Duncan, City (CY)",
-        "graph": "graphs/duncan.png",
-        "census_subdivision_id": "5919012",
-        "census_subdivision_name": "Duncan",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 2.0646,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055919012",
-        "source_census_geo_code": "5919012",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.702148,
-          48.779396
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Golden",
-        "slug": "golden",
-        "population": 3986,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Golden, Town (T)",
-        "graph": "graphs/golden.png",
-        "census_subdivision_id": "5939007",
-        "census_subdivision_name": "Golden",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 11.3255,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055939007",
-        "source_census_geo_code": "5939007",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -116.963204,
-          51.298382
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Grand Forks",
-        "slug": "grand-forks",
-        "population": 4112,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Grand Forks, City (CY)",
-        "graph": "graphs/grand-forks.png",
-        "census_subdivision_id": "5905032",
-        "census_subdivision_name": "Grand Forks",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 10.3741,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055905032",
-        "source_census_geo_code": "5905032",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -118.446657,
-          49.030661
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Hope",
-        "slug": "hope",
-        "population": 6686,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Hope, District municipality (DM)",
-        "graph": "graphs/hope.png",
-        "census_subdivision_id": "5909009",
-        "census_subdivision_name": "Hope",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 40.8706,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055909009",
-        "source_census_geo_code": "5909009",
-        "data_quality_flag": "00010"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -121.454672,
-          49.379946
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Houston",
-        "slug": "houston",
-        "population": 3052,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Houston, District municipality (DM)",
-        "graph": "graphs/houston.png",
-        "census_subdivision_id": "5951034",
-        "census_subdivision_name": "Houston",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 72.8761,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055951034",
-        "source_census_geo_code": "5951034",
-        "data_quality_flag": "00010"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -126.666479,
-          54.396918
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Kamloops",
-        "slug": "kamloops",
-        "population": 97902,
-        "population_rank": 11,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Kamloops",
-        "graph": "graphs/kamloops.png",
-        "census_subdivision_id": "5933042",
-        "census_subdivision_name": "Kamloops",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 297.9262,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 36
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -120.327649,
-          50.694169
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Kelowna",
-        "slug": "kelowna",
-        "population": 144576,
-        "population_rank": 7,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Kelowna",
-        "graph": "graphs/kelowna.png",
-        "census_subdivision_id": "5935010",
-        "census_subdivision_name": "Kelowna",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 211.8491,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 38
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.440254,
-          49.88497
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Kitimat",
-        "slug": "kitimat",
-        "population": 8236,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Kitimat, District municipality (DM)",
-        "graph": "graphs/kitimat.png",
-        "census_subdivision_id": "5949005",
-        "census_subdivision_name": "Kitimat",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 239.28,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055949005",
-        "source_census_geo_code": "5949005",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -128.714341,
-          53.989093
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Lake Cowichan",
-        "slug": "lake-cowichan",
-        "population": 3325,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Lake Cowichan, Town (T)",
-        "graph": "graphs/lake-cowichan.png",
-        "census_subdivision_id": "5919016",
-        "census_subdivision_name": "Lake Cowichan",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 8.2412,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055919016",
-        "source_census_geo_code": "5919016",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -124.060453,
-          48.823376
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Langford",
-        "slug": "langford",
-        "population": 46584,
-        "population_rank": 19,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Langford",
-        "graph": "graphs/langford.png",
-        "census_subdivision_id": "5917044",
-        "census_subdivision_name": "Langford",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 41.4315,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 125
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.529888,
-          48.449804
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Merritt",
-        "slug": "merritt",
-        "population": 7051,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Merritt, City (CY)",
-        "graph": "graphs/merritt.png",
-        "census_subdivision_id": "5933006",
-        "census_subdivision_name": "Merritt",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 26.043,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055933006",
-        "source_census_geo_code": "5933006",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -120.775262,
-          50.112844
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Nanaimo",
-        "slug": "nanaimo",
-        "population": 99863,
-        "population_rank": 10,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Nanaimo",
-        "graph": "graphs/nanaimo.png",
-        "census_subdivision_id": "5921007",
-        "census_subdivision_name": "Nanaimo",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 90.4488,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 67
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.967275,
-          49.180132
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Nelson",
-        "slug": "nelson",
-        "population": 11106,
-        "population_rank": 54,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Nelson",
-        "graph": "graphs/nelson.png",
-        "census_subdivision_id": "5903015",
-        "census_subdivision_name": "Nelson",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 11.9338,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 42
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -117.366432,
-          49.480206
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Oliver",
-        "slug": "oliver",
-        "population": 5094,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Oliver, Town (T)",
-        "graph": "graphs/oliver.png",
-        "census_subdivision_id": "5907014",
-        "census_subdivision_name": "Oliver",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 5.4899,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055907014",
-        "source_census_geo_code": "5907014",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.550015,
-          49.184443
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Parksville",
-        "slug": "parksville",
-        "population": 13642,
-        "population_rank": 45,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Parksville",
-        "graph": "graphs/parksville.png",
-        "census_subdivision_id": "5921018",
-        "census_subdivision_name": "Parksville",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 14.5205,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 66
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -124.30442,
-          49.317395
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Pemberton",
-        "slug": "pemberton",
-        "population": 3407,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Pemberton, Village (VL)",
-        "graph": "graphs/pemberton.png",
-        "census_subdivision_id": "5931012",
-        "census_subdivision_name": "Pemberton",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 61.3552,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055931012",
-        "source_census_geo_code": "5931012",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.872779,
-          50.315111
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Penticton",
-        "slug": "penticton",
-        "population": 36885,
-        "population_rank": 24,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Penticton",
-        "graph": "graphs/penticton.png",
-        "census_subdivision_id": "5907041",
-        "census_subdivision_name": "Penticton",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 43.0259,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 40
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.569709,
-          49.494722
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Port Alberni",
-        "slug": "port-alberni",
-        "population": 18259,
-        "population_rank": 36,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Port Alberni",
-        "graph": "graphs/port-alberni.png",
-        "census_subdivision_id": "5923008",
-        "census_subdivision_name": "Port Alberni",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 19.657,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 71
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -124.80209,
-          49.247551
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Port Hardy",
-        "slug": "port-hardy",
-        "population": 3902,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Port Hardy, District municipality (DM)",
-        "graph": "graphs/port-hardy.png",
-        "census_subdivision_id": "5943023",
-        "census_subdivision_name": "Port Hardy",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 38.5522,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055943023",
-        "source_census_geo_code": "5943023",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -127.441236,
-          50.694665
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Port McNeill",
-        "slug": "port-mcneill",
-        "population": 2356,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Port McNeill, Town (T)",
-        "graph": "graphs/port-mcneill.png",
-        "census_subdivision_id": "5943012",
-        "census_subdivision_name": "Port McNeill",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 13.7675,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055943012",
-        "source_census_geo_code": "5943012",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -127.121554,
-          50.588131
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Powell River",
-        "slug": "powell-river",
-        "population": 13943,
-        "population_rank": 44,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Powell River",
-        "graph": "graphs/powell-river.png",
-        "census_subdivision_id": "5927008",
-        "census_subdivision_name": "Powell River",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 28.905,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 72
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -124.533739,
-          49.861533
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Prince George",
-        "slug": "prince-george",
-        "population": 76708,
-        "population_rank": 16,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Prince George",
-        "graph": "graphs/prince-george.png",
-        "census_subdivision_id": "5953023",
-        "census_subdivision_name": "Prince George",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 316.7408,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 24
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.775726,
-          53.923807
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Prince Rupert",
-        "slug": "prince-rupert",
-        "population": 12300,
-        "population_rank": 48,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Prince Rupert",
-        "graph": "graphs/prince-rupert.png",
-        "census_subdivision_id": "5947012",
-        "census_subdivision_name": "Prince Rupert",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 66.0033,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 20
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -130.29712,
-          54.290093
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Princeton",
-        "slug": "princeton",
-        "population": 2894,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Princeton, Town (T)",
-        "graph": "graphs/princeton.png",
-        "census_subdivision_id": "5907024",
-        "census_subdivision_name": "Princeton",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 59.2806,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055907024",
-        "source_census_geo_code": "5907024",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -120.518009,
-          49.361058
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Quesnel",
-        "slug": "quesnel",
-        "population": 9889,
-        "population_rank": 57,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Quesnel",
-        "graph": "graphs/quesnel.png",
-        "census_subdivision_id": "5941013",
-        "census_subdivision_name": "Quesnel",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 35.3483,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 30
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -122.475693,
-          52.987692
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Salmon Arm",
-        "slug": "salmon-arm",
-        "population": 19432,
-        "population_rank": 33,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Salmon Arm DM",
-        "graph": "graphs/salmon-arm.png",
-        "census_subdivision_id": "5939032",
-        "census_subdivision_name": "Salmon Arm",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 155.1886,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 35
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -119.284638,
-          50.699673
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Sechelt",
-        "slug": "sechelt",
-        "population": 10847,
-        "population_rank": 56,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Sechelt",
-        "graph": "graphs/sechelt.png",
-        "census_subdivision_id": "5929011",
-        "census_subdivision_name": "Sechelt",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 39.018,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 87
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.761201,
-          49.481072
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Sidney",
-        "slug": "sidney",
-        "population": 12318,
-        "population_rank": 47,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Sidney",
-        "graph": "graphs/sidney.png",
-        "census_subdivision_id": "5917010",
-        "census_subdivision_name": "Sidney",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 5.1052,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 69
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.406996,
-          48.651916
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Smithers",
-        "slug": "smithers",
-        "population": 5378,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Smithers, Town (T)",
-        "graph": "graphs/smithers.png",
-        "census_subdivision_id": "5951043",
-        "census_subdivision_name": "Smithers",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 15.259,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055951043",
-        "source_census_geo_code": "5951043",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -127.164903,
-          54.786142
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Squamish",
-        "slug": "squamish",
-        "population": 23819,
-        "population_rank": 29,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Squamish",
-        "graph": "graphs/squamish.png",
-        "census_subdivision_id": "5931006",
-        "census_subdivision_name": "Squamish",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 104.7075,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 64
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -123.137346,
-          49.749254
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Terrace",
-        "slug": "terrace",
-        "population": 12017,
-        "population_rank": 51,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Terrace",
-        "graph": "graphs/terrace.png",
-        "census_subdivision_id": "5949011",
-        "census_subdivision_name": "Terrace",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 57.3268,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 19
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -128.591785,
-          54.478274
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Tofino",
-        "slug": "tofino",
-        "population": 2516,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Tofino, District municipality (DM)",
-        "graph": "graphs/tofino.png",
-        "census_subdivision_id": "5923025",
-        "census_subdivision_name": "Tofino",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 10.557,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055923025",
-        "source_census_geo_code": "5923025",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -125.885289,
-          49.1275
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
-        "name": "Trail",
-        "slug": "trail",
-        "population": 7920,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Trail, City (CY)",
-        "graph": "graphs/trail.png",
-        "census_subdivision_id": "5905014",
-        "census_subdivision_name": "Trail",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 34.9039,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055905014",
-        "source_census_geo_code": "5905014",
-        "data_quality_flag": "00000"
-      },
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -117.713172,
-          49.089523
-        ]
-      }
-    },
-    {
-      "type": "Feature",
-      "properties": {
         "name": "Vancouver",
         "slug": "vancouver",
-        "population": 662248,
+        "wui_name": "Vancouver",
+        "wui_population": 2613401,
+        "wui_population_rank": 1,
+        "wui_places": [
+          "Anmore",
+          "Belcarra",
+          "Bowen Island",
+          "Burnaby",
+          "Coquitlam",
+          "Delta",
+          "Langley (City)",
+          "Langley (District)",
+          "Lions Bay",
+          "Maple Ridge",
+          "New Westminster",
+          "North Vancouver (City)",
+          "North Vancouver (District)",
+          "Pitt Meadows",
+          "Port Coquitlam",
+          "Port Moody",
+          "Richmond",
+          "Surrey",
+          "Tsawwassen",
+          "Vancouver",
+          "West Vancouver",
+          "White Rock"
+        ],
+        "population": 2613401,
         "population_rank": 1,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Vancouver",
+        "population_source": "2021 census",
         "graph": "graphs/vancouver.png",
+        "has_graph": true,
+        "mean_bp": 0.000874851597473025,
+        "median_bp": 0.000596056602984487,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
         "census_subdivision_id": "5915022",
         "census_subdivision_name": "Vancouver",
         "census_subdivision_type": "CY",
-        "land_area_sq_km": 115.1756,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 63
+        "land_area_sq_km": 115.1756
       },
       "geometry": {
         "type": "Point",
@@ -1102,27 +71,37 @@
     {
       "type": "Feature",
       "properties": {
-        "name": "Vanderhoof",
-        "slug": "vanderhoof",
-        "population": 4346,
-        "population_rank": null,
-        "population_source": "Statistics Canada 2021 Census of Population",
-        "matched_population_name": "Vanderhoof, District municipality (DM)",
-        "graph": "graphs/vanderhoof.png",
-        "census_subdivision_id": "5951007",
-        "census_subdivision_name": "Vanderhoof",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 53.9276,
+        "name": "Chilliwack",
+        "slug": "chilliwack",
+        "wui_name": "Chilliwack",
+        "wui_population": 290151,
+        "wui_population_rank": 2,
+        "wui_places": [
+          "Abbotsford",
+          "Chilliwack",
+          "Harrison Hot Springs",
+          "Mission"
+        ],
+        "population": 290151,
+        "population_rank": 2,
+        "population_source": "2021 census",
+        "graph": "graphs/chilliwack.png",
+        "has_graph": true,
+        "mean_bp": 0.00101701868698001,
+        "median_bp": 0.000656651166731402,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
         "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_census_dguid": "2021A00055951007",
-        "source_census_geo_code": "5951007",
-        "data_quality_flag": "00000"
+        "census_subdivision_id": "5909020",
+        "census_subdivision_name": "Chilliwack",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 261.3431
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.025645,
-          54.015794
+          -121.929499,
+          49.142623
         ]
       }
     },
@@ -1131,17 +110,29 @@
       "properties": {
         "name": "Victoria",
         "slug": "victoria",
-        "population": 91867,
-        "population_rank": 13,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Victoria",
+        "wui_name": "Victoria",
+        "wui_population": 245125,
+        "wui_population_rank": 3,
+        "wui_places": [
+          "Esquimalt",
+          "Oak Bay",
+          "Saanich",
+          "Victoria"
+        ],
+        "population": 245125,
+        "population_rank": 3,
+        "population_source": "2021 census",
         "graph": "graphs/victoria.png",
+        "has_graph": true,
+        "mean_bp": 0.000662064994685352,
+        "median_bp": 0.000600153488609339,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
         "census_subdivision_id": "5917034",
         "census_subdivision_name": "Victoria",
         "census_subdivision_type": "CY",
-        "land_area_sq_km": 19.4539,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 70
+        "land_area_sq_km": 19.4539
       },
       "geometry": {
         "type": "Point",
@@ -1154,19 +145,698 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Kelowna",
+        "slug": "kelowna",
+        "wui_name": "Kelowna",
+        "wui_population": 166182,
+        "wui_population_rank": 4,
+        "wui_places": [
+          "Kelowna",
+          "Lake Country",
+          "Peachland"
+        ],
+        "population": 166182,
+        "population_rank": 4,
+        "population_source": "2021 census",
+        "graph": "graphs/kelowna.png",
+        "has_graph": true,
+        "mean_bp": 0.00301298522390425,
+        "median_bp": 0.0027487105065041,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5935010",
+        "census_subdivision_name": "Kelowna",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 211.8491
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.440254,
+          49.88497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nanaimo",
+        "slug": "nanaimo",
+        "wui_name": "Nanaimo",
+        "wui_population": 108853,
+        "wui_population_rank": 5,
+        "wui_places": [
+          "Ladysmith",
+          "Nanaimo"
+        ],
+        "population": 108853,
+        "population_rank": 5,
+        "population_source": "2021 census",
+        "graph": "graphs/nanaimo.png",
+        "has_graph": true,
+        "mean_bp": 0.000651958282105625,
+        "median_bp": 0.000574820397094117,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5921007",
+        "census_subdivision_name": "Nanaimo",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 90.4488
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.967275,
+          49.180132
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Langford",
+        "slug": "langford",
+        "wui_name": "Langford",
+        "wui_population": 99755,
+        "wui_population_rank": 6,
+        "wui_places": [
+          "Colwood",
+          "Highlands",
+          "Langford",
+          "Metchosin",
+          "Sooke",
+          "View Royal"
+        ],
+        "population": 99755,
+        "population_rank": 6,
+        "population_source": "2021 census",
+        "graph": "graphs/langford.png",
+        "has_graph": true,
+        "mean_bp": 0.000601369771175086,
+        "median_bp": 0.000558520013825714,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5917044",
+        "census_subdivision_name": "Langford",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 41.4315
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.529888,
+          48.449804
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kamloops",
+        "slug": "kamloops",
+        "wui_name": "Kamloops",
+        "wui_population": 97902,
+        "wui_population_rank": 7,
+        "wui_places": [
+          "Kamloops"
+        ],
+        "population": 97902,
+        "population_rank": 7,
+        "population_source": "2021 census",
+        "graph": "graphs/kamloops.png",
+        "has_graph": true,
+        "mean_bp": 0.00279223220422864,
+        "median_bp": 0.00238048734236267,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933042",
+        "census_subdivision_name": "Kamloops",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 297.9262
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.327649,
+          50.694169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prince George",
+        "slug": "prince-george",
+        "wui_name": "Prince George",
+        "wui_population": 76708,
+        "wui_population_rank": 8,
+        "wui_places": [
+          "Prince George"
+        ],
+        "population": 76708,
+        "population_rank": 8,
+        "population_source": "2021 census",
+        "graph": "graphs/prince-george.png",
+        "has_graph": true,
+        "mean_bp": 0.00610204786062241,
+        "median_bp": 0.00580574537131255,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5953023",
+        "census_subdivision_name": "Prince George",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 316.7408
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.775726,
+          53.923807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vernon",
+        "slug": "vernon",
+        "wui_name": "Vernon",
+        "wui_population": 57753,
+        "wui_population_rank": 9,
+        "wui_places": [
+          "Coldstream",
+          "Lumby",
+          "Vernon"
+        ],
+        "population": 57753,
+        "population_rank": 9,
+        "population_source": "2021 census",
+        "graph": "graphs/vernon.png",
+        "has_graph": true,
+        "mean_bp": 0.00280119711533189,
+        "median_bp": 0.00247292142302329,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5937014",
+        "census_subdivision_name": "Vernon",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 96.4285
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.346168,
+          50.233968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Penticton",
+        "slug": "penticton",
+        "wui_name": "Penticton",
+        "wui_population": 48927,
+        "wui_population_rank": 10,
+        "wui_places": [
+          "Penticton",
+          "Summerland"
+        ],
+        "population": 48927,
+        "population_rank": 10,
+        "population_source": "2021 census",
+        "graph": "graphs/penticton.png",
+        "has_graph": true,
+        "mean_bp": 0.00392600335180759,
+        "median_bp": 0.00370886496072601,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5907041",
+        "census_subdivision_name": "Penticton",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 43.0259
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.569709,
+          49.494722
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Courtenay",
+        "slug": "courtenay",
+        "wui_name": "Courtenay",
+        "wui_population": 43226,
+        "wui_population_rank": 11,
+        "wui_places": [
+          "Comox",
+          "Courtenay"
+        ],
+        "population": 43226,
+        "population_rank": 11,
+        "population_source": "2021 census",
+        "graph": "graphs/courtenay.png",
+        "has_graph": true,
+        "mean_bp": 0.00137434038333595,
+        "median_bp": 0.000919871031126524,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5926010",
+        "census_subdivision_name": "Courtenay",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 32.4176
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.977003,
+          49.697925
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sidney",
+        "slug": "sidney",
+        "wui_name": "Sidney",
+        "wui_population": 41938,
+        "wui_population_rank": 12,
+        "wui_places": [
+          "Central Saanich",
+          "North Saanich",
+          "Sidney"
+        ],
+        "population": 41938,
+        "population_rank": 12,
+        "population_source": "2021 census",
+        "graph": "graphs/sidney.png",
+        "has_graph": true,
+        "mean_bp": 0.000585696252528578,
+        "median_bp": 0.000567738610419772,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5917010",
+        "census_subdivision_name": "Sidney",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 5.1052
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.406996,
+          48.651916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Duncan",
+        "slug": "duncan",
+        "wui_name": "Duncan",
+        "wui_population": 37037,
+        "wui_population_rank": 13,
+        "wui_places": [
+          "Duncan",
+          "North Cowichan"
+        ],
+        "population": 37037,
+        "population_rank": 13,
+        "population_source": "2021 census",
+        "graph": "graphs/duncan.png",
+        "has_graph": true,
+        "mean_bp": 0.000813365331850946,
+        "median_bp": 0.000670910742300052,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5919012",
+        "census_subdivision_name": "Duncan",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 2.0646
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.702148,
+          48.779396
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Campbell River",
+        "slug": "campbell-river",
+        "wui_name": "Campbell River",
+        "wui_population": 35519,
+        "wui_population_rank": 14,
+        "wui_places": [
+          "Campbell River"
+        ],
+        "population": 35519,
+        "population_rank": 14,
+        "population_source": "2021 census",
+        "graph": "graphs/campbell-river.png",
+        "has_graph": true,
+        "mean_bp": 0.000829540484119207,
+        "median_bp": 0.000767502378383057,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5924034",
+        "census_subdivision_name": "Campbell River",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 144.3782
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.297416,
+          50.00165
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort St. John",
+        "slug": "fort-st-john",
+        "wui_name": "Fort St. John",
+        "wui_population": 28729,
+        "wui_population_rank": 15,
+        "wui_places": [
+          "Fort St. John"
+        ],
+        "population": 28729,
+        "population_rank": 15,
+        "population_source": "2021 census",
+        "graph": "graphs/fort-st-john.png",
+        "has_graph": true,
+        "mean_bp": 0.000632023089565337,
+        "median_bp": 0.000593347079110988,
+        "ecodivision_name": "BOREAL",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5955034",
+        "census_subdivision_name": "Fort St. John",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 32.6746
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.826603,
+          56.243899
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kimberley",
+        "slug": "kimberley",
+        "wui_name": "Kimberley",
+        "wui_population": 28614,
+        "wui_population_rank": 16,
+        "wui_places": [
+          "Cranbrook",
+          "Kimberley"
+        ],
+        "population": 28614,
+        "population_rank": 16,
+        "population_source": "2021 census",
+        "graph": "graphs/kimberley.png",
+        "has_graph": true,
+        "mean_bp": 0.0109636755660176,
+        "median_bp": 0.00857352648803543,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5901028",
+        "census_subdivision_name": "Kimberley",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 60.5082
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.982774,
+          49.667859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Parksville",
+        "slug": "parksville",
+        "wui_name": "Parksville",
+        "wui_population": 27392,
+        "wui_population_rank": 17,
+        "wui_places": [
+          "Cumberland",
+          "Parksville",
+          "Qualicum Beach"
+        ],
+        "population": 27392,
+        "population_rank": 17,
+        "population_source": "2021 census",
+        "graph": "graphs/parksville.png",
+        "has_graph": true,
+        "mean_bp": 0.000755739223677665,
+        "median_bp": 0.000644521024859793,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5921018",
+        "census_subdivision_name": "Parksville",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 14.5205
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.30442,
+          49.317395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Squamish",
+        "slug": "squamish",
+        "wui_name": "Squamish",
+        "wui_population": 23819,
+        "wui_population_rank": 18,
+        "wui_places": [
+          "Squamish"
+        ],
+        "population": 23819,
+        "population_rank": 18,
+        "population_source": "2021 census",
+        "graph": "graphs/squamish.png",
+        "has_graph": true,
+        "mean_bp": 0.00135064555797726,
+        "median_bp": 0.00127458941120235,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5931006",
+        "census_subdivision_name": "Squamish",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 104.7075
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.137346,
+          49.749254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salmon Arm",
+        "slug": "salmon-arm",
+        "wui_name": "Salmon Arm",
+        "wui_population": 19705,
+        "wui_population_rank": 19,
+        "wui_places": [
+          "Salmon Arm"
+        ],
+        "population": 19705,
+        "population_rank": 19,
+        "population_source": "2021 census",
+        "graph": "graphs/salmon-arm.png",
+        "has_graph": true,
+        "mean_bp": 0.00255037448368967,
+        "median_bp": 0.00223206274684607,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5939032",
+        "census_subdivision_name": "Salmon Arm",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 155.1886
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.284638,
+          50.699673
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Alberni",
+        "slug": "port-alberni",
+        "wui_name": "Port Alberni",
+        "wui_population": 18259,
+        "wui_population_rank": 20,
+        "wui_places": [
+          "Port Alberni"
+        ],
+        "population": 18259,
+        "population_rank": 20,
+        "population_source": "2021 census",
+        "graph": "graphs/port-alberni.png",
+        "has_graph": true,
+        "mean_bp": 0.000787333236075938,
+        "median_bp": 0.000623690182086885,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5923008",
+        "census_subdivision_name": "Port Alberni",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 19.657
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.80209,
+          49.247551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trail",
+        "slug": "trail",
+        "wui_name": "Trail",
+        "wui_population": 16784,
+        "wui_population_rank": 21,
+        "wui_places": [
+          "Fruitvale",
+          "Montrose",
+          "Rossland",
+          "Trail",
+          "Warfield"
+        ],
+        "population": 16784,
+        "population_rank": 21,
+        "population_source": "2021 census",
+        "graph": "graphs/trail.png",
+        "has_graph": true,
+        "mean_bp": 0.0024819104000926,
+        "median_bp": 0.00206279904322197,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5905014",
+        "census_subdivision_name": "Trail",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 34.9039
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.713172,
+          49.089523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sechelt",
+        "slug": "sechelt",
+        "wui_name": "Sechelt",
+        "wui_population": 16370,
+        "wui_population_rank": 22,
+        "wui_places": [
+          "Gibsons",
+          "Sechelt",
+          "Sechelt Ind Gov Dist"
+        ],
+        "population": 16370,
+        "population_rank": 22,
+        "population_source": "2021 census",
+        "graph": "graphs/sechelt.png",
+        "has_graph": true,
+        "mean_bp": 0.000486612319946289,
+        "median_bp": 0.000412538279361798,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5929011",
+        "census_subdivision_name": "Sechelt",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 39.018
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.761201,
+          49.481072
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Whistler",
         "slug": "whistler",
+        "wui_name": "Whistler",
+        "wui_population": 13982,
+        "wui_population_rank": 23,
+        "wui_places": [
+          "Whistler"
+        ],
         "population": 13982,
-        "population_rank": 43,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Whistler",
+        "population_rank": 23,
+        "population_source": "2021 census",
         "graph": "graphs/whistler.png",
+        "has_graph": true,
+        "mean_bp": 0.00215794844552875,
+        "median_bp": 0.00160972820736605,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
         "census_subdivision_id": "5931020",
         "census_subdivision_name": "Whistler",
         "census_subdivision_type": "DM",
-        "land_area_sq_km": 239.9956,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 65
+        "land_area_sq_km": 239.9956
       },
       "geometry": {
         "type": "Point",
@@ -1179,25 +849,2645 @@
     {
       "type": "Feature",
       "properties": {
+        "name": "Powell River",
+        "slug": "powell-river",
+        "wui_name": "Powell River",
+        "wui_population": 13943,
+        "wui_population_rank": 24,
+        "wui_places": [
+          "Powell River"
+        ],
+        "population": 13943,
+        "population_rank": 24,
+        "population_source": "2021 census",
+        "graph": "graphs/powell-river.png",
+        "has_graph": true,
+        "mean_bp": 0.000648361979983747,
+        "median_bp": 0.000503284435659469,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5927008",
+        "census_subdivision_name": "Powell River",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 28.905
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.533739,
+          49.861533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dawson Creek",
+        "slug": "dawson-creek",
+        "wui_name": "Dawson Creek",
+        "wui_population": 13180,
+        "wui_population_rank": 25,
+        "wui_places": [
+          "Dawson Creek",
+          "Rolla",
+          "Pouce Coupe"
+        ],
+        "population": 13180,
+        "population_rank": 25,
+        "population_source": "2021 census",
+        "graph": "graphs/dawson-creek.png",
+        "has_graph": true,
+        "mean_bp": 0.000651076203212142,
+        "median_bp": 0.000600171549436285,
+        "ecodivision_name": "BOREAL",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5955014",
+        "census_subdivision_name": "Dawson Creek",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 26.7247
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.229694,
+          55.754892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prince Rupert",
+        "slug": "prince-rupert",
+        "wui_name": "Prince Rupert",
+        "wui_population": 12300,
+        "wui_population_rank": 26,
+        "wui_places": [
+          "Prince Rupert"
+        ],
+        "population": 12300,
+        "population_rank": 26,
+        "population_source": "2021 census",
+        "graph": "graphs/prince-rupert.png",
+        "has_graph": true,
+        "mean_bp": 0.000531860161572695,
+        "median_bp": 0.00048811101110645,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5947012",
+        "census_subdivision_name": "Prince Rupert",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 66.0033
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -130.29712,
+          54.290093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Terrace",
+        "slug": "terrace",
+        "wui_name": "Terrace",
+        "wui_population": 12017,
+        "wui_population_rank": 27,
+        "wui_places": [
+          "Terrace"
+        ],
+        "population": 12017,
+        "population_rank": 27,
+        "population_source": "2021 census",
+        "graph": "graphs/terrace.png",
+        "has_graph": true,
+        "mean_bp": 0.00078064197441563,
+        "median_bp": 0.000611241153879647,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5949011",
+        "census_subdivision_name": "Terrace",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 57.3268
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.591785,
+          54.478274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nelson",
+        "slug": "nelson",
+        "wui_name": "Nelson",
+        "wui_population": 11106,
+        "wui_population_rank": 28,
+        "wui_places": [
+          "Nelson"
+        ],
+        "population": 11106,
+        "population_rank": 28,
+        "population_source": "2021 census",
+        "graph": "graphs/nelson.png",
+        "has_graph": true,
+        "mean_bp": 0.00286498572677374,
+        "median_bp": 0.00270914330059083,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5903015",
+        "census_subdivision_name": "Nelson",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 11.9338
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.366432,
+          49.480206
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
         "name": "Williams Lake",
         "slug": "williams-lake",
+        "wui_name": "Williams Lake",
+        "wui_population": 10947,
+        "wui_population_rank": 29,
+        "wui_places": [
+          "Williams Lake"
+        ],
         "population": 10947,
-        "population_rank": 55,
-        "population_source": "2021 census fuzzy match",
-        "matched_population_name": "Williams Lake",
+        "population_rank": 29,
+        "population_source": "2021 census",
         "graph": "graphs/williams-lake.png",
+        "has_graph": true,
+        "mean_bp": 0.00511270016431808,
+        "median_bp": 0.00509106763610205,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
         "census_subdivision_id": "5941009",
         "census_subdivision_name": "Williams Lake",
         "census_subdivision_type": "CY",
-        "land_area_sq_km": 33.1202,
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "source_csv_city_id": 31
+        "land_area_sq_km": 33.1202
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
           -122.126305,
           52.135974
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oliver",
+        "slug": "oliver",
+        "wui_name": "Oliver",
+        "wui_population": 10650,
+        "wui_population_rank": 30,
+        "wui_places": [
+          "Oliver",
+          "Osoyoos"
+        ],
+        "population": 10650,
+        "population_rank": 30,
+        "population_source": "2021 census",
+        "graph": "graphs/oliver.png",
+        "has_graph": true,
+        "mean_bp": 0.00298613309860229,
+        "median_bp": 0.00266303851160512,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5907014",
+        "census_subdivision_name": "Oliver",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 5.4899
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.550015,
+          49.184443
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Quesnel",
+        "slug": "quesnel",
+        "wui_name": "Quesnel",
+        "wui_population": 9889,
+        "wui_population_rank": 31,
+        "wui_places": [
+          "Quesnel"
+        ],
+        "population": 9889,
+        "population_rank": 31,
+        "population_source": "2021 census",
+        "graph": "graphs/quesnel.png",
+        "has_graph": true,
+        "mean_bp": 0.00450492836534977,
+        "median_bp": 0.00360777576252538,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5941013",
+        "census_subdivision_name": "Quesnel",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 35.3483
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.475693,
+          52.987692
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Armstrong",
+        "slug": "armstrong",
+        "wui_name": "Armstrong",
+        "wui_population": 8351,
+        "wui_population_rank": 32,
+        "wui_places": [
+          "Armstrong",
+          "Enderby"
+        ],
+        "population": 8351,
+        "population_rank": 32,
+        "population_source": "2021 census",
+        "graph": "graphs/armstrong.png",
+        "has_graph": true,
+        "mean_bp": 0.00228142342530191,
+        "median_bp": 0.00194393465337314,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5937028",
+        "census_subdivision_name": "Armstrong",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 5.2185
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.19785,
+          50.444851
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Castlegar",
+        "slug": "castlegar",
+        "wui_name": "Castlegar",
+        "wui_population": 8338,
+        "wui_population_rank": 33,
+        "wui_places": [
+          "Castlegar"
+        ],
+        "population": 8338,
+        "population_rank": 33,
+        "population_source": "2021 census",
+        "graph": "graphs/castlegar.png",
+        "has_graph": true,
+        "mean_bp": 0.00365615240298212,
+        "median_bp": 0.00340126683770478,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5903045",
+        "census_subdivision_name": "Castlegar",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 19.8709
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.671457,
+          49.300935
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Revelstoke",
+        "slug": "revelstoke",
+        "wui_name": "Revelstoke",
+        "wui_population": 8275,
+        "wui_population_rank": 34,
+        "wui_places": [
+          "Revelstoke"
+        ],
+        "population": 8275,
+        "population_rank": 34,
+        "population_source": "2021 census",
+        "graph": "graphs/revelstoke.png",
+        "has_graph": true,
+        "mean_bp": 0.00222614081576467,
+        "median_bp": 0.00190649485759838,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5939019",
+        "census_subdivision_name": "Revelstoke",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 41.28
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.191516,
+          50.997322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kitimat",
+        "slug": "kitimat",
+        "wui_name": "Kitimat",
+        "wui_population": 8236,
+        "wui_population_rank": 35,
+        "wui_places": [
+          "Kitimat"
+        ],
+        "population": 8236,
+        "population_rank": 35,
+        "population_source": "2021 census",
+        "graph": "graphs/kitimat.png",
+        "has_graph": true,
+        "mean_bp": 0.000498320150654763,
+        "median_bp": 0.000412501346325772,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5949005",
+        "census_subdivision_name": "Kitimat",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 239.28
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -128.714341,
+          53.989093
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Invermere",
+        "slug": "invermere",
+        "wui_name": "Invermere",
+        "wui_population": 7328,
+        "wui_population_rank": 36,
+        "wui_places": [
+          "Invermere",
+          "Radium Hot Springs",
+          "Wilmer",
+          "Windermere",
+          "Shuswap"
+        ],
+        "population": 7328,
+        "population_rank": 36,
+        "population_source": "2021 census",
+        "graph": "graphs/invermere.png",
+        "has_graph": true,
+        "mean_bp": 0.00194193166680634,
+        "median_bp": 0.00186481853915954,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5901039",
+        "census_subdivision_name": "Invermere",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 10.7482
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.035732,
+          50.500076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Merritt",
+        "slug": "merritt",
+        "wui_name": "Merritt",
+        "wui_population": 7051,
+        "wui_population_rank": 37,
+        "wui_places": [
+          "Merritt"
+        ],
+        "population": 7051,
+        "population_rank": 37,
+        "population_source": "2021 census",
+        "graph": "graphs/merritt.png",
+        "has_graph": true,
+        "mean_bp": 0.0033787852153182,
+        "median_bp": 0.00322866947402045,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933006",
+        "census_subdivision_name": "Merritt",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 26.043
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.775262,
+          50.112844
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smithers",
+        "slug": "smithers",
+        "wui_name": "Smithers",
+        "wui_population": 6852,
+        "wui_population_rank": 38,
+        "wui_places": [
+          "Smithers",
+          "Telkwa"
+        ],
+        "population": 6852,
+        "population_rank": 38,
+        "population_source": "2021 census",
+        "graph": "graphs/smithers.png",
+        "has_graph": true,
+        "mean_bp": 0.00214343145489693,
+        "median_bp": 0.00192839958289097,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5951043",
+        "census_subdivision_name": "Smithers",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 15.259
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.164903,
+          54.786142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hope",
+        "slug": "hope",
+        "wui_name": "Hope",
+        "wui_population": 6686,
+        "wui_population_rank": 39,
+        "wui_places": [
+          "Hope"
+        ],
+        "population": 6686,
+        "population_rank": 39,
+        "population_source": "2021 census",
+        "graph": "graphs/hope.png",
+        "has_graph": true,
+        "mean_bp": 0.000748452846892178,
+        "median_bp": 0.000602974465095628,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5909009",
+        "census_subdivision_name": "Hope",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 40.8706
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.454672,
+          49.379946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fernie",
+        "slug": "fernie",
+        "wui_name": "Fernie",
+        "wui_population": 6320,
+        "wui_population_rank": 40,
+        "wui_places": [
+          "Fernie"
+        ],
+        "population": 6320,
+        "population_rank": 40,
+        "population_source": "2021 census",
+        "graph": "graphs/fernie.png",
+        "has_graph": true,
+        "mean_bp": 0.00477939192205667,
+        "median_bp": 0.00409161762035637,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5901012",
+        "census_subdivision_name": "Fernie",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 15.1082
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.061169,
+          49.506527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Creston",
+        "slug": "creston",
+        "wui_name": "Creston",
+        "wui_population": 5583,
+        "wui_population_rank": 41,
+        "wui_places": [
+          "Creston"
+        ],
+        "population": 5583,
+        "population_rank": 41,
+        "population_source": "2021 census",
+        "graph": "graphs/creston.png",
+        "has_graph": true,
+        "mean_bp": 0.00346657657064497,
+        "median_bp": 0.00293228482497172,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5903004",
+        "census_subdivision_name": "Creston",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 8.4055
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.514313,
+          49.105712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vanderhoof",
+        "slug": "vanderhoof",
+        "wui_name": "Vanderhoof",
+        "wui_population": 4346,
+        "wui_population_rank": 42,
+        "wui_places": [
+          "Vanderhoof"
+        ],
+        "population": 4346,
+        "population_rank": 42,
+        "population_source": "2021 census",
+        "graph": "graphs/vanderhoof.png",
+        "has_graph": true,
+        "mean_bp": 0.00227838265709579,
+        "median_bp": 0.0019618969410418,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5951007",
+        "census_subdivision_name": "Vanderhoof",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 53.9276
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.025645,
+          54.015794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sparwood",
+        "slug": "sparwood",
+        "wui_name": "Sparwood",
+        "wui_population": 4148,
+        "wui_population_rank": 43,
+        "wui_places": [
+          "Sparwood"
+        ],
+        "population": 4148,
+        "population_rank": 43,
+        "population_source": "2021 census",
+        "graph": "graphs/sparwood.png",
+        "has_graph": true,
+        "mean_bp": 0.00340766296721995,
+        "median_bp": 0.003174822495251,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5901006",
+        "census_subdivision_name": "Sparwood",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 191.2959
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.797225,
+          49.75842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grand Forks",
+        "slug": "grand-forks",
+        "wui_name": "Grand Forks",
+        "wui_population": 4112,
+        "wui_population_rank": 44,
+        "wui_places": [
+          "Grand Forks"
+        ],
+        "population": 4112,
+        "population_rank": 44,
+        "population_source": "2021 census",
+        "graph": "graphs/grand-forks.png",
+        "has_graph": true,
+        "mean_bp": 0.00164143065921962,
+        "median_bp": 0.00146466291081943,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5905032",
+        "census_subdivision_name": "Grand Forks",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 10.3741
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.446657,
+          49.030661
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Golden",
+        "slug": "golden",
+        "wui_name": "Golden",
+        "wui_population": 3986,
+        "wui_population_rank": 45,
+        "wui_places": [
+          "Golden"
+        ],
+        "population": 3986,
+        "population_rank": 45,
+        "population_source": "2021 census",
+        "graph": "graphs/golden.png",
+        "has_graph": true,
+        "mean_bp": 0.0030120110604912,
+        "median_bp": 0.00273259333996259,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5939007",
+        "census_subdivision_name": "Golden",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 11.3255
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.963204,
+          51.298382
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kamloops 1",
+        "slug": "kamloops-1",
+        "wui_name": "Kamloops 1",
+        "wui_population": 3915,
+        "wui_population_rank": 46,
+        "wui_places": [
+          "Kamloops 1"
+        ],
+        "population": 3915,
+        "population_rank": 46,
+        "population_source": "2021 census",
+        "graph": "graphs/kamloops-1.png",
+        "has_graph": true,
+        "mean_bp": 0.00325778545811772,
+        "median_bp": 0.00332416711210679,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933880",
+        "census_subdivision_name": "Kamloops 1",
+        "census_subdivision_type": "IRI",
+        "land_area_sq_km": 136.7272
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.257193,
+          50.72967
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Hardy",
+        "slug": "port-hardy",
+        "wui_name": "Port Hardy",
+        "wui_population": 3902,
+        "wui_population_rank": 47,
+        "wui_places": [
+          "Port Hardy"
+        ],
+        "population": 3902,
+        "population_rank": 47,
+        "population_source": "2021 census",
+        "graph": "graphs/port-hardy.png",
+        "has_graph": true,
+        "mean_bp": 0.000679677643347532,
+        "median_bp": 0.000599879019787561,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5943023",
+        "census_subdivision_name": "Port Hardy",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 38.5522
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.441236,
+          50.694665
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pemberton",
+        "slug": "pemberton",
+        "wui_name": "Pemberton",
+        "wui_population": 3407,
+        "wui_population_rank": 48,
+        "wui_places": [
+          "Pemberton"
+        ],
+        "population": 3407,
+        "population_rank": 48,
+        "population_source": "2021 census",
+        "graph": "graphs/pemberton.png",
+        "has_graph": true,
+        "mean_bp": 0.00364901847206056,
+        "median_bp": 0.00348216973276284,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5931012",
+        "census_subdivision_name": "Pemberton",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 61.3552
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.872779,
+          50.315111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lake Cowichan",
+        "slug": "lake-cowichan",
+        "wui_name": "Lake Cowichan",
+        "wui_population": 3325,
+        "wui_population_rank": 49,
+        "wui_places": [
+          "Lake Cowichan"
+        ],
+        "population": 3325,
+        "population_rank": 49,
+        "population_source": "2021 census",
+        "graph": "graphs/lake-cowichan.png",
+        "has_graph": true,
+        "mean_bp": 0.000631888804491609,
+        "median_bp": 0.000565961599506126,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5919016",
+        "census_subdivision_name": "Lake Cowichan",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 8.2412
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.060453,
+          48.823376
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mackenzie",
+        "slug": "mackenzie",
+        "wui_name": "Mackenzie",
+        "wui_population": 3281,
+        "wui_population_rank": 50,
+        "wui_places": [
+          "Mackenzie"
+        ],
+        "population": 3281,
+        "population_rank": 50,
+        "population_source": "2021 census",
+        "graph": "graphs/mackenzie.png",
+        "has_graph": true,
+        "mean_bp": 0.00264309323392808,
+        "median_bp": 0.00250687769088519,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5953033",
+        "census_subdivision_name": "Mackenzie",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 154.1856
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.147251,
+          55.314086
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Houston",
+        "slug": "houston",
+        "wui_name": "Houston_388",
+        "wui_population": 3052,
+        "wui_population_rank": 51,
+        "wui_places": [
+          "Houston"
+        ],
+        "population": 3052,
+        "population_rank": 51,
+        "population_source": "2021 census",
+        "graph": "graphs/houston.png",
+        "has_graph": true,
+        "mean_bp": 0.00406439602375031,
+        "median_bp": 0.00347762548109659,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5951034",
+        "census_subdivision_name": "Houston",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 72.8761
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.666479,
+          54.396918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Princeton",
+        "slug": "princeton",
+        "wui_name": "Princeton",
+        "wui_population": 2894,
+        "wui_population_rank": 52,
+        "wui_places": [
+          "Princeton"
+        ],
+        "population": 2894,
+        "population_rank": 52,
+        "population_source": "2021 census",
+        "graph": "graphs/princeton.png",
+        "has_graph": true,
+        "mean_bp": 0.00320539902895689,
+        "median_bp": 0.00291030203131047,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5907024",
+        "census_subdivision_name": "Princeton",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 59.2806
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.518009,
+          49.361058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port McNeill",
+        "slug": "port-mcneill",
+        "wui_name": "Port McNeill",
+        "wui_population": 2805,
+        "wui_population_rank": 53,
+        "wui_places": [
+          "Alert Bay",
+          "Port McNeill"
+        ],
+        "population": 2805,
+        "population_rank": 53,
+        "population_source": "2021 census",
+        "graph": "graphs/port-mcneill.png",
+        "has_graph": true,
+        "mean_bp": 0.000830770819447935,
+        "median_bp": 0.000709574484280183,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5943012",
+        "census_subdivision_name": "Port McNeill",
+        "census_subdivision_type": "T",
+        "land_area_sq_km": 13.7675
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.121554,
+          50.588131
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "100 Mile House",
+        "slug": "100-mile-house",
+        "wui_name": "100 Mile House",
+        "wui_population": 2751,
+        "wui_population_rank": 54,
+        "wui_places": [
+          "100 Mile House",
+          "Lone Butte",
+          "103 Mile"
+        ],
+        "population": 2751,
+        "population_rank": 54,
+        "population_source": "2021 census",
+        "graph": "graphs/100-mile-house.png",
+        "has_graph": true,
+        "mean_bp": 0.00810360815376043,
+        "median_bp": 0.00707315989584449,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5941005",
+        "census_subdivision_name": "One Hundred Mile House",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 53.0116
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.312724,
+          51.641331
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Elkford",
+        "slug": "elkford",
+        "wui_name": "Elkford",
+        "wui_population": 2749,
+        "wui_population_rank": 55,
+        "wui_places": [
+          "Elkford"
+        ],
+        "population": 2749,
+        "population_rank": 55,
+        "population_source": "2021 census",
+        "graph": "graphs/elkford.png",
+        "has_graph": true,
+        "mean_bp": 0.00698028411716223,
+        "median_bp": 0.0069678459720818,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5901003",
+        "census_subdivision_name": "Elkford",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 108.121
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -114.876908,
+          50.061989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kaslo",
+        "slug": "kaslo",
+        "wui_name": "Kaslo",
+        "wui_population": 2702,
+        "wui_population_rank": 56,
+        "wui_places": [
+          "Kaslo",
+          "Harrop",
+          "Procter",
+          "Balfour",
+          "Crawford Bay",
+          "Riondel"
+        ],
+        "population": 2702,
+        "population_rank": 56,
+        "population_source": "2021 census",
+        "graph": "graphs/kaslo.png",
+        "has_graph": true,
+        "mean_bp": 0.00178108620457351,
+        "median_bp": 0.00163099557366442,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5903023",
+        "census_subdivision_name": "Kaslo",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 3.0079
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.914067,
+          49.908544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sicamous",
+        "slug": "sicamous",
+        "wui_name": "Sicamous",
+        "wui_population": 2613,
+        "wui_population_rank": 57,
+        "wui_places": [
+          "Sicamous"
+        ],
+        "population": 2613,
+        "population_rank": 57,
+        "population_source": "2021 census",
+        "graph": "graphs/sicamous.png",
+        "has_graph": true,
+        "mean_bp": 0.00197896780446172,
+        "median_bp": 0.00168853921397325,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5939045",
+        "census_subdivision_name": "Sicamous",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 12.7964
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.98028,
+          50.835829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort Nelson",
+        "slug": "fort-nelson",
+        "wui_name": "Fort Nelson",
+        "wui_population": 2611,
+        "wui_population_rank": 58,
+        "wui_places": [
+          "Fort Nelson"
+        ],
+        "population": 2611,
+        "population_rank": 58,
+        "population_source": "2021 census",
+        "graph": "graphs/fort-nelson.png",
+        "has_graph": true,
+        "mean_bp": 0.00119197531603277,
+        "median_bp": 0.000867028423094637,
+        "ecodivision_name": "SUB-ARCTIC",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Fort Nelson",
+        "geocoder_full_address": "Fort Nelson, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.696944,
+          58.805278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lillooet",
+        "slug": "lillooet",
+        "wui_name": "Lillooet",
+        "wui_population": 2587,
+        "wui_population_rank": 59,
+        "wui_places": [
+          "Lillooet",
+          "Lillooet 1"
+        ],
+        "population": 2587,
+        "population_rank": 59,
+        "population_source": "2021 census",
+        "graph": "graphs/lillooet.png",
+        "has_graph": true,
+        "mean_bp": 0.00334341148845851,
+        "median_bp": 0.00296752923765033,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5931026",
+        "census_subdivision_name": "Lillooet",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 27.6331
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.917709,
+          50.682973
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tofino",
+        "slug": "tofino",
+        "wui_name": "Tofino",
+        "wui_population": 2516,
+        "wui_population_rank": 60,
+        "wui_places": [
+          "Tofino"
+        ],
+        "population": 2516,
+        "population_rank": 60,
+        "population_source": "2021 census",
+        "graph": "graphs/tofino.png",
+        "has_graph": true,
+        "mean_bp": 0.000450718711363152,
+        "median_bp": 0.000400044286633243,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5923025",
+        "census_subdivision_name": "Tofino",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 10.557
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.885289,
+          49.1275
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chase",
+        "slug": "chase",
+        "wui_name": "Chase",
+        "wui_population": 2399,
+        "wui_population_rank": 61,
+        "wui_places": [
+          "Chase"
+        ],
+        "population": 2399,
+        "population_rank": 61,
+        "population_source": "2021 census",
+        "graph": "graphs/chase.png",
+        "has_graph": true,
+        "mean_bp": 0.00255209975875914,
+        "median_bp": 0.00195329934320508,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933054",
+        "census_subdivision_name": "Chase",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 3.7528
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.689354,
+          50.843815
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tumbler Ridge",
+        "slug": "tumbler-ridge",
+        "wui_name": "Tumbler Ridge_422",
+        "wui_population": 2389,
+        "wui_population_rank": 62,
+        "wui_places": [
+          "Tumbler Ridge"
+        ],
+        "population": 2389,
+        "population_rank": 62,
+        "population_source": "2021 census",
+        "graph": "graphs/tumbler-ridge.png",
+        "has_graph": true,
+        "mean_bp": 0.00272054644301534,
+        "median_bp": 0.0027305457019124,
+        "ecodivision_name": "BOREAL, HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5955003",
+        "census_subdivision_name": "Tumbler Ridge",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 1557.4142
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.158354,
+          55.058262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Clearwater",
+        "slug": "clearwater",
+        "wui_name": "Clearwater",
+        "wui_population": 2388,
+        "wui_population_rank": 63,
+        "wui_places": [
+          "Clearwater"
+        ],
+        "population": 2388,
+        "population_rank": 63,
+        "population_source": "2021 census",
+        "graph": "graphs/clearwater.png",
+        "has_graph": true,
+        "mean_bp": 0.00629783887416124,
+        "median_bp": 0.00608865992243546,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933067",
+        "census_subdivision_name": "Clearwater",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 55.6508
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.009103,
+          51.644334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bella Coola",
+        "slug": "bella-coola",
+        "wui_name": "Bella Coola",
+        "wui_population": 2309,
+        "wui_population_rank": 64,
+        "wui_places": [
+          "Bella Coola",
+          "Hagensborg",
+          "Bella Coola 1"
+        ],
+        "population": 2309,
+        "population_rank": 64,
+        "population_source": "2021 census",
+        "graph": "graphs/bella-coola.png",
+        "has_graph": true,
+        "mean_bp": 0.00040074487333186,
+        "median_bp": 0.000399287051278174,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Bella Coola",
+        "geocoder_full_address": "Bella Coola, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.753333,
+          52.372778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Chetwynd",
+        "slug": "chetwynd",
+        "wui_name": "Chetwynd",
+        "wui_population": 2302,
+        "wui_population_rank": 65,
+        "wui_places": [
+          "Chetwynd"
+        ],
+        "population": 2302,
+        "population_rank": 65,
+        "population_source": "2021 census",
+        "graph": "graphs/chetwynd.png",
+        "has_graph": true,
+        "mean_bp": 0.00160658766981214,
+        "median_bp": 0.0013104527519314,
+        "ecodivision_name": "BOREAL, HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5955010",
+        "census_subdivision_name": "Chetwynd",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 63.5491
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.767933,
+          55.692147
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Logan Lake",
+        "slug": "logan-lake",
+        "wui_name": "Logan Lake_160",
+        "wui_population": 2255,
+        "wui_population_rank": 66,
+        "wui_places": [
+          "Logan Lake"
+        ],
+        "population": 2255,
+        "population_rank": 66,
+        "population_source": "2021 census",
+        "graph": "graphs/logan-lake.png",
+        "has_graph": true,
+        "mean_bp": 0.00396096520125866,
+        "median_bp": 0.00367880452585721,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933035",
+        "census_subdivision_name": "Logan Lake",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 324.2761
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.028089,
+          50.486571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Penticton 1",
+        "slug": "penticton-1",
+        "wui_name": "Penticton 1",
+        "wui_population": 2080,
+        "wui_population_rank": 67,
+        "wui_places": [
+          "Penticton 1"
+        ],
+        "population": 2080,
+        "population_rank": 67,
+        "population_source": "2021 census",
+        "graph": "graphs/penticton-1.png",
+        "has_graph": true,
+        "mean_bp": 0.00302663631737232,
+        "median_bp": 0.00307719941409681,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5907803",
+        "census_subdivision_name": "Penticton 1",
+        "census_subdivision_type": "IRI",
+        "land_area_sq_km": 194.5453
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.684787,
+          49.477324
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ucluelet",
+        "slug": "ucluelet",
+        "wui_name": "Ucluelet",
+        "wui_population": 2066,
+        "wui_population_rank": 68,
+        "wui_places": [
+          "Ucluelet"
+        ],
+        "population": 2066,
+        "population_rank": 68,
+        "population_source": "2021 census",
+        "graph": "graphs/ucluelet.png",
+        "has_graph": true,
+        "mean_bp": 0.000700135773513466,
+        "median_bp": 0.000589094506683978,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5923019",
+        "census_subdivision_name": "Ucluelet",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 6.4798
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.560676,
+          48.943481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Hazelton",
+        "slug": "new-hazelton",
+        "wui_name": "New Hazelton",
+        "wui_population": 1839,
+        "wui_population_rank": 69,
+        "wui_places": [
+          "New Hazelton",
+          "South Hazelton",
+          "Hazelton",
+          "Sik-e-dakh 2",
+          "Kispiox 1"
+        ],
+        "population": 1839,
+        "population_rank": 69,
+        "population_source": "2021 census",
+        "graph": "graphs/new-hazelton.png",
+        "has_graph": true,
+        "mean_bp": 0.000924884981941432,
+        "median_bp": 0.000799995437019335,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5949024",
+        "census_subdivision_name": "New Hazelton",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 24.3426
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.595136,
+          55.236605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Burns Lake",
+        "slug": "burns-lake",
+        "wui_name": "Burns Lake",
+        "wui_population": 1692,
+        "wui_population_rank": 70,
+        "wui_places": [
+          "Burns Lake",
+          "Burns Lake 18"
+        ],
+        "population": 1692,
+        "population_rank": 70,
+        "population_source": "2021 census",
+        "graph": "graphs/burns-lake.png",
+        "has_graph": true,
+        "mean_bp": 0.00270056142471731,
+        "median_bp": 0.00240516786283761,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5951022",
+        "census_subdivision_name": "Burns Lake",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 6.5402
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -125.723393,
+          54.224928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Keremeos",
+        "slug": "keremeos",
+        "wui_name": "Keremeos",
+        "wui_population": 1608,
+        "wui_population_rank": 71,
+        "wui_places": [
+          "Keremeos"
+        ],
+        "population": 1608,
+        "population_rank": 71,
+        "population_source": "2021 census",
+        "graph": "graphs/keremeos.png",
+        "has_graph": true,
+        "mean_bp": 0.00160896766465157,
+        "median_bp": 0.00138121217919865,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5907009",
+        "census_subdivision_name": "Keremeos",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 2.093
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.825624,
+          49.205752
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nakusp",
+        "slug": "nakusp",
+        "wui_name": "Nakusp",
+        "wui_population": 1589,
+        "wui_population_rank": 72,
+        "wui_places": [
+          "Nakusp"
+        ],
+        "population": 1589,
+        "population_rank": 72,
+        "population_source": "2021 census",
+        "graph": "graphs/nakusp.png",
+        "has_graph": true,
+        "mean_bp": 0.00191982695832849,
+        "median_bp": 0.00169974405000488,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5903050",
+        "census_subdivision_name": "Nakusp",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 8.0376
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.797553,
+          50.24996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sun Peaks",
+        "slug": "sun-peaks",
+        "wui_name": "Sun Peaks",
+        "wui_population": 1404,
+        "wui_population_rank": 73,
+        "wui_places": [
+          "Sun Peaks Mountain"
+        ],
+        "population": 1404,
+        "population_rank": 73,
+        "population_source": "2021 census",
+        "graph": "graphs/sun-peaks.png",
+        "has_graph": true,
+        "mean_bp": 0.00183458172250539,
+        "median_bp": 0.00165062548984539,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4, NDT5",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933045",
+        "census_subdivision_name": "Sun Peaks Mountain",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 40.8525
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.895957,
+          50.889184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barriere",
+        "slug": "barriere",
+        "wui_name": "Barriere",
+        "wui_population": 1391,
+        "wui_population_rank": 74,
+        "wui_places": [
+          "Barriere"
+        ],
+        "population": 1391,
+        "population_rank": 74,
+        "population_source": "2021 census",
+        "graph": "graphs/barriere.png",
+        "has_graph": true,
+        "mean_bp": 0.00364538538269699,
+        "median_bp": 0.00345929512106148,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933074",
+        "census_subdivision_name": "Barriere",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 10.7272
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.125434,
+          51.178667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fort St. James",
+        "slug": "fort-st-james",
+        "wui_name": "Fort St. James",
+        "wui_population": 1386,
+        "wui_population_rank": 75,
+        "wui_places": [
+          "Fort St. James"
+        ],
+        "population": 1386,
+        "population_rank": 75,
+        "population_source": "2021 census",
+        "graph": "graphs/fort-st-james.png",
+        "has_graph": true,
+        "mean_bp": 0.00257149594835937,
+        "median_bp": 0.00229954428283646,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5951013",
+        "census_subdivision_name": "Fort St. James",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 23.4524
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.227003,
+          54.470739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Christina Lake",
+        "slug": "christina-lake",
+        "wui_name": "Christina Lake",
+        "wui_population": 1329,
+        "wui_population_rank": 76,
+        "wui_places": [
+          "Christina Lake"
+        ],
+        "population": 1329,
+        "population_rank": 76,
+        "population_source": "2021 census",
+        "graph": "graphs/christina-lake.png",
+        "has_graph": true,
+        "mean_bp": 0.00270640081726015,
+        "median_bp": 0.00246614385357108,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Christina Lake",
+        "geocoder_full_address": "Christina Lake, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.209444,
+          49.042778
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Masset",
+        "slug": "masset",
+        "wui_name": "Masset",
+        "wui_population": 1313,
+        "wui_population_rank": 77,
+        "wui_places": [
+          "Masset",
+          "Masset 1"
+        ],
+        "population": 1313,
+        "population_rank": 77,
+        "population_source": "2021 census",
+        "graph": "graphs/masset.png",
+        "has_graph": true,
+        "mean_bp": 0.00042925780871883,
+        "median_bp": 0.000402135471099725,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5947023",
+        "census_subdivision_name": "Masset",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 20.6897
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.103732,
+          54.020715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sorrento",
+        "slug": "sorrento",
+        "wui_name": "Sorrento",
+        "wui_population": 1309,
+        "wui_population_rank": 78,
+        "wui_places": [
+          "Sorrento"
+        ],
+        "population": 1309,
+        "population_rank": 78,
+        "population_source": "2021 census",
+        "graph": "graphs/sorrento.png",
+        "has_graph": true,
+        "mean_bp": 0.00238158903084695,
+        "median_bp": 0.00191341620010043,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Sorrento",
+        "geocoder_full_address": "Sorrento, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.466667,
+          50.876667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gold River",
+        "slug": "gold-river",
+        "wui_name": "Gold River",
+        "wui_population": 1246,
+        "wui_population_rank": 79,
+        "wui_places": [
+          "Gold River"
+        ],
+        "population": 1246,
+        "population_rank": 79,
+        "population_source": "2021 census",
+        "graph": "graphs/gold-river.png",
+        "has_graph": true,
+        "mean_bp": 0.000603508960921317,
+        "median_bp": 0.000583941765945121,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5924025",
+        "census_subdivision_name": "Gold River",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 10.9152
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.083777,
+          49.731554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Garibaldi Estates",
+        "slug": "garibaldi-estates",
+        "wui_name": "Garibaldi Estates",
+        "wui_population": 1195,
+        "wui_population_rank": 80,
+        "wui_places": [
+          "Garibaldi Estates"
+        ],
+        "population": 1195,
+        "population_rank": 80,
+        "population_source": "2024 Garibaldi Estates Neighbourhood Plan",
+        "graph": "graphs/garibaldi-estates.png",
+        "has_graph": true,
+        "mean_bp": 0.00123994704335928,
+        "median_bp": 0.00117965359272571,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Garibaldi Estates",
+        "geocoder_full_address": "Garibaldi Estates in Squamish, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.135556,
+          49.740555
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salmo",
+        "slug": "salmo",
+        "wui_name": "Salmo",
+        "wui_population": 1140,
+        "wui_population_rank": 81,
+        "wui_places": [
+          "Salmo"
+        ],
+        "population": 1140,
+        "population_rank": 81,
+        "population_source": "2021 census",
+        "graph": "graphs/salmo.png",
+        "has_graph": true,
+        "mean_bp": 0.00245662080124021,
+        "median_bp": 0.00225151007463806,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5903011",
+        "census_subdivision_name": "Salmo",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 2.4442
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.280266,
+          49.190741
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Valemount",
+        "slug": "valemount",
+        "wui_name": "Valemount",
+        "wui_population": 1052,
+        "wui_population_rank": 82,
+        "wui_places": [
+          "Valemount"
+        ],
+        "population": 1052,
+        "population_rank": 82,
+        "population_source": "2021 census",
+        "graph": "graphs/valemount.png",
+        "has_graph": true,
+        "mean_bp": 0.000721383315976709,
+        "median_bp": 0.000635511497730535,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5953007",
+        "census_subdivision_name": "Valemount",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 5.1629
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.265873,
+          52.828381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Big White",
+        "slug": "big-white",
+        "wui_name": "Big White",
+        "wui_population": 991,
+        "wui_population_rank": 83,
+        "wui_places": [
+          "Big White"
+        ],
+        "population": 991,
+        "population_rank": 83,
+        "population_source": "2021 census",
+        "graph": "graphs/big-white.png",
+        "has_graph": true,
+        "mean_bp": 0.00105438474565744,
+        "median_bp": 0.00106983608418003,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT5",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Big White",
+        "geocoder_full_address": "Big White, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.927778,
+          49.721111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nicola",
+        "slug": "nicola",
+        "wui_name": "Nicola",
+        "wui_population": 980,
+        "wui_population_rank": 84,
+        "wui_places": [
+          "Lower Nicola"
+        ],
+        "population": 980,
+        "population_rank": 84,
+        "population_source": "2021 census",
+        "graph": "graphs/nicola.png",
+        "has_graph": true,
+        "mean_bp": 0.00177969271317124,
+        "median_bp": 0.00163629094679879,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Nicola",
+        "geocoder_full_address": "Nicola in Upper Nicola, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -120.665556,
+          50.163611
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cobble Hill",
+        "slug": "cobble-hill",
+        "wui_name": "Cobble Hill",
+        "wui_population": 972,
+        "wui_population_rank": 85,
+        "wui_places": [
+          "Cobble Hill"
+        ],
+        "population": 972,
+        "population_rank": 85,
+        "population_source": "2021 census",
+        "graph": "graphs/cobble-hill.png",
+        "has_graph": true,
+        "mean_bp": 0.000767210323829204,
+        "median_bp": 0.000619956635398879,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Cobble Hill",
+        "geocoder_full_address": "Cobble Hill, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -123.603333,
+          48.686111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cache Creek",
+        "slug": "cache-creek",
+        "wui_name": "Cache Creek",
+        "wui_population": 969,
+        "wui_population_rank": 86,
+        "wui_places": [
+          "Cache Creek"
+        ],
+        "population": 969,
+        "population_rank": 86,
+        "population_source": "2021 census",
+        "graph": "graphs/cache-creek.png",
+        "has_graph": true,
+        "mean_bp": 0.00300891161896288,
+        "median_bp": 0.00273877381745493,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5933024",
+        "census_subdivision_name": "Cache Creek",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 10.3976
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -121.319038,
+          50.797918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fraser Lake",
+        "slug": "fraser-lake",
+        "wui_name": "Fraser Lake",
+        "wui_population": 965,
+        "wui_population_rank": 87,
+        "wui_places": [
+          "Fraser Lake"
+        ],
+        "population": 965,
+        "population_rank": 87,
+        "population_source": "2021 census",
+        "graph": "graphs/fraser-lake.png",
+        "has_graph": true,
+        "mean_bp": 0.00309473369270563,
+        "median_bp": 0.00259858349154812,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5951009",
+        "census_subdivision_name": "Fraser Lake",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 4.0645
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -124.851662,
+          54.058369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Village of Queen Charlotte",
+        "slug": "village-of-queen-charlotte",
+        "wui_name": "Queen Charlotte, Village Of",
+        "wui_population": 964,
+        "wui_population_rank": 88,
+        "wui_places": [
+          "Village of Daajing Giids"
+        ],
+        "population": 964,
+        "population_rank": 88,
+        "population_source": "2021 census",
+        "graph": "graphs/village-of-queen-charlotte.png",
+        "has_graph": true,
+        "mean_bp": 0.000407280516810715,
+        "median_bp": 0.000389067319771201,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5947026",
+        "census_subdivision_name": "Queen Charlotte",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 35.5824
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -132.09453,
+          53.257905
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Falkland",
+        "slug": "falkland",
+        "wui_name": "Falkland",
+        "wui_population": 946,
+        "wui_population_rank": 89,
+        "wui_places": [
+          "Falkland"
+        ],
+        "population": 946,
+        "population_rank": 89,
+        "population_source": "2021 census",
+        "graph": "graphs/falkland.png",
+        "has_graph": true,
+        "mean_bp": 0.00271236733533442,
+        "median_bp": 0.00221707192027886,
+        "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Falkland",
+        "geocoder_full_address": "Falkland, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -119.558056,
+          50.501111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson's Hope",
+        "slug": "hudson-s-hope",
+        "wui_name": "Hudson'S Hope",
+        "wui_population": 841,
+        "wui_population_rank": 90,
+        "wui_places": [
+          "Hudson's Hope"
+        ],
+        "population": 841,
+        "population_rank": 90,
+        "population_source": "2021 census",
+        "graph": "graphs/hudson-s-hope.png",
+        "has_graph": true,
+        "mean_bp": 0.00150200654752553,
+        "median_bp": 0.00139305544259651,
+        "ecodivision_name": "BOREAL",
+        "natural_disturbance_type_code": "NDT3",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5955025",
+        "census_subdivision_name": "Hudson's Hope",
+        "census_subdivision_type": "DM",
+        "land_area_sq_km": 826.6963
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -122.006847,
+          56.023563
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Canal Flats",
+        "slug": "canal-flats",
+        "wui_name": "Canal Flats",
+        "wui_population": 802,
+        "wui_population_rank": 91,
+        "wui_places": [
+          "Canal Flats"
+        ],
+        "population": 802,
+        "population_rank": 91,
+        "population_source": "2021 census",
+        "graph": "graphs/canal-flats.png",
+        "has_graph": true,
+        "mean_bp": 0.00257765385322273,
+        "median_bp": 0.00215573873057993,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5901043",
+        "census_subdivision_name": "Canal Flats",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 11.0663
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.821416,
+          50.165153
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fairmont Hot Springs",
+        "slug": "fairmont-hot-springs",
+        "wui_name": "Fairmont Hot Springs",
+        "wui_population": 781,
+        "wui_population_rank": 92,
+        "wui_places": [
+          "Fairmont Hot Springs"
+        ],
+        "population": 781,
+        "population_rank": 92,
+        "population_source": "2021 census",
+        "graph": "graphs/fairmont-hot-springs.png",
+        "has_graph": true,
+        "mean_bp": 0.00187467783689499,
+        "median_bp": 0.00190643184076084,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Fairmont Hot Springs",
+        "geocoder_full_address": "Fairmont Hot Springs, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -115.856667,
+          50.335833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marktosis",
+        "slug": "marktosis",
+        "wui_name": "Marktosis",
+        "wui_population": 760,
+        "wui_population_rank": 93,
+        "wui_places": [
+          "Marktosis 15"
+        ],
+        "population": 760,
+        "population_rank": 93,
+        "population_source": "2021 census",
+        "graph": "graphs/marktosis.png",
+        "has_graph": true,
+        "mean_bp": 0.000352235801983625,
+        "median_bp": 0.000359635610948317,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Marktosis",
+        "geocoder_full_address": "Marktosis in Ahousaht, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -126.056944,
+          49.276944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New Aiyansh",
+        "slug": "new-aiyansh",
+        "wui_name": "New Aiyansh",
+        "wui_population": 749,
+        "wui_population_rank": 94,
+        "wui_places": [
+          "New Aiyansh"
+        ],
+        "population": 749,
+        "population_rank": 94,
+        "population_source": "2021 census",
+        "graph": "graphs/new-aiyansh.png",
+        "has_graph": true,
+        "mean_bp": 0.000783292111009359,
+        "median_bp": 0.000761769077639929,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "New Aiyansh",
+        "geocoder_full_address": "New Aiyansh in Gitlaxt'aamiks, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -129.080833,
+          55.203889
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Port Alice",
+        "slug": "port-alice",
+        "wui_name": "Port Alice",
+        "wui_population": 739,
+        "wui_population_rank": 95,
+        "wui_places": [
+          "Port Alice"
+        ],
+        "population": 739,
+        "population_rank": 95,
+        "population_source": "2021 census",
+        "graph": "graphs/port-alice.png",
+        "has_graph": true,
+        "mean_bp": 0.000547520234249532,
+        "median_bp": 0.000516322829845608,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5943017",
+        "census_subdivision_name": "Port Alice",
+        "census_subdivision_type": "VL",
+        "land_area_sq_km": 7.0301
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -127.476026,
+          50.416949
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Edgewater",
+        "slug": "edgewater",
+        "wui_name": "Edgewater",
+        "wui_population": 720,
+        "wui_population_rank": 96,
+        "wui_places": [
+          "Edgewater"
+        ],
+        "population": 720,
+        "population_rank": 96,
+        "population_source": "2021 census",
+        "graph": "graphs/edgewater.png",
+        "has_graph": true,
+        "mean_bp": 0.00150473741814494,
+        "median_bp": 0.00135080118670077,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Edgewater",
+        "geocoder_full_address": "Edgewater, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -116.135556,
+          50.699444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherryville",
+        "slug": "cherryville",
+        "wui_name": "Cherryville_145",
+        "wui_population": 717,
+        "wui_population_rank": 97,
+        "wui_places": [
+          "Cherryville"
+        ],
+        "population": 717,
+        "population_rank": 97,
+        "population_source": "2021 census",
+        "graph": "graphs/cherryville.png",
+        "has_graph": true,
+        "mean_bp": 0.00281311222352087,
+        "median_bp": 0.00226542713873374,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Cherryville",
+        "geocoder_full_address": "Cherryville, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.617778,
+          50.241389
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greenwood",
+        "slug": "greenwood",
+        "wui_name": "Greenwood",
+        "wui_population": 702,
+        "wui_population_rank": 98,
+        "wui_places": [
+          "Greenwood"
+        ],
+        "population": 702,
+        "population_rank": 98,
+        "population_source": "2021 census",
+        "graph": "graphs/greenwood.png",
+        "has_graph": true,
+        "mean_bp": 0.00334394071251154,
+        "median_bp": 0.00318096034831771,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
+        "natural_disturbance_type_code": "NDT3, NDT4",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5905042",
+        "census_subdivision_name": "Greenwood",
+        "census_subdivision_type": "CY",
+        "land_area_sq_km": 2.419
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -118.678462,
+          49.094135
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Skidegate 1",
+        "slug": "skidegate-1",
+        "wui_name": "Skidegate 1",
+        "wui_population": 697,
+        "wui_population_rank": 99,
+        "wui_places": [
+          "Skidegate 1"
+        ],
+        "population": 697,
+        "population_rank": 99,
+        "population_source": "2021 census",
+        "graph": "graphs/skidegate-1.png",
+        "has_graph": true,
+        "mean_bp": 0.000384793296689168,
+        "median_bp": 0.000382665464505957,
+        "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1",
+        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
+        "census_subdivision_id": "5947804",
+        "census_subdivision_name": "Skidegate 1",
+        "census_subdivision_type": "IRI",
+        "land_area_sq_km": 5.1234
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -131.984231,
+          53.277121
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Appledale",
+        "slug": "appledale",
+        "wui_name": "Appledale",
+        "wui_population": 689,
+        "wui_population_rank": 100,
+        "wui_places": [
+          "Slocan",
+          "Winlaw"
+        ],
+        "population": 689,
+        "population_rank": 100,
+        "population_source": "2021 census",
+        "graph": "graphs/appledale.png",
+        "has_graph": true,
+        "mean_bp": 0.00213913037441671,
+        "median_bp": 0.00181687722506859,
+        "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
+        "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Appledale",
+        "geocoder_full_address": "Appledale, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -117.534444,
+          49.649722
         ]
       }
     }

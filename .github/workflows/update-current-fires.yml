@@ -24,7 +24,26 @@ jobs:
           python-version: "3.x"
 
       - name: Fetch current fire perimeters
-        run: python scripts/fetch_current_fire_perimeters.py
+        run: |
+          set -e
+          max_attempts=4
+          attempt=1
+          while [ "$attempt" -le "$max_attempts" ]; do
+            echo "Fetch attempt $attempt/$max_attempts"
+            if python scripts/fetch_current_fire_perimeters.py; then
+              echo "Fetch succeeded"
+              exit 0
+            fi
+
+            echo "Fetch failed on attempt $attempt"
+            attempt=$((attempt + 1))
+            sleep_seconds=$((attempt * 15))
+            echo "Sleeping $sleep_seconds seconds before retry"
+            sleep "$sleep_seconds"
+          done
+
+          echo "All $max_attempts fetch attempts failed"
+          exit 1
 
       - name: Commit updated fire data
         run: |

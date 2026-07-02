@@ -329,6 +329,31 @@ input {
   margin-top: 18px;
 }
 
+.wui-places {
+  margin-top: 18px;
+}
+
+.wui-places h2 {
+  margin: 0 0 6px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.graph-missing {
+  display: grid;
+  gap: 4px;
+  margin-top: 18px;
+  border: 1px dashed var(--line);
+  border-radius: 8px;
+  padding: 14px;
+  background: #f8faf9;
+  color: var(--muted);
+}
+
+.graph-missing strong {
+  color: var(--ink);
+}
+
 .graph-frame.is-clickable img {
   cursor: zoom-in;
 }
