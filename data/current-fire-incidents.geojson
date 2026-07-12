@@ -285,7 +285,7 @@
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_point_count": 10,
-    "generated_at_utc": "2026-07-12T14:38:09+00:00",
+    "generated_at_utc": "2026-07-12T17:17:54+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
