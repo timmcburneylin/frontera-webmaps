@@ -22,6 +22,20 @@ DEFAULT_GEOCODED_POINTS = Path("data/wui-geocoded-points.json")
 DEFAULT_GRAPH_DIR = Path("graphs")
 DEFAULT_OUTPUT = Path("data/communities.geojson")
 XLSX_NS = {"a": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
+COORDINATE_OVERRIDES = {
+    "Kimberley": {
+        "coordinates": [-115.7694, 49.5129],
+        "source": "Manual town-centre override; WUI includes Cranbrook and Kimberley",
+        "query": "Cranbrook",
+        "full_address": "Cranbrook, BC",
+    },
+    "Princeton": {
+        "coordinates": [-120.5103, 49.4580],
+        "source": "Manual town-centre override; Census subdivision centroid falls south of the townsite",
+        "query": "Princeton",
+        "full_address": "Princeton, BC",
+    },
+}
 
 # NAD83 / Statistics Canada Lambert parameters from lcsd000b21a_e.prj.
 SEMI_MAJOR_AXIS = 6378137.0
@@ -44,6 +58,7 @@ def slugify(value: str) -> str:
 
 def clean_wui_display_name(value: str) -> str:
     display_aliases = {
+        "Kimberley": "Cranbrook",
         "Queen Charlotte, Village Of": "Village of Queen Charlotte",
         "Hudson'S Hope": "Hudson's Hope",
         "Hudson’s Hope": "Hudson's Hope",
@@ -297,10 +312,29 @@ def build_geojson(
         display_name = clean_wui_display_name(raw_wui_name)
         slug = slugify(display_name)
         csd_record = match_csd_record(raw_wui_name, by_name)
+        coordinate_override = COORDINATE_OVERRIDES.get(raw_wui_name)
+        geocoded_point = geocoded_points.get(raw_wui_name)
         coordinate_source = ""
         coordinate_metadata = {}
 
-        if csd_record:
+        if coordinate_override:
+            longitude, latitude = coordinate_override["coordinates"]
+            coordinate_source = coordinate_override["source"]
+            coordinate_metadata = {
+                "coordinate_override_query": coordinate_override["query"],
+                "coordinate_override_full_address": coordinate_override["full_address"],
+            }
+        elif geocoded_point:
+            longitude, latitude = geocoded_point["coordinates"]
+            coordinate_source = geocoded_point.get("source", "BC Geocoder API")
+            coordinate_metadata = {
+                "geocoder_query": geocoded_point.get("query"),
+                "geocoder_full_address": geocoded_point.get("full_address"),
+                "geocoder_match_precision": geocoded_point.get("match_precision"),
+                "geocoder_score": geocoded_point.get("score"),
+                "geocoder_locality_type": geocoded_point.get("locality_type"),
+            }
+        elif csd_record:
             x, y = polygon_centroid(csd_prefix.with_suffix(".shp"), shx_offsets, int(csd_record["_index"]))
             longitude, latitude = inverse_statscan_lambert(x, y)
             coordinate_source = "2021 Statistics Canada Census subdivision polygon centroid"
@@ -311,20 +345,9 @@ def build_geojson(
                 "land_area_sq_km": float(csd_record["LANDAREA"]),
             }
         else:
-            geocoded_point = geocoded_points.get(raw_wui_name)
-            if not geocoded_point:
-                raise ValueError(f"No coordinate source for {raw_wui_name}")
+            raise ValueError(f"No coordinate source for {raw_wui_name}")
 
-            longitude, latitude = geocoded_point["coordinates"]
-            coordinate_source = geocoded_point.get("source", "BC Geocoder API")
-            coordinate_metadata = {
-                "geocoder_query": geocoded_point.get("query"),
-                "geocoder_full_address": geocoded_point.get("full_address"),
-                "geocoder_match_precision": geocoded_point.get("match_precision"),
-                "geocoder_score": geocoded_point.get("score"),
-            }
-
-        graph = graph_for_slug(graph_dir, slug)
+        graph = graph_for_slug(graph_dir, slug) or graph_for_slug(graph_dir, slugify(raw_wui_name))
 
         properties = {
             "name": display_name,

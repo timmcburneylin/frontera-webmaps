@@ -54,17 +54,18 @@
         "median_bp": 0.000596056602984487,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5915022",
-        "census_subdivision_name": "Vancouver",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 115.1756
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Vancouver",
+        "geocoder_full_address": "Vancouver, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.10785,
-          49.249094
+          -123.1138889,
+          49.2611111
         ]
       }
     },
@@ -91,17 +92,18 @@
         "median_bp": 0.000656651166731402,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5909020",
-        "census_subdivision_name": "Chilliwack",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 261.3431
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Chilliwack",
+        "geocoder_full_address": "Chilliwack, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.929499,
-          49.142623
+          -121.9508334,
+          49.1577778
         ]
       }
     },
@@ -128,17 +130,18 @@
         "median_bp": 0.000600153488609339,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5917034",
-        "census_subdivision_name": "Victoria",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 19.4539
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Victoria",
+        "geocoder_full_address": "Victoria, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.356417,
-          48.428355
+          -123.3647222,
+          48.4283333
         ]
       }
     },
@@ -164,17 +167,18 @@
         "median_bp": 0.0027487105065041,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5935010",
-        "census_subdivision_name": "Kelowna",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 211.8491
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Kelowna",
+        "geocoder_full_address": "Kelowna, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.440254,
-          49.88497
+          -119.4955556,
+          49.8880556
         ]
       }
     },
@@ -199,17 +203,18 @@
         "median_bp": 0.000574820397094117,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5921007",
-        "census_subdivision_name": "Nanaimo",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 90.4488
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Nanaimo",
+        "geocoder_full_address": "Nanaimo, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.967275,
-          49.180132
+          -123.9380555,
+          49.1638889
         ]
       }
     },
@@ -238,17 +243,18 @@
         "median_bp": 0.000558520013825714,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5917044",
-        "census_subdivision_name": "Langford",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 41.4315
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Langford",
+        "geocoder_full_address": "Langford, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.529888,
-          48.449804
+          -123.5044444,
+          48.4497222
         ]
       }
     },
@@ -272,17 +278,18 @@
         "median_bp": 0.00238048734236267,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933042",
-        "census_subdivision_name": "Kamloops",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 297.9262
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Kamloops",
+        "geocoder_full_address": "Kamloops, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.327649,
-          50.694169
+          -120.3394445,
+          50.6758334
         ]
       }
     },
@@ -306,17 +313,18 @@
         "median_bp": 0.00580574537131255,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5953023",
-        "census_subdivision_name": "Prince George",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 316.7408
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Prince George",
+        "geocoder_full_address": "Prince George, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.775726,
-          53.923807
+          -122.7452777,
+          53.9130555
         ]
       }
     },
@@ -342,17 +350,18 @@
         "median_bp": 0.00247292142302329,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5937014",
-        "census_subdivision_name": "Vernon",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 96.4285
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Vernon",
+        "geocoder_full_address": "Vernon, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.346168,
-          50.233968
+          -119.2716667,
+          50.2658334
         ]
       }
     },
@@ -377,17 +386,18 @@
         "median_bp": 0.00370886496072601,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5907041",
-        "census_subdivision_name": "Penticton",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 43.0259
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Penticton",
+        "geocoder_full_address": "Penticton, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.569709,
-          49.494722
+          -119.5938888,
+          49.5008333
         ]
       }
     },
@@ -412,17 +422,18 @@
         "median_bp": 0.000919871031126524,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5926010",
-        "census_subdivision_name": "Courtenay",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 32.4176
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Courtenay",
+        "geocoder_full_address": "Courtenay, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.977003,
-          49.697925
+          -124.9958334,
+          49.6894445
         ]
       }
     },
@@ -448,17 +459,18 @@
         "median_bp": 0.000567738610419772,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5917010",
-        "census_subdivision_name": "Sidney",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 5.1052
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Sidney",
+        "geocoder_full_address": "Sidney, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.406996,
-          48.651916
+          -123.3983333,
+          48.6505556
         ]
       }
     },
@@ -483,17 +495,18 @@
         "median_bp": 0.000670910742300052,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5919012",
-        "census_subdivision_name": "Duncan",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 2.0646
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Duncan",
+        "geocoder_full_address": "Duncan, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.702148,
-          48.779396
+          -123.7080555,
+          48.7786111
         ]
       }
     },
@@ -517,17 +530,18 @@
         "median_bp": 0.000767502378383057,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5924034",
-        "census_subdivision_name": "Campbell River",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 144.3782
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Campbell River",
+        "geocoder_full_address": "Campbell River, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -125.297416,
-          50.00165
+          -125.2436111,
+          50.0230555
         ]
       }
     },
@@ -551,25 +565,26 @@
         "median_bp": 0.000593347079110988,
         "ecodivision_name": "BOREAL",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5955034",
-        "census_subdivision_name": "Fort St. John",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 32.6746
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Fort St. John",
+        "geocoder_full_address": "Fort St. John, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.826603,
-          56.243899
+          -120.8466667,
+          56.2525
         ]
       }
     },
     {
       "type": "Feature",
       "properties": {
-        "name": "Kimberley",
-        "slug": "kimberley",
+        "name": "Cranbrook",
+        "slug": "cranbrook",
         "wui_name": "Kimberley",
         "wui_population": 28614,
         "wui_population_rank": 16,
@@ -586,17 +601,18 @@
         "median_bp": 0.00857352648803543,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5901028",
-        "census_subdivision_name": "Kimberley",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 60.5082
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Cranbrook",
+        "geocoder_full_address": "Cranbrook, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -115.982774,
-          49.667859
+          -115.7469445,
+          49.5080555
         ]
       }
     },
@@ -622,17 +638,18 @@
         "median_bp": 0.000644521024859793,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5921018",
-        "census_subdivision_name": "Parksville",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 14.5205
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Parksville",
+        "geocoder_full_address": "Parksville, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.30442,
-          49.317395
+          -124.3113888,
+          49.3180556
         ]
       }
     },
@@ -656,17 +673,18 @@
         "median_bp": 0.00127458941120235,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5931006",
-        "census_subdivision_name": "Squamish",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 104.7075
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Squamish",
+        "geocoder_full_address": "Squamish, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.137346,
-          49.749254
+          -123.1558334,
+          49.6980555
         ]
       }
     },
@@ -690,17 +708,18 @@
         "median_bp": 0.00223206274684607,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5939032",
-        "census_subdivision_name": "Salmon Arm",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 155.1886
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Salmon Arm",
+        "geocoder_full_address": "Salmon Arm, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.284638,
-          50.699673
+          -119.2780556,
+          50.7013889
         ]
       }
     },
@@ -724,17 +743,18 @@
         "median_bp": 0.000623690182086885,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5923008",
-        "census_subdivision_name": "Port Alberni",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 19.657
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Port Alberni",
+        "geocoder_full_address": "Port Alberni, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.80209,
-          49.247551
+          -124.8058334,
+          49.2344444
         ]
       }
     },
@@ -762,17 +782,18 @@
         "median_bp": 0.00206279904322197,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5905014",
-        "census_subdivision_name": "Trail",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 34.9039
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Trail",
+        "geocoder_full_address": "Trail, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.713172,
-          49.089523
+          -117.7091667,
+          49.0944445
         ]
       }
     },
@@ -798,17 +819,18 @@
         "median_bp": 0.000412538279361798,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5929011",
-        "census_subdivision_name": "Sechelt",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 39.018
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Sechelt",
+        "geocoder_full_address": "Sechelt, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.761201,
-          49.481072
+          -123.7633333,
+          49.4716666
         ]
       }
     },
@@ -832,17 +854,18 @@
         "median_bp": 0.00160972820736605,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5931020",
-        "census_subdivision_name": "Whistler",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 239.9956
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Whistler",
+        "geocoder_full_address": "Whistler, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Resort Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.994235,
-          50.090347
+          -122.9547222,
+          50.1172222
         ]
       }
     },
@@ -866,17 +889,18 @@
         "median_bp": 0.000503284435659469,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5927008",
-        "census_subdivision_name": "Powell River",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 28.905
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Powell River",
+        "geocoder_full_address": "Powell River, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.533739,
-          49.861533
+          -124.5244444,
+          49.8355556
         ]
       }
     },
@@ -902,17 +926,18 @@
         "median_bp": 0.000600171549436285,
         "ecodivision_name": "BOREAL",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5955014",
-        "census_subdivision_name": "Dawson Creek",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 26.7247
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Dawson Creek",
+        "geocoder_full_address": "Dawson Creek, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.229694,
-          55.754892
+          -120.2355556,
+          55.7605556
         ]
       }
     },
@@ -936,17 +961,18 @@
         "median_bp": 0.00048811101110645,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5947012",
-        "census_subdivision_name": "Prince Rupert",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 66.0033
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Prince Rupert",
+        "geocoder_full_address": "Prince Rupert, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -130.29712,
-          54.290093
+          -130.3252778,
+          54.3127778
         ]
       }
     },
@@ -970,17 +996,18 @@
         "median_bp": 0.000611241153879647,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5949011",
-        "census_subdivision_name": "Terrace",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 57.3268
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Terrace",
+        "geocoder_full_address": "Terrace, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -128.591785,
-          54.478274
+          -128.5997222,
+          54.5175
         ]
       }
     },
@@ -1004,17 +1031,18 @@
         "median_bp": 0.00270914330059083,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5903015",
-        "census_subdivision_name": "Nelson",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 11.9338
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Nelson",
+        "geocoder_full_address": "Nelson, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.366432,
-          49.480206
+          -117.2958334,
+          49.4933334
         ]
       }
     },
@@ -1038,17 +1066,18 @@
         "median_bp": 0.00509106763610205,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5941009",
-        "census_subdivision_name": "Williams Lake",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 33.1202
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Williams Lake",
+        "geocoder_full_address": "Williams Lake, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.126305,
-          52.135974
+          -122.14,
+          52.1291667
         ]
       }
     },
@@ -1073,17 +1102,18 @@
         "median_bp": 0.00266303851160512,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5907014",
-        "census_subdivision_name": "Oliver",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 5.4899
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Oliver",
+        "geocoder_full_address": "Oliver, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.550015,
-          49.184443
+          -119.5508334,
+          49.1825
         ]
       }
     },
@@ -1107,17 +1137,18 @@
         "median_bp": 0.00360777576252538,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5941013",
-        "census_subdivision_name": "Quesnel",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 35.3483
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Quesnel",
+        "geocoder_full_address": "Quesnel, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.475693,
-          52.987692
+          -122.4936111,
+          52.9797222
         ]
       }
     },
@@ -1142,17 +1173,18 @@
         "median_bp": 0.00194393465337314,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5937028",
-        "census_subdivision_name": "Armstrong",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 5.2185
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Armstrong",
+        "geocoder_full_address": "Armstrong, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.19785,
-          50.444851
+          -119.1966667,
+          50.4483333
         ]
       }
     },
@@ -1176,17 +1208,18 @@
         "median_bp": 0.00340126683770478,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5903045",
-        "census_subdivision_name": "Castlegar",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 19.8709
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Castlegar",
+        "geocoder_full_address": "Castlegar, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.671457,
-          49.300935
+          -117.6669444,
+          49.3244444
         ]
       }
     },
@@ -1210,17 +1243,18 @@
         "median_bp": 0.00190649485759838,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5939019",
-        "census_subdivision_name": "Revelstoke",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 41.28
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Revelstoke",
+        "geocoder_full_address": "Revelstoke, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.191516,
-          50.997322
+          -118.1961111,
+          50.9980555
         ]
       }
     },
@@ -1244,17 +1278,18 @@
         "median_bp": 0.000412501346325772,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5949005",
-        "census_subdivision_name": "Kitimat",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 239.28
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Kitimat",
+        "geocoder_full_address": "Kitimat, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -128.714341,
-          53.989093
+          -128.6522222,
+          54.0533333
         ]
       }
     },
@@ -1282,17 +1317,18 @@
         "median_bp": 0.00186481853915954,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5901039",
-        "census_subdivision_name": "Invermere",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 10.7482
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Invermere",
+        "geocoder_full_address": "Invermere, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -116.035732,
-          50.500076
+          -116.0305555,
+          50.5058333
         ]
       }
     },
@@ -1316,17 +1352,18 @@
         "median_bp": 0.00322866947402045,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933006",
-        "census_subdivision_name": "Merritt",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 26.043
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Merritt",
+        "geocoder_full_address": "Merritt, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.775262,
-          50.112844
+          -120.7883333,
+          50.1125
         ]
       }
     },
@@ -1351,17 +1388,18 @@
         "median_bp": 0.00192839958289097,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5951043",
-        "census_subdivision_name": "Smithers",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 15.259
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Smithers",
+        "geocoder_full_address": "Smithers, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -127.164903,
-          54.786142
+          -127.1761111,
+          54.7791666
         ]
       }
     },
@@ -1385,17 +1423,18 @@
         "median_bp": 0.000602974465095628,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5909009",
-        "census_subdivision_name": "Hope",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 40.8706
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Hope",
+        "geocoder_full_address": "Hope, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.454672,
-          49.379946
+          -121.4413888,
+          49.38
         ]
       }
     },
@@ -1419,17 +1458,18 @@
         "median_bp": 0.00409161762035637,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5901012",
-        "census_subdivision_name": "Fernie",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 15.1082
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Fernie",
+        "geocoder_full_address": "Fernie, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -115.061169,
-          49.506527
+          -115.0627778,
+          49.5041666
         ]
       }
     },
@@ -1453,17 +1493,18 @@
         "median_bp": 0.00293228482497172,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5903004",
-        "census_subdivision_name": "Creston",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 8.4055
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Creston",
+        "geocoder_full_address": "Creston, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -116.514313,
-          49.105712
+          -116.5130555,
+          49.0975
         ]
       }
     },
@@ -1487,17 +1528,18 @@
         "median_bp": 0.0019618969410418,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5951007",
-        "census_subdivision_name": "Vanderhoof",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 53.9276
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Vanderhoof",
+        "geocoder_full_address": "Vanderhoof, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.025645,
-          54.015794
+          -124.0074999,
+          54.0175
         ]
       }
     },
@@ -1521,17 +1563,18 @@
         "median_bp": 0.003174822495251,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5901006",
-        "census_subdivision_name": "Sparwood",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 191.2959
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Sparwood",
+        "geocoder_full_address": "Sparwood, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.797225,
-          49.75842
+          -114.8858333,
+          49.7333333
         ]
       }
     },
@@ -1555,17 +1598,18 @@
         "median_bp": 0.00146466291081943,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5905032",
-        "census_subdivision_name": "Grand Forks",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 10.3741
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Grand Forks",
+        "geocoder_full_address": "Grand Forks, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.446657,
-          49.030661
+          -118.4391667,
+          49.0311111
         ]
       }
     },
@@ -1589,17 +1633,18 @@
         "median_bp": 0.00273259333996259,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5939007",
-        "census_subdivision_name": "Golden",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 11.3255
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Golden",
+        "geocoder_full_address": "Golden, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -116.963204,
-          51.298382
+          -116.9647223,
+          51.2977777
         ]
       }
     },
@@ -1623,17 +1668,18 @@
         "median_bp": 0.00332416711210679,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933880",
-        "census_subdivision_name": "Kamloops 1",
-        "census_subdivision_type": "IRI",
-        "land_area_sq_km": 136.7272
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Kamloops",
+        "geocoder_full_address": "Kamloops, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.257193,
-          50.72967
+          -120.3394445,
+          50.6758334
         ]
       }
     },
@@ -1657,17 +1703,18 @@
         "median_bp": 0.000599879019787561,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5943023",
-        "census_subdivision_name": "Port Hardy",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 38.5522
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Port Hardy",
+        "geocoder_full_address": "Port Hardy, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -127.441236,
-          50.694665
+          -127.4980555,
+          50.7244445
         ]
       }
     },
@@ -1691,17 +1738,18 @@
         "median_bp": 0.00348216973276284,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5931012",
-        "census_subdivision_name": "Pemberton",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 61.3552
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Pemberton",
+        "geocoder_full_address": "Pemberton, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.872779,
-          50.315111
+          -122.8077778,
+          50.3205556
         ]
       }
     },
@@ -1725,17 +1773,18 @@
         "median_bp": 0.000565961599506126,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5919016",
-        "census_subdivision_name": "Lake Cowichan",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 8.2412
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Lake Cowichan",
+        "geocoder_full_address": "Lake Cowichan, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.060453,
-          48.823376
+          -124.0563889,
+          48.8258333
         ]
       }
     },
@@ -1759,17 +1808,18 @@
         "median_bp": 0.00250687769088519,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5953033",
-        "census_subdivision_name": "Mackenzie",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 154.1856
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Mackenzie",
+        "geocoder_full_address": "Mackenzie, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.147251,
-          55.314086
+          -123.0927778,
+          55.3244445
         ]
       }
     },
@@ -1793,17 +1843,18 @@
         "median_bp": 0.00347762548109659,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5951034",
-        "census_subdivision_name": "Houston",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 72.8761
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Houston",
+        "geocoder_full_address": "Houston, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -126.666479,
-          54.396918
+          -126.6483333,
+          54.3983333
         ]
       }
     },
@@ -1827,17 +1878,18 @@
         "median_bp": 0.00291030203131047,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5907024",
-        "census_subdivision_name": "Princeton",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 59.2806
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Princeton",
+        "geocoder_full_address": "Princeton, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.518009,
-          49.361058
+          -120.5088889,
+          49.4591666
         ]
       }
     },
@@ -1862,17 +1914,18 @@
         "median_bp": 0.000709574484280183,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5943012",
-        "census_subdivision_name": "Port McNeill",
-        "census_subdivision_type": "T",
-        "land_area_sq_km": 13.7675
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Port McNeill",
+        "geocoder_full_address": "Port McNeill, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Town"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -127.121554,
-          50.588131
+          -127.0836112,
+          50.5894444
         ]
       }
     },
@@ -1898,17 +1951,18 @@
         "median_bp": 0.00707315989584449,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5941005",
-        "census_subdivision_name": "One Hundred Mile House",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 53.0116
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "100 Mile House",
+        "geocoder_full_address": "100 Mile House, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.312724,
-          51.641331
+          -121.2955556,
+          51.6427778
         ]
       }
     },
@@ -1932,17 +1986,18 @@
         "median_bp": 0.0069678459720818,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5901003",
-        "census_subdivision_name": "Elkford",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 108.121
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Elkford",
+        "geocoder_full_address": "Elkford, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -114.876908,
-          50.061989
+          -114.9216667,
+          50.0244444
         ]
       }
     },
@@ -1971,17 +2026,18 @@
         "median_bp": 0.00163099557366442,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5903023",
-        "census_subdivision_name": "Kaslo",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 3.0079
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Kaslo",
+        "geocoder_full_address": "Kaslo, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -116.914067,
-          49.908544
+          -116.9050001,
+          49.9105556
         ]
       }
     },
@@ -2005,17 +2061,18 @@
         "median_bp": 0.00168853921397325,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5939045",
-        "census_subdivision_name": "Sicamous",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 12.7964
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Sicamous",
+        "geocoder_full_address": "Sicamous, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.98028,
-          50.835829
+          -118.98,
+          50.8361111
         ]
       }
     },
@@ -2043,13 +2100,14 @@
         "geocoder_query": "Fort Nelson",
         "geocoder_full_address": "Fort Nelson, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.696944,
-          58.805278
+          -122.6972222,
+          58.8055555
         ]
       }
     },
@@ -2074,17 +2132,18 @@
         "median_bp": 0.00296752923765033,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5931026",
-        "census_subdivision_name": "Lillooet",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 27.6331
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Lillooet",
+        "geocoder_full_address": "Lillooet, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.917709,
-          50.682973
+          -121.9336111,
+          50.6938889
         ]
       }
     },
@@ -2108,17 +2167,18 @@
         "median_bp": 0.000400044286633243,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5923025",
-        "census_subdivision_name": "Tofino",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 10.557
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Tofino",
+        "geocoder_full_address": "Tofino, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -125.885289,
-          49.1275
+          -125.9044444,
+          49.1530555
         ]
       }
     },
@@ -2142,17 +2202,18 @@
         "median_bp": 0.00195329934320508,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933054",
-        "census_subdivision_name": "Chase",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 3.7528
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Chase",
+        "geocoder_full_address": "Chase, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.689354,
-          50.843815
+          -119.6861111,
+          50.8191666
         ]
       }
     },
@@ -2176,17 +2237,18 @@
         "median_bp": 0.0027305457019124,
         "ecodivision_name": "BOREAL, HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5955003",
-        "census_subdivision_name": "Tumbler Ridge",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 1557.4142
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Tumbler Ridge",
+        "geocoder_full_address": "Tumbler Ridge, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.158354,
-          55.058262
+          -120.9980556,
+          55.1261111
         ]
       }
     },
@@ -2210,17 +2272,18 @@
         "median_bp": 0.00608865992243546,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933067",
-        "census_subdivision_name": "Clearwater",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 55.6508
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Clearwater",
+        "geocoder_full_address": "Clearwater, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.009103,
-          51.644334
+          -120.0325,
+          51.6455556
         ]
       }
     },
@@ -2250,13 +2313,14 @@
         "geocoder_query": "Bella Coola",
         "geocoder_full_address": "Bella Coola, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -126.753333,
-          52.372778
+          -126.7536112,
+          52.3730556
         ]
       }
     },
@@ -2280,17 +2344,18 @@
         "median_bp": 0.0013104527519314,
         "ecodivision_name": "BOREAL, HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5955010",
-        "census_subdivision_name": "Chetwynd",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 63.5491
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Chetwynd",
+        "geocoder_full_address": "Chetwynd, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.767933,
-          55.692147
+          -121.6383334,
+          55.6958333
         ]
       }
     },
@@ -2314,17 +2379,18 @@
         "median_bp": 0.00367880452585721,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933035",
-        "census_subdivision_name": "Logan Lake",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 324.2761
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Logan Lake",
+        "geocoder_full_address": "Logan Lake, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.028089,
-          50.486571
+          -120.8133333,
+          50.4944444
         ]
       }
     },
@@ -2348,17 +2414,18 @@
         "median_bp": 0.00307719941409681,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5907803",
-        "census_subdivision_name": "Penticton 1",
-        "census_subdivision_type": "IRI",
-        "land_area_sq_km": 194.5453
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Penticton",
+        "geocoder_full_address": "Penticton, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.684787,
-          49.477324
+          -119.5938888,
+          49.5008333
         ]
       }
     },
@@ -2382,17 +2449,18 @@
         "median_bp": 0.000589094506683978,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5923019",
-        "census_subdivision_name": "Ucluelet",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 6.4798
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Ucluelet",
+        "geocoder_full_address": "Ucluelet, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -125.560676,
-          48.943481
+          -125.5461112,
+          48.9427778
         ]
       }
     },
@@ -2420,17 +2488,18 @@
         "median_bp": 0.000799995437019335,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5949024",
-        "census_subdivision_name": "New Hazelton",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 24.3426
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "New Hazelton",
+        "geocoder_full_address": "New Hazelton, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -127.595136,
-          55.236605
+          -127.5869444,
+          55.2433334
         ]
       }
     },
@@ -2455,17 +2524,18 @@
         "median_bp": 0.00240516786283761,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5951022",
-        "census_subdivision_name": "Burns Lake",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 6.5402
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Burns Lake",
+        "geocoder_full_address": "Burns Lake, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -125.723393,
-          54.224928
+          -125.7644445,
+          54.2302778
         ]
       }
     },
@@ -2489,17 +2559,18 @@
         "median_bp": 0.00138121217919865,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5907009",
-        "census_subdivision_name": "Keremeos",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 2.093
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Keremeos",
+        "geocoder_full_address": "Keremeos, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.825624,
-          49.205752
+          -119.8297223,
+          49.2047222
         ]
       }
     },
@@ -2523,17 +2594,18 @@
         "median_bp": 0.00169974405000488,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5903050",
-        "census_subdivision_name": "Nakusp",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 8.0376
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Nakusp",
+        "geocoder_full_address": "Nakusp, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.797553,
-          50.24996
+          -117.7975,
+          50.2391667
         ]
       }
     },
@@ -2557,17 +2629,18 @@
         "median_bp": 0.00165062548984539,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4, NDT5",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933045",
-        "census_subdivision_name": "Sun Peaks Mountain",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 40.8525
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Sun Peaks",
+        "geocoder_full_address": "Sun Peaks, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Mountain Resort Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.895957,
-          50.889184
+          -119.8794445,
+          50.8844444
         ]
       }
     },
@@ -2591,17 +2664,18 @@
         "median_bp": 0.00345929512106148,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933074",
-        "census_subdivision_name": "Barriere",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 10.7272
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Barriere",
+        "geocoder_full_address": "Barriere, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.125434,
-          51.178667
+          -120.1236112,
+          51.1797222
         ]
       }
     },
@@ -2625,17 +2699,18 @@
         "median_bp": 0.00229954428283646,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5951013",
-        "census_subdivision_name": "Fort St. James",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 23.4524
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Fort St. James",
+        "geocoder_full_address": "Fort St. James, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.227003,
-          54.470739
+          -124.2591666,
+          54.4444444
         ]
       }
     },
@@ -2663,13 +2738,14 @@
         "geocoder_query": "Christina Lake",
         "geocoder_full_address": "Christina Lake, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.209444,
-          49.042778
+          -118.2094444,
+          49.0427777
         ]
       }
     },
@@ -2694,17 +2770,18 @@
         "median_bp": 0.000402135471099725,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5947023",
-        "census_subdivision_name": "Masset",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 20.6897
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Masset",
+        "geocoder_full_address": "Masset, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -132.103732,
-          54.020715
+          -132.1466667,
+          54.0111111
         ]
       }
     },
@@ -2732,13 +2809,14 @@
         "geocoder_query": "Sorrento",
         "geocoder_full_address": "Sorrento, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.466667,
-          50.876667
+          -119.4669445,
+          50.8769445
         ]
       }
     },
@@ -2762,17 +2840,18 @@
         "median_bp": 0.000583941765945121,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1, NDT2",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5924025",
-        "census_subdivision_name": "Gold River",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 10.9152
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Gold River",
+        "geocoder_full_address": "Gold River, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -126.083777,
-          49.731554
+          -126.0469445,
+          49.7813889
         ]
       }
     },
@@ -2800,13 +2879,14 @@
         "geocoder_query": "Garibaldi Estates",
         "geocoder_full_address": "Garibaldi Estates in Squamish, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.135556,
-          49.740555
+          -123.1358333,
+          49.7408333
         ]
       }
     },
@@ -2830,17 +2910,18 @@
         "median_bp": 0.00225151007463806,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5903011",
-        "census_subdivision_name": "Salmo",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 2.4442
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Salmo",
+        "geocoder_full_address": "Salmo, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.280266,
-          49.190741
+          -117.2786111,
+          49.1933333
         ]
       }
     },
@@ -2864,17 +2945,18 @@
         "median_bp": 0.000635511497730535,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT2, NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5953007",
-        "census_subdivision_name": "Valemount",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 5.1629
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Valemount",
+        "geocoder_full_address": "Valemount, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.265873,
-          52.828381
+          -119.2733334,
+          52.8286112
         ]
       }
     },
@@ -2902,13 +2984,14 @@
         "geocoder_query": "Big White",
         "geocoder_full_address": "Big White, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Recreational Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.927778,
-          49.721111
+          -118.9277777,
+          49.7213888
         ]
       }
     },
@@ -2936,13 +3019,14 @@
         "geocoder_query": "Nicola",
         "geocoder_full_address": "Nicola in Upper Nicola, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -120.665556,
-          50.163611
+          -120.6655556,
+          50.1636112
         ]
       }
     },
@@ -2970,13 +3054,14 @@
         "geocoder_query": "Cobble Hill",
         "geocoder_full_address": "Cobble Hill, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -123.603333,
-          48.686111
+          -123.6033333,
+          48.6863889
         ]
       }
     },
@@ -3000,17 +3085,18 @@
         "median_bp": 0.00273877381745493,
         "ecodivision_name": "SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5933024",
-        "census_subdivision_name": "Cache Creek",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 10.3976
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Cache Creek",
+        "geocoder_full_address": "Cache Creek, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -121.319038,
-          50.797918
+          -121.3233333,
+          50.8119444
         ]
       }
     },
@@ -3034,17 +3120,18 @@
         "median_bp": 0.00259858349154812,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5951009",
-        "census_subdivision_name": "Fraser Lake",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 4.0645
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Fraser Lake",
+        "geocoder_full_address": "Fraser Lake, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -124.851662,
-          54.058369
+          -124.8438888,
+          54.0602778
         ]
       }
     },
@@ -3068,17 +3155,18 @@
         "median_bp": 0.000389067319771201,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5947026",
-        "census_subdivision_name": "Queen Charlotte",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 35.5824
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Daajing Giids",
+        "geocoder_full_address": "Daajing Giids, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -132.09453,
-          53.257905
+          -132.1025001,
+          53.2547222
         ]
       }
     },
@@ -3106,13 +3194,14 @@
         "geocoder_query": "Falkland",
         "geocoder_full_address": "Falkland, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -119.558056,
-          50.501111
+          -119.5583333,
+          50.5013889
         ]
       }
     },
@@ -3136,17 +3225,18 @@
         "median_bp": 0.00139305544259651,
         "ecodivision_name": "BOREAL",
         "natural_disturbance_type_code": "NDT3",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5955025",
-        "census_subdivision_name": "Hudson's Hope",
-        "census_subdivision_type": "DM",
-        "land_area_sq_km": 826.6963
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Hudson's Hope",
+        "geocoder_full_address": "Hudson's Hope, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "District Municipality"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -122.006847,
-          56.023563
+          -121.9136111,
+          56.0258334
         ]
       }
     },
@@ -3170,17 +3260,18 @@
         "median_bp": 0.00215573873057993,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5901043",
-        "census_subdivision_name": "Canal Flats",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 11.0663
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Canal Flats",
+        "geocoder_full_address": "Canal Flats, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -115.821416,
-          50.165153
+          -115.8088888,
+          50.1602778
         ]
       }
     },
@@ -3208,13 +3299,14 @@
         "geocoder_query": "Fairmont Hot Springs",
         "geocoder_full_address": "Fairmont Hot Springs, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Recreational Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -115.856667,
-          50.335833
+          -115.8569445,
+          50.3361111
         ]
       }
     },
@@ -3242,13 +3334,14 @@
         "geocoder_query": "Marktosis",
         "geocoder_full_address": "Marktosis in Ahousaht, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -126.056944,
-          49.276944
+          -126.0569444,
+          49.2769445
         ]
       }
     },
@@ -3276,13 +3369,14 @@
         "geocoder_query": "New Aiyansh",
         "geocoder_full_address": "New Aiyansh in Gitlaxt'aamiks, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -129.080833,
-          55.203889
+          -129.0702778,
+          55.1972223
         ]
       }
     },
@@ -3306,17 +3400,18 @@
         "median_bp": 0.000516322829845608,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5943017",
-        "census_subdivision_name": "Port Alice",
-        "census_subdivision_type": "VL",
-        "land_area_sq_km": 7.0301
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Port Alice",
+        "geocoder_full_address": "Port Alice, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Village"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -127.476026,
-          50.416949
+          -127.4880555,
+          50.4266666
         ]
       }
     },
@@ -3344,13 +3439,14 @@
         "geocoder_query": "Edgewater",
         "geocoder_full_address": "Edgewater, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -116.135556,
-          50.699444
+          -116.1355555,
+          50.6997222
         ]
       }
     },
@@ -3378,13 +3474,14 @@
         "geocoder_query": "Cherryville",
         "geocoder_full_address": "Cherryville, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.617778,
-          50.241389
+          -118.6061111,
+          50.2380556
         ]
       }
     },
@@ -3408,17 +3505,18 @@
         "median_bp": 0.00318096034831771,
         "ecodivision_name": "HUMID CONTINENTAL HIGHLANDS, SEMI-ARID STEPPE HIGHLANDS",
         "natural_disturbance_type_code": "NDT3, NDT4",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5905042",
-        "census_subdivision_name": "Greenwood",
-        "census_subdivision_type": "CY",
-        "land_area_sq_km": 2.419
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Greenwood",
+        "geocoder_full_address": "Greenwood, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "City"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -118.678462,
-          49.094135
+          -118.6763889,
+          49.0883333
         ]
       }
     },
@@ -3442,17 +3540,18 @@
         "median_bp": 0.000382665464505957,
         "ecodivision_name": "COOL HYPERMARITIME AND HIGHLANDS",
         "natural_disturbance_type_code": "NDT1",
-        "coordinate_source": "2021 Statistics Canada Census subdivision polygon centroid",
-        "census_subdivision_id": "5947804",
-        "census_subdivision_name": "Skidegate 1",
-        "census_subdivision_type": "IRI",
-        "land_area_sq_km": 5.1234
+        "coordinate_source": "BC Geocoder API",
+        "geocoder_query": "Skidegate",
+        "geocoder_full_address": "Skidegate, BC",
+        "geocoder_match_precision": "LOCALITY",
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -131.984231,
-          53.277121
+          -131.9919445,
+          53.2663889
         ]
       }
     },
@@ -3481,13 +3580,14 @@
         "geocoder_query": "Appledale",
         "geocoder_full_address": "Appledale, BC",
         "geocoder_match_precision": "LOCALITY",
-        "geocoder_score": 68
+        "geocoder_score": 68,
+        "geocoder_locality_type": "Community"
       },
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -117.534444,
-          49.649722
+          -117.5344444,
+          49.6497223
         ]
       }
     }

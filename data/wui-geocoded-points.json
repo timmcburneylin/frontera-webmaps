@@ -14,8 +14,8 @@
   "Cherryville_145": {
     "query": "Cherryville",
     "coordinates": [
-      -118.6177777,
-      50.2413889
+      -118.6061111,
+      50.2380556
     ],
     "full_address": "Cherryville, BC",
     "match_precision": "LOCALITY",
@@ -26,8 +26,8 @@
   "Edgewater": {
     "query": "Edgewater",
     "coordinates": [
-      -116.1355556,
-      50.6994444
+      -116.1355555,
+      50.6997222
     ],
     "full_address": "Edgewater, BC",
     "match_precision": "LOCALITY",
@@ -38,8 +38,8 @@
   "New Aiyansh": {
     "query": "New Aiyansh",
     "coordinates": [
-      -129.0808333,
-      55.2038889
+      -129.0702778,
+      55.1972223
     ],
     "full_address": "New Aiyansh in Gitlaxt'aamiks, BC",
     "match_precision": "LOCALITY",
@@ -62,8 +62,8 @@
   "Fairmont Hot Springs": {
     "query": "Fairmont Hot Springs",
     "coordinates": [
-      -115.8566667,
-      50.3358334
+      -115.8569445,
+      50.3361111
     ],
     "full_address": "Fairmont Hot Springs, BC",
     "match_precision": "LOCALITY",
@@ -74,8 +74,8 @@
   "Falkland": {
     "query": "Falkland",
     "coordinates": [
-      -119.5580556,
-      50.5011111
+      -119.5583333,
+      50.5013889
     ],
     "full_address": "Falkland, BC",
     "match_precision": "LOCALITY",
@@ -86,8 +86,8 @@
   "Cobble Hill": {
     "query": "Cobble Hill",
     "coordinates": [
-      -123.6033334,
-      48.6861111
+      -123.6033333,
+      48.6863889
     ],
     "full_address": "Cobble Hill, BC",
     "match_precision": "LOCALITY",
@@ -111,7 +111,7 @@
     "query": "Big White",
     "coordinates": [
       -118.9277777,
-      49.7211111
+      49.7213888
     ],
     "full_address": "Big White, BC",
     "match_precision": "LOCALITY",
@@ -122,8 +122,8 @@
   "Garibaldi Estates": {
     "query": "Garibaldi Estates",
     "coordinates": [
-      -123.1355556,
-      49.7405555
+      -123.1358333,
+      49.7408333
     ],
     "full_address": "Garibaldi Estates in Squamish, BC",
     "match_precision": "LOCALITY",
@@ -134,8 +134,8 @@
   "Sorrento": {
     "query": "Sorrento",
     "coordinates": [
-      -119.4666667,
-      50.8766667
+      -119.4669445,
+      50.8769445
     ],
     "full_address": "Sorrento, BC",
     "match_precision": "LOCALITY",
@@ -158,8 +158,8 @@
   "Bella Coola": {
     "query": "Bella Coola",
     "coordinates": [
-      -126.7533334,
-      52.3727778
+      -126.7536112,
+      52.3730556
     ],
     "full_address": "Bella Coola, BC",
     "match_precision": "LOCALITY",
@@ -170,10 +170,1030 @@
   "Fort Nelson": {
     "query": "Fort Nelson",
     "coordinates": [
-      -122.6969444,
-      58.8052778
+      -122.6972222,
+      58.8055555
     ],
     "full_address": "Fort Nelson, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Community",
+    "source": "BC Geocoder API"
+  },
+  "Vancouver": {
+    "query": "Vancouver",
+    "coordinates": [
+      -123.1138889,
+      49.2611111
+    ],
+    "full_address": "Vancouver, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Chilliwack": {
+    "query": "Chilliwack",
+    "coordinates": [
+      -121.9508334,
+      49.1577778
+    ],
+    "full_address": "Chilliwack, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Victoria": {
+    "query": "Victoria",
+    "coordinates": [
+      -123.3647222,
+      48.4283333
+    ],
+    "full_address": "Victoria, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Kelowna": {
+    "query": "Kelowna",
+    "coordinates": [
+      -119.4955556,
+      49.8880556
+    ],
+    "full_address": "Kelowna, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Nanaimo": {
+    "query": "Nanaimo",
+    "coordinates": [
+      -123.9380555,
+      49.1638889
+    ],
+    "full_address": "Nanaimo, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Langford": {
+    "query": "Langford",
+    "coordinates": [
+      -123.5044444,
+      48.4497222
+    ],
+    "full_address": "Langford, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Kamloops": {
+    "query": "Kamloops",
+    "coordinates": [
+      -120.3394445,
+      50.6758334
+    ],
+    "full_address": "Kamloops, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Prince George": {
+    "query": "Prince George",
+    "coordinates": [
+      -122.7452777,
+      53.9130555
+    ],
+    "full_address": "Prince George, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Vernon": {
+    "query": "Vernon",
+    "coordinates": [
+      -119.2716667,
+      50.2658334
+    ],
+    "full_address": "Vernon, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Penticton": {
+    "query": "Penticton",
+    "coordinates": [
+      -119.5938888,
+      49.5008333
+    ],
+    "full_address": "Penticton, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Courtenay": {
+    "query": "Courtenay",
+    "coordinates": [
+      -124.9958334,
+      49.6894445
+    ],
+    "full_address": "Courtenay, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Sidney": {
+    "query": "Sidney",
+    "coordinates": [
+      -123.3983333,
+      48.6505556
+    ],
+    "full_address": "Sidney, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Duncan": {
+    "query": "Duncan",
+    "coordinates": [
+      -123.7080555,
+      48.7786111
+    ],
+    "full_address": "Duncan, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Campbell River": {
+    "query": "Campbell River",
+    "coordinates": [
+      -125.2436111,
+      50.0230555
+    ],
+    "full_address": "Campbell River, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Fort St. John": {
+    "query": "Fort St. John",
+    "coordinates": [
+      -120.8466667,
+      56.2525
+    ],
+    "full_address": "Fort St. John, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Kimberley": {
+    "query": "Cranbrook",
+    "coordinates": [
+      -115.7469445,
+      49.5080555
+    ],
+    "full_address": "Cranbrook, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Parksville": {
+    "query": "Parksville",
+    "coordinates": [
+      -124.3113888,
+      49.3180556
+    ],
+    "full_address": "Parksville, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Squamish": {
+    "query": "Squamish",
+    "coordinates": [
+      -123.1558334,
+      49.6980555
+    ],
+    "full_address": "Squamish, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Salmon Arm": {
+    "query": "Salmon Arm",
+    "coordinates": [
+      -119.2780556,
+      50.7013889
+    ],
+    "full_address": "Salmon Arm, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Port Alberni": {
+    "query": "Port Alberni",
+    "coordinates": [
+      -124.8058334,
+      49.2344444
+    ],
+    "full_address": "Port Alberni, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Trail": {
+    "query": "Trail",
+    "coordinates": [
+      -117.7091667,
+      49.0944445
+    ],
+    "full_address": "Trail, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Sechelt": {
+    "query": "Sechelt",
+    "coordinates": [
+      -123.7633333,
+      49.4716666
+    ],
+    "full_address": "Sechelt, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Whistler": {
+    "query": "Whistler",
+    "coordinates": [
+      -122.9547222,
+      50.1172222
+    ],
+    "full_address": "Whistler, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Resort Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Powell River": {
+    "query": "Powell River",
+    "coordinates": [
+      -124.5244444,
+      49.8355556
+    ],
+    "full_address": "Powell River, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Dawson Creek": {
+    "query": "Dawson Creek",
+    "coordinates": [
+      -120.2355556,
+      55.7605556
+    ],
+    "full_address": "Dawson Creek, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Prince Rupert": {
+    "query": "Prince Rupert",
+    "coordinates": [
+      -130.3252778,
+      54.3127778
+    ],
+    "full_address": "Prince Rupert, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Terrace": {
+    "query": "Terrace",
+    "coordinates": [
+      -128.5997222,
+      54.5175
+    ],
+    "full_address": "Terrace, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Nelson": {
+    "query": "Nelson",
+    "coordinates": [
+      -117.2958334,
+      49.4933334
+    ],
+    "full_address": "Nelson, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Williams Lake": {
+    "query": "Williams Lake",
+    "coordinates": [
+      -122.14,
+      52.1291667
+    ],
+    "full_address": "Williams Lake, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Oliver": {
+    "query": "Oliver",
+    "coordinates": [
+      -119.5508334,
+      49.1825
+    ],
+    "full_address": "Oliver, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Quesnel": {
+    "query": "Quesnel",
+    "coordinates": [
+      -122.4936111,
+      52.9797222
+    ],
+    "full_address": "Quesnel, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Armstrong": {
+    "query": "Armstrong",
+    "coordinates": [
+      -119.1966667,
+      50.4483333
+    ],
+    "full_address": "Armstrong, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Castlegar": {
+    "query": "Castlegar",
+    "coordinates": [
+      -117.6669444,
+      49.3244444
+    ],
+    "full_address": "Castlegar, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Revelstoke": {
+    "query": "Revelstoke",
+    "coordinates": [
+      -118.1961111,
+      50.9980555
+    ],
+    "full_address": "Revelstoke, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Kitimat": {
+    "query": "Kitimat",
+    "coordinates": [
+      -128.6522222,
+      54.0533333
+    ],
+    "full_address": "Kitimat, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Invermere": {
+    "query": "Invermere",
+    "coordinates": [
+      -116.0305555,
+      50.5058333
+    ],
+    "full_address": "Invermere, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Merritt": {
+    "query": "Merritt",
+    "coordinates": [
+      -120.7883333,
+      50.1125
+    ],
+    "full_address": "Merritt, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Smithers": {
+    "query": "Smithers",
+    "coordinates": [
+      -127.1761111,
+      54.7791666
+    ],
+    "full_address": "Smithers, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Hope": {
+    "query": "Hope",
+    "coordinates": [
+      -121.4413888,
+      49.38
+    ],
+    "full_address": "Hope, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Fernie": {
+    "query": "Fernie",
+    "coordinates": [
+      -115.0627778,
+      49.5041666
+    ],
+    "full_address": "Fernie, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Creston": {
+    "query": "Creston",
+    "coordinates": [
+      -116.5130555,
+      49.0975
+    ],
+    "full_address": "Creston, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Vanderhoof": {
+    "query": "Vanderhoof",
+    "coordinates": [
+      -124.0074999,
+      54.0175
+    ],
+    "full_address": "Vanderhoof, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Sparwood": {
+    "query": "Sparwood",
+    "coordinates": [
+      -114.8858333,
+      49.7333333
+    ],
+    "full_address": "Sparwood, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Grand Forks": {
+    "query": "Grand Forks",
+    "coordinates": [
+      -118.4391667,
+      49.0311111
+    ],
+    "full_address": "Grand Forks, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Golden": {
+    "query": "Golden",
+    "coordinates": [
+      -116.9647223,
+      51.2977777
+    ],
+    "full_address": "Golden, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Kamloops 1": {
+    "query": "Kamloops",
+    "coordinates": [
+      -120.3394445,
+      50.6758334
+    ],
+    "full_address": "Kamloops, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Port Hardy": {
+    "query": "Port Hardy",
+    "coordinates": [
+      -127.4980555,
+      50.7244445
+    ],
+    "full_address": "Port Hardy, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Pemberton": {
+    "query": "Pemberton",
+    "coordinates": [
+      -122.8077778,
+      50.3205556
+    ],
+    "full_address": "Pemberton, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Lake Cowichan": {
+    "query": "Lake Cowichan",
+    "coordinates": [
+      -124.0563889,
+      48.8258333
+    ],
+    "full_address": "Lake Cowichan, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Mackenzie": {
+    "query": "Mackenzie",
+    "coordinates": [
+      -123.0927778,
+      55.3244445
+    ],
+    "full_address": "Mackenzie, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Houston_388": {
+    "query": "Houston",
+    "coordinates": [
+      -126.6483333,
+      54.3983333
+    ],
+    "full_address": "Houston, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Princeton": {
+    "query": "Princeton",
+    "coordinates": [
+      -120.5088889,
+      49.4591666
+    ],
+    "full_address": "Princeton, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "Port McNeill": {
+    "query": "Port McNeill",
+    "coordinates": [
+      -127.0836112,
+      50.5894444
+    ],
+    "full_address": "Port McNeill, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Town",
+    "source": "BC Geocoder API"
+  },
+  "100 Mile House": {
+    "query": "100 Mile House",
+    "coordinates": [
+      -121.2955556,
+      51.6427778
+    ],
+    "full_address": "100 Mile House, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Elkford": {
+    "query": "Elkford",
+    "coordinates": [
+      -114.9216667,
+      50.0244444
+    ],
+    "full_address": "Elkford, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Kaslo": {
+    "query": "Kaslo",
+    "coordinates": [
+      -116.9050001,
+      49.9105556
+    ],
+    "full_address": "Kaslo, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Sicamous": {
+    "query": "Sicamous",
+    "coordinates": [
+      -118.98,
+      50.8361111
+    ],
+    "full_address": "Sicamous, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Lillooet": {
+    "query": "Lillooet",
+    "coordinates": [
+      -121.9336111,
+      50.6938889
+    ],
+    "full_address": "Lillooet, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Tofino": {
+    "query": "Tofino",
+    "coordinates": [
+      -125.9044444,
+      49.1530555
+    ],
+    "full_address": "Tofino, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Chase": {
+    "query": "Chase",
+    "coordinates": [
+      -119.6861111,
+      50.8191666
+    ],
+    "full_address": "Chase, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Tumbler Ridge_422": {
+    "query": "Tumbler Ridge",
+    "coordinates": [
+      -120.9980556,
+      55.1261111
+    ],
+    "full_address": "Tumbler Ridge, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Clearwater": {
+    "query": "Clearwater",
+    "coordinates": [
+      -120.0325,
+      51.6455556
+    ],
+    "full_address": "Clearwater, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Chetwynd": {
+    "query": "Chetwynd",
+    "coordinates": [
+      -121.6383334,
+      55.6958333
+    ],
+    "full_address": "Chetwynd, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Logan Lake_160": {
+    "query": "Logan Lake",
+    "coordinates": [
+      -120.8133333,
+      50.4944444
+    ],
+    "full_address": "Logan Lake, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Penticton 1": {
+    "query": "Penticton",
+    "coordinates": [
+      -119.5938888,
+      49.5008333
+    ],
+    "full_address": "Penticton, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Ucluelet": {
+    "query": "Ucluelet",
+    "coordinates": [
+      -125.5461112,
+      48.9427778
+    ],
+    "full_address": "Ucluelet, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "New Hazelton": {
+    "query": "New Hazelton",
+    "coordinates": [
+      -127.5869444,
+      55.2433334
+    ],
+    "full_address": "New Hazelton, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Burns Lake": {
+    "query": "Burns Lake",
+    "coordinates": [
+      -125.7644445,
+      54.2302778
+    ],
+    "full_address": "Burns Lake, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Keremeos": {
+    "query": "Keremeos",
+    "coordinates": [
+      -119.8297223,
+      49.2047222
+    ],
+    "full_address": "Keremeos, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Nakusp": {
+    "query": "Nakusp",
+    "coordinates": [
+      -117.7975,
+      50.2391667
+    ],
+    "full_address": "Nakusp, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Sun Peaks": {
+    "query": "Sun Peaks",
+    "coordinates": [
+      -119.8794445,
+      50.8844444
+    ],
+    "full_address": "Sun Peaks, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Mountain Resort Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Barriere": {
+    "query": "Barriere",
+    "coordinates": [
+      -120.1236112,
+      51.1797222
+    ],
+    "full_address": "Barriere, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Fort St. James": {
+    "query": "Fort St. James",
+    "coordinates": [
+      -124.2591666,
+      54.4444444
+    ],
+    "full_address": "Fort St. James, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Masset": {
+    "query": "Masset",
+    "coordinates": [
+      -132.1466667,
+      54.0111111
+    ],
+    "full_address": "Masset, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Gold River": {
+    "query": "Gold River",
+    "coordinates": [
+      -126.0469445,
+      49.7813889
+    ],
+    "full_address": "Gold River, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Salmo": {
+    "query": "Salmo",
+    "coordinates": [
+      -117.2786111,
+      49.1933333
+    ],
+    "full_address": "Salmo, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Valemount": {
+    "query": "Valemount",
+    "coordinates": [
+      -119.2733334,
+      52.8286112
+    ],
+    "full_address": "Valemount, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Cache Creek": {
+    "query": "Cache Creek",
+    "coordinates": [
+      -121.3233333,
+      50.8119444
+    ],
+    "full_address": "Cache Creek, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Fraser Lake": {
+    "query": "Fraser Lake",
+    "coordinates": [
+      -124.8438888,
+      54.0602778
+    ],
+    "full_address": "Fraser Lake, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Queen Charlotte, Village Of": {
+    "query": "Daajing Giids",
+    "coordinates": [
+      -132.1025001,
+      53.2547222
+    ],
+    "full_address": "Daajing Giids, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Hudson'S Hope": {
+    "query": "Hudson's Hope",
+    "coordinates": [
+      -121.9136111,
+      56.0258334
+    ],
+    "full_address": "Hudson's Hope, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "District Municipality",
+    "source": "BC Geocoder API"
+  },
+  "Canal Flats": {
+    "query": "Canal Flats",
+    "coordinates": [
+      -115.8088888,
+      50.1602778
+    ],
+    "full_address": "Canal Flats, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Port Alice": {
+    "query": "Port Alice",
+    "coordinates": [
+      -127.4880555,
+      50.4266666
+    ],
+    "full_address": "Port Alice, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "Village",
+    "source": "BC Geocoder API"
+  },
+  "Greenwood": {
+    "query": "Greenwood",
+    "coordinates": [
+      -118.6763889,
+      49.0883333
+    ],
+    "full_address": "Greenwood, BC",
+    "match_precision": "LOCALITY",
+    "score": 68,
+    "locality_type": "City",
+    "source": "BC Geocoder API"
+  },
+  "Skidegate 1": {
+    "query": "Skidegate",
+    "coordinates": [
+      -131.9919445,
+      53.2663889
+    ],
+    "full_address": "Skidegate, BC",
     "match_precision": "LOCALITY",
     "score": 68,
     "locality_type": "Community",

@@ -11,6 +11,7 @@ css/styles.css
 js/map.js
 data/communities.geojson
 data/current-fire-perimeters.geojson
+data/wui-polygons.geojson
 data/graph-manifest.json
 graphs/
   kamloops.png
@@ -67,10 +68,33 @@ Regenerate `data/communities.geojson` with:
 python scripts\generate_communities_geojson.py
 ```
 
-The generator uses the 2021 Statistics Canada Census subdivision shapefile for
-most map points. WUI titles that are localities rather than Census subdivisions
-are cached in `data/wui-geocoded-points.json` from the BC Geocoder API. The map
-has graph PNGs for all 100 WUI communities.
+The generator prefers cached BC Geocoder locality points from
+`data/wui-geocoded-points.json`, then falls back to the 2021 Statistics Canada
+Census subdivision shapefile only if a locality point is unavailable. This keeps
+markers on recognizable community centres instead of polygon centroids, which
+can fall far away from the settled area for large or irregular municipalities.
+Refresh the cached locality points and `data/communities.geojson` with:
+
+```powershell
+python scripts\refresh_community_geocoded_points.py --force
+```
+
+The map has graph PNGs for all 100 WUI communities.
+
+## WUI Polygons
+
+The optional WUI area overlay is exported from
+`C:\Users\tgmcb\Downloads\wuis_top100.gpkg`:
+
+```powershell
+python scripts\export_wui_polygons_geojson.py
+```
+
+This writes `data/wui-polygons.geojson`, which the map loads as the clickable
+`WUI Risk Class Polygons` layer. The GeoPackage includes WUI polygon name,
+population, source, and combined community names. It does not currently include
+a separate risk-class field, so the overlay explains WUI grouping but is not
+styled by class.
 
 ## Current Wildfires
 

@@ -13,6 +13,11 @@ permissions:
 jobs:
   update-current-fires:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      FIRE_FETCH_ATTEMPTS: "6"
+      FIRE_FETCH_TIMEOUT_SECONDS: "120"
+      FIRE_FETCH_BACKOFF_SECONDS: "10,30,60,120,180"
 
     steps:
       - name: Check out repo
@@ -26,7 +31,7 @@ jobs:
       - name: Fetch current fire perimeters
         run: |
           set -e
-          max_attempts=4
+          max_attempts=2
           attempt=1
           while [ "$attempt" -le "$max_attempts" ]; do
             echo "Fetch attempt $attempt/$max_attempts"
@@ -37,7 +42,7 @@ jobs:
 
             echo "Fetch failed on attempt $attempt"
             attempt=$((attempt + 1))
-            sleep_seconds=$((attempt * 15))
+            sleep_seconds=$((attempt * 120))
             echo "Sleeping $sleep_seconds seconds before retry"
             sleep "$sleep_seconds"
           done

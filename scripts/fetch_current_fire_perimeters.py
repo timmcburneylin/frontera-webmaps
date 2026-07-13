@@ -10,6 +10,7 @@ from __future__ import annotations
 import argparse
 import gzip
 import json
+import os
 import time
 import urllib.error
 import urllib.parse
@@ -34,8 +35,13 @@ STAGE_OF_CONTROL = {
 # observed include Out, Under Control, Being Held, Out of Control, and
 # sometimes blank.
 EXCLUDED_FIRE_STATUS = "Out"
-FETCH_ATTEMPTS = 5
-FETCH_TIMEOUT_SECONDS = 45
+FETCH_ATTEMPTS = int(os.environ.get("FIRE_FETCH_ATTEMPTS", "6"))
+FETCH_TIMEOUT_SECONDS = int(os.environ.get("FIRE_FETCH_TIMEOUT_SECONDS", "120"))
+FETCH_BACKOFF_SECONDS = tuple(
+    int(value.strip())
+    for value in os.environ.get("FIRE_FETCH_BACKOFF_SECONDS", "10,30,60,120,180").split(",")
+    if value.strip()
+)
 RETRY_STATUS_CODES = {429, 500, 502, 503, 504}
 
 
@@ -62,7 +68,7 @@ def fetch_bytes(url: str, attempts: int = FETCH_ATTEMPTS, timeout: int = FETCH_T
 
     for attempt in range(1, attempts + 1):
         try:
-            print(f"Fetching {url} (attempt {attempt}/{attempts})", flush=True)
+            print(f"Fetching {url} (attempt {attempt}/{attempts}, timeout {timeout}s)", flush=True)
             with urllib.request.urlopen(request, timeout=timeout) as response:
                 return response.read()
         except urllib.error.HTTPError as error:
@@ -76,7 +82,7 @@ def fetch_bytes(url: str, attempts: int = FETCH_ATTEMPTS, timeout: int = FETCH_T
             if not should_retry:
                 raise
 
-        sleep_seconds = min(60, 2 ** (attempt - 1) * 5)
+        sleep_seconds = FETCH_BACKOFF_SECONDS[min(attempt - 1, len(FETCH_BACKOFF_SECONDS) - 1)]
         print(f"Retrying in {sleep_seconds} seconds", flush=True)
         time.sleep(sleep_seconds)
 

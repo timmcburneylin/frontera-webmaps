@@ -217,21 +217,51 @@ input {
 
 .sidebar-empty,
 .community-detail,
-.fire-detail {
+.fire-detail,
+.wui-detail {
+  position: relative;
   padding: 28px;
+}
+
+.sidebar-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sidebar-close:hover,
+.sidebar-close:focus {
+  border-color: var(--accent);
+  color: var(--accent-strong);
+  outline: 3px solid rgba(45, 106, 79, 0.16);
 }
 
 .sidebar-empty h1,
 .community-detail h1,
-.fire-detail h1 {
+.fire-detail h1,
+.wui-detail h1 {
   margin: 0 0 10px;
+  padding-right: 36px;
   font-size: 1.4rem;
   line-height: 1.2;
 }
 
 .sidebar-empty p,
 .community-detail p,
-.fire-detail p {
+.fire-detail p,
+.wui-detail p {
   margin: 0;
   color: var(--muted);
   line-height: 1.55;
@@ -255,6 +285,10 @@ input {
 
 .fire-status-badge.is-under-control {
   background: #ca8a04;
+}
+
+.fire-status-badge.is-fire-of-note {
+  background: #7c3aed;
 }
 
 .fire-status-badge.is-being-held {
@@ -392,12 +426,14 @@ input {
 }
 
 .community-popup,
-.fire-popup {
+.fire-popup,
+.wui-popup {
   min-width: 190px;
 }
 
 .community-popup strong,
-.fire-popup strong {
+.fire-popup strong,
+.wui-popup strong {
   display: block;
   margin-bottom: 4px;
 }
@@ -459,28 +495,30 @@ input {
 }
 
 .fire-status-swatch {
-  width: 14px;
-  height: 14px;
-  flex: 0 0 14px;
-  border: 2px solid #ffffff;
-  border-radius: 999px;
-  box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.18);
+  width: 15px;
+  height: 15px;
+  flex: 0 0 15px;
+  filter: drop-shadow(0 1px 1px rgba(15, 23, 42, 0.24));
 }
 
 .fire-status-swatch.is-under-control {
-  background: #eab308;
+  fill: #eab308;
 }
 
 .fire-status-swatch.is-being-held {
-  background: #f97316;
+  fill: #f97316;
 }
 
 .fire-status-swatch.is-out-of-control {
-  background: #b91c1c;
+  fill: #b91c1c;
+}
+
+.fire-status-swatch.is-fire-of-note {
+  fill: #7c3aed;
 }
 
 .fire-status-swatch.is-unknown-status {
-  background: #64748b;
+  fill: #64748b;
 }
 
 .fire-status-legend-item.is-perimeter {
@@ -646,6 +684,13 @@ input {
     0 4px 14px rgba(15, 23, 42, 0.45);
 }
 
+.fire-marker-icon.is-fire-of-note {
+  background: #7c3aed;
+  box-shadow:
+    0 0 0 2px rgba(124, 58, 237, 0.32),
+    0 4px 12px rgba(15, 23, 42, 0.42);
+}
+
 .fire-marker-icon.is-being-held {
   background: #f97316;
   box-shadow:
@@ -667,8 +712,8 @@ input {
 }
 
 .fire-marker-symbol {
-  width: 13px;
-  height: 13px;
+  width: 10px;
+  height: 10px;
   fill: #fff7ed;
 }
 

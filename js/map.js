@@ -3,6 +3,7 @@
 // and place its graph PNG in graphs/<slug>.png.
 
 const COMMUNITY_DATA_URL = "data/communities.geojson";
+const WUI_POLYGON_DATA_URL = "data/wui-polygons.geojson";
 const CURRENT_FIRE_DATA_URL = "data/current-fire-perimeters.geojson";
 const CURRENT_FIRE_INCIDENT_DATA_URL = "data/current-fire-incidents.geojson";
 const HILLSHADE_IMAGE_URL = "data/hillshade.png";
@@ -23,11 +24,13 @@ const map = L.map("map", {
 
 map.createPane("hillshadePane");
 map.createPane("burnProbabilityPane");
+map.createPane("wuiPolygonPane");
 map.createPane("firePerimeterPane");
 map.createPane("communityPane");
 map.createPane("fireMarkerPane");
 map.getPane("hillshadePane").style.zIndex = 350;
 map.getPane("burnProbabilityPane").style.zIndex = 360;
+map.getPane("wuiPolygonPane").style.zIndex = 390;
 map.getPane("firePerimeterPane").style.zIndex = 420;
 map.getPane("communityPane").style.zIndex = 460;
 map.getPane("fireMarkerPane").style.zIndex = 520;
@@ -108,21 +111,25 @@ const fireStatusLegend = L.control({ position: "bottomleft" });
 fireStatusLegend.onAdd = () => {
   const container = L.DomUtil.create("div", "fire-status-legend leaflet-control");
   container.innerHTML = `
-    <div class="fire-status-legend-title">Fire status</div>
+    <div class="fire-status-legend-title">Wildfire Status</div>
     <div class="fire-status-legend-item">
-      <span class="fire-status-swatch is-under-control" aria-hidden="true"></span>
-      <span>Under Control</span>
+      ${fireLegendIcon("is-fire-of-note")}
+      <span>Fire of Note</span>
     </div>
     <div class="fire-status-legend-item">
-      <span class="fire-status-swatch is-being-held" aria-hidden="true"></span>
-      <span>Being Held</span>
-    </div>
-    <div class="fire-status-legend-item">
-      <span class="fire-status-swatch is-out-of-control" aria-hidden="true"></span>
+      ${fireLegendIcon("is-out-of-control")}
       <span>Out of Control</span>
     </div>
     <div class="fire-status-legend-item">
-      <span class="fire-status-swatch is-unknown-status" aria-hidden="true"></span>
+      ${fireLegendIcon("is-being-held")}
+      <span>Being Held</span>
+    </div>
+    <div class="fire-status-legend-item">
+      ${fireLegendIcon("is-under-control")}
+      <span>Under Control</span>
+    </div>
+    <div class="fire-status-legend-item">
+      ${fireLegendIcon("is-unknown-status")}
       <span>Unknown</span>
     </div>
     <div class="fire-status-legend-item is-perimeter">
@@ -151,15 +158,32 @@ const communitiesBySlug = new Map();
 const communitiesByName = new Map();
 const layersBySlug = new Map();
 const fireLayersById = new Map();
+const FIRE_STATUS_ORDER = [
+  "Fire of Note",
+  "Out of Control",
+  "Being Held",
+  "Under Control",
+  "Unknown"
+];
 let selectedLayer = null;
 let selectedFeature = null;
 let selectedFireMarker = null;
 let selectedFireFeature = null;
+let selectedWuiLayer = null;
+let selectedWuiFeature = null;
 
 function normalize(value) {
   return String(value || "")
     .trim()
     .toLowerCase();
+}
+
+function fireLegendIcon(className) {
+  return `
+    <svg class="fire-status-swatch ${className}" viewBox="0 0 16 16" aria-hidden="true">
+      <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15" />
+    </svg>
+  `;
 }
 
 function communityMarkerSize(population) {
@@ -202,6 +226,35 @@ function setCommunitySelected(layer, isSelected) {
 
   if (layer.setStyle) {
     layer.setStyle({ fillColor: isSelected ? "#2d6a4f" : "#2563eb" });
+  }
+}
+
+function wuiPolygonStyle(feature) {
+  const population = feature.properties?.wui_population || 0;
+  const weight = population > 100000 ? 2 : 1;
+
+  return {
+    pane: "wuiPolygonPane",
+    color: "#92400e",
+    weight,
+    opacity: 0.78,
+    fillColor: "#f59e0b",
+    fillOpacity: 0.12
+  };
+}
+
+function setWuiPolygonSelected(layer, isSelected) {
+  layer.setStyle(
+    isSelected
+      ? {
+          color: "#1b4332",
+          weight: 3,
+          fillOpacity: 0.26
+        }
+      : wuiPolygonStyle(layer.feature)
+  );
+  if (isSelected) {
+    layer.bringToFront();
   }
 }
 
@@ -297,20 +350,63 @@ function fireMarkerIcon(feature) {
         <path d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16m0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15" />
       </svg>
     `,
-    iconSize: [24, 24],
-    iconAnchor: [12, 12],
-    popupAnchor: [0, -13]
+    iconSize: [18, 18],
+    iconAnchor: [9, 9],
+    popupAnchor: [0, -10]
   });
 }
 
 function fireStatusClass(status) {
   const statusClassByName = {
+    "Fire of Note": "is-fire-of-note",
     "Out of Control": "is-out-of-control",
     "Being Held": "is-being-held",
     "Under Control": "is-under-control"
   };
 
   return statusClassByName[status] || "is-unknown-status";
+}
+
+function normalizedFireStatus(feature) {
+  return feature.properties?.FIRE_STATUS || "Unknown";
+}
+
+function fireStatusSortIndex(status) {
+  const index = FIRE_STATUS_ORDER.indexOf(status);
+  return index === -1 ? FIRE_STATUS_ORDER.length : index;
+}
+
+function populateFireSelect(features) {
+  fireSelect.innerHTML = '<option value="">Select an active wildfire</option>';
+
+  const groupsByStatus = new Map(FIRE_STATUS_ORDER.map((status) => [status, []]));
+  features.forEach((feature) => {
+    const status = normalizedFireStatus(feature);
+    if (!groupsByStatus.has(status)) {
+      groupsByStatus.set(status, []);
+    }
+    groupsByStatus.get(status).push(feature);
+  });
+
+  [...groupsByStatus.entries()]
+    .sort(([statusA], [statusB]) => fireStatusSortIndex(statusA) - fireStatusSortIndex(statusB))
+    .forEach(([status, statusFeatures]) => {
+      if (!statusFeatures.length) {
+        return;
+      }
+
+      const group = document.createElement("optgroup");
+      group.label = status;
+      statusFeatures
+        .sort((a, b) => fireLabel(a).localeCompare(fireLabel(b)))
+        .forEach((feature) => {
+          const option = document.createElement("option");
+          option.value = fireId(feature);
+          option.textContent = fireLabel(feature);
+          group.appendChild(option);
+        });
+      fireSelect.appendChild(group);
+    });
 }
 
 function clearSelectedCommunity() {
@@ -324,6 +420,35 @@ function clearSelectedCommunity() {
 
   selectedFeature = null;
   closeGraphModal();
+}
+
+function clearSelectedWuiPolygon() {
+  if (selectedWuiLayer) {
+    setWuiPolygonSelected(selectedWuiLayer, false);
+    selectedWuiLayer.closePopup();
+    selectedWuiLayer = null;
+  }
+
+  selectedWuiFeature = null;
+}
+
+function closeSidebarPane() {
+  const hadSelection = Boolean(selectedFeature || selectedFireFeature || selectedWuiFeature);
+  clearSelectedCommunity();
+  clearSelectedFire();
+  clearSelectedWuiPolygon();
+
+  if (hadSelection) {
+    renderDefaultSidebar();
+  }
+}
+
+function sidebarCloseButton(label = "Close details") {
+  return `
+    <button class="sidebar-close" type="button" aria-label="${label}" title="${label}" data-close-sidebar>
+      <span aria-hidden="true">&times;</span>
+    </button>
+  `;
 }
 
 function renderDefaultSidebar() {
@@ -358,6 +483,7 @@ function renderFireSidebar(feature) {
 
   sidebar.innerHTML = `
     <article class="fire-detail">
+      ${sidebarCloseButton("Close wildfire details")}
       <div class="fire-detail-heading">
         <div>
           <h1>${displayName}</h1>
@@ -378,6 +504,54 @@ function renderFireSidebar(feature) {
   `;
 }
 
+function formatWuiPolygon(feature) {
+  const properties = feature.properties || {};
+  const communities = properties.communities || [];
+
+  return {
+    name: properties.name || "WUI area",
+    populationLabel:
+      typeof properties.wui_population === "number"
+        ? properties.wui_population.toLocaleString()
+        : "Unavailable",
+    source: properties.population_source || "Unavailable",
+    communities,
+    communitiesLabel: communities.length ? communities.join(", ") : "Not listed"
+  };
+}
+
+function wuiPolygonPopupHtml(feature) {
+  const details = formatWuiPolygon(feature);
+
+  return `
+    <div class="wui-popup">
+      <strong>${details.name}</strong>
+      <span>WUI population ${details.populationLabel}</span><br />
+      <span>${details.communities.length} included place${details.communities.length === 1 ? "" : "s"}</span>
+    </div>
+  `;
+}
+
+function renderWuiPolygonSidebar(feature) {
+  const details = formatWuiPolygon(feature);
+
+  sidebar.innerHTML = `
+    <article class="wui-detail">
+      ${sidebarCloseButton("Close WUI polygon details")}
+      <h1>${details.name}</h1>
+      <p>Wildland urban interface polygon for this mapped WUI area.</p>
+      <div class="detail-meta" aria-label="WUI polygon metadata">
+        <span>WUI population: ${details.populationLabel}</span>
+        <span>Source: ${details.source}</span>
+      </div>
+      <section class="wui-places" aria-label="Populated places included in this WUI polygon">
+        <h2>Included places</h2>
+        <p>${details.communitiesLabel}</p>
+      </section>
+    </article>
+  `;
+}
+
 function selectFireById(id) {
   const fireRecord = fireLayersById.get(id);
   if (!fireRecord) {
@@ -392,6 +566,7 @@ function selectFireById(id) {
   selectedFireFeature = fireRecord.feature;
   selectedFireMarker.getElement()?.classList.add("is-selected");
   clearSelectedCommunity();
+  clearSelectedWuiPolygon();
 
   const latlng = fireRecord.marker.getLatLng();
   const targetZoom = Math.max(map.getZoom(), SELECTED_FIRE_ZOOM);
@@ -480,15 +655,68 @@ function loadCurrentFirePerimeters() {
           marker,
           perimeter
         });
-
-        const option = document.createElement("option");
-        option.value = id;
-        option.textContent = fireLabel(feature);
-        fireSelect.appendChild(option);
       });
+      populateFireSelect(geojson.features);
       const fireLayer = L.layerGroup([firePerimeterLayer, fireMarkerLayer]).addTo(map);
 
       layerControl.addOverlay(fireLayer, "Current Wildfires");
+    })
+    .catch((error) => {
+      console.warn(error);
+    });
+}
+
+function showWuiPolygon(feature, layer) {
+  clearSelectedCommunity();
+  clearSelectedFire();
+
+  if (selectedWuiLayer) {
+    setWuiPolygonSelected(selectedWuiLayer, false);
+  }
+
+  selectedWuiLayer = layer;
+  selectedWuiFeature = feature;
+  setWuiPolygonSelected(selectedWuiLayer, true);
+  layer.setPopupContent(wuiPolygonPopupHtml(feature));
+  layer.openPopup();
+  renderWuiPolygonSidebar(feature);
+}
+
+function loadWuiPolygons() {
+  fetch(WUI_POLYGON_DATA_URL)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Could not load ${WUI_POLYGON_DATA_URL}`);
+      }
+
+      return response.json();
+    })
+    .then((geojson) => {
+      const wuiPolygonLayer = L.geoJSON(geojson, {
+        pane: "wuiPolygonPane",
+        style: wuiPolygonStyle,
+        onEachFeature: (feature, layer) => {
+          layer.bindPopup(wuiPolygonPopupHtml(feature), {
+            autoPan: false,
+            keepInView: false
+          });
+          layer.on({
+            click: () => showWuiPolygon(feature, layer),
+            mouseover: () => {
+              if (layer !== selectedWuiLayer) {
+                layer.setStyle({ fillOpacity: 0.2 });
+              }
+            },
+            mouseout: () => {
+              if (layer !== selectedWuiLayer) {
+                setWuiPolygonSelected(layer, false);
+              }
+            }
+          });
+        }
+      }).addTo(map);
+
+      layerControl.addOverlay(wuiPolygonLayer, "WUI Risk Class Polygons");
     })
     .catch((error) => {
       console.warn(error);
@@ -545,7 +773,7 @@ function popupHtml(feature) {
     <div class="community-popup">
       <strong>${details.name}</strong>
       <span>WUI population ${details.populationLabel}</span><br />
-      <span>WUI rank ${details.rankLabel}</span>
+      <span>WUI Population Rank ${details.rankLabel}</span>
     </div>
   `;
 }
@@ -556,9 +784,10 @@ function renderSidebar(feature) {
     <article class="community-detail">
       <h1>${details.name}</h1>
       <p>Wildfire risk information for this WUI community.</p>
+      ${sidebarCloseButton("Close community details")}
       <div class="detail-meta" aria-label="Community metadata">
         <span>WUI population: ${details.populationLabel}</span>
-        <span>WUI rank: ${details.rankLabel}</span>
+        <span>WUI Population Rank: ${details.rankLabel}</span>
       </div>
       <section class="wui-places" aria-label="Populated places included in this WUI">
         <h2>Included places</h2>
@@ -578,7 +807,7 @@ function openGraphModal(feature) {
       <div class="graph-card-header">
         <div>
           <h1 id="graph-modal-title">${details.name}</h1>
-          <p>WUI population ${details.populationLabel} | WUI rank ${details.rankLabel}</p>
+          <p>WUI population ${details.populationLabel} | WUI Population Rank ${details.rankLabel}</p>
         </div>
       </div>
       ${graphImageHtml(details)}
@@ -598,6 +827,7 @@ function showCommunity(feature, layer) {
   const latlng = layer.getLatLng();
 
   clearSelectedFire();
+  clearSelectedWuiPolygon();
 
   if (selectedLayer) {
     setCommunitySelected(selectedLayer, false);
@@ -658,6 +888,9 @@ function loadCommunities() {
       return response.json();
     })
     .then((geojson) => {
+      geojson.features = [...(geojson.features || [])].sort((a, b) =>
+        String(a.properties?.name || "").localeCompare(String(b.properties?.name || ""))
+      );
       const communityLayer = L.geoJSON(geojson, {
         pointToLayer: communityMarkerForFeature,
         onEachFeature: (feature, layer) => {
@@ -727,8 +960,14 @@ clearFireButton.addEventListener("click", () => {
 });
 
 sidebar.addEventListener("click", (event) => {
+  const closeButton = event.target.closest("[data-close-sidebar]");
   const modalButton = event.target.closest("[data-open-modal]");
   const graphFrame = event.target.closest(".graph-frame.is-clickable");
+
+  if (closeButton) {
+    closeSidebarPane();
+    return;
+  }
 
   if (!selectedFeature || (!modalButton && !graphFrame)) {
     return;
@@ -749,6 +988,7 @@ window.addEventListener("keydown", (event) => {
   }
 });
 
+loadWuiPolygons();
 loadCommunities();
 loadCurrentFirePerimeters();
 
