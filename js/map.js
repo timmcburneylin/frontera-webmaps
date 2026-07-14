@@ -8,6 +8,7 @@ const CURRENT_FIRE_DATA_URL = "data/current-fire-perimeters.geojson";
 const CURRENT_FIRE_INCIDENT_DATA_URL = "data/current-fire-incidents.geojson";
 const HILLSHADE_IMAGE_URL = "data/hillshade.png";
 const BURN_PROBABILITY_TILE_URL = "tiles/burn-probability/{z}/{x}/{y}.png";
+const GRAPH_ASSET_VERSION = "20260714-density-curves";
 const BC_CENTER = [54.3, -125.2];
 const DEFAULT_ZOOM = 5;
 const SELECTED_ZOOM = 10;
@@ -761,7 +762,7 @@ function graphImageHtml(details, className = "") {
 
   return `
     <div class="graph-frame ${className}">
-      <img src="${details.graph}" alt="Wildfire risk graph for ${details.name}" />
+      <img src="${details.graph}?v=${GRAPH_ASSET_VERSION}" alt="Wildfire risk graph for ${details.name}" />
     </div>
   `;
 }
