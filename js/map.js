@@ -240,7 +240,7 @@ function wuiPolygonStyle(feature) {
     weight,
     opacity: 0.78,
     fillColor: "#f59e0b",
-    fillOpacity: 0.12
+    fillOpacity: 0
   };
 }
 
@@ -250,7 +250,7 @@ function setWuiPolygonSelected(layer, isSelected) {
       ? {
           color: "#1b4332",
           weight: 3,
-          fillOpacity: 0.26
+          fillOpacity: 0
         }
       : wuiPolygonStyle(layer.feature)
   );
@@ -705,7 +705,7 @@ function loadWuiPolygons() {
             click: () => showWuiPolygon(feature, layer),
             mouseover: () => {
               if (layer !== selectedWuiLayer) {
-                layer.setStyle({ fillOpacity: 0.2 });
+                layer.setStyle({ fillOpacity: 0 });
               }
             },
             mouseout: () => {
