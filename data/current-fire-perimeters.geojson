@@ -1391,7 +1391,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 355160.4512,
         "FEATURE_LENGTH_M": 3043.2492,
-        "OBJECTID": 27111497,
+        "OBJECTID": 27113799,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "Valenzuela Lake",
@@ -4803,7 +4803,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 17749707.0148,
         "FEATURE_LENGTH_M": 28161.8656,
-        "OBJECTID": 27111445,
+        "OBJECTID": 27113685,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "Swede Creek",
@@ -6751,7 +6751,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 103004.6567,
         "FEATURE_LENGTH_M": 2215.2312,
-        "OBJECTID": 27111451,
+        "OBJECTID": 27113691,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "C20851",
@@ -8683,7 +8683,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 299250.336,
         "FEATURE_LENGTH_M": 3302.7391,
-        "OBJECTID": 27111452,
+        "OBJECTID": 27113692,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter"
       }
@@ -8748,7 +8748,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 14468.8093,
         "FEATURE_LENGTH_M": 448.5383,
-        "OBJECTID": 27111527,
+        "OBJECTID": 27113829,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "G90285",
@@ -10104,355 +10104,11 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 20648.1689,
         "FEATURE_LENGTH_M": 926.7324,
-        "OBJECTID": 27111529,
+        "OBJECTID": 27113831,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "G90849",
         "INCIDENT_NUMBER_LABEL": "G90849",
-        "INCIDENT_FIRE_YEAR": 2026
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.R90834",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -129.1583648,
-              59.75578973
-            ],
-            [
-              -129.15837032,
-              59.75578249
-            ],
-            [
-              -129.158544,
-              59.755555
-            ],
-            [
-              -129.158925,
-              59.755342
-            ],
-            [
-              -129.15865,
-              59.754933
-            ],
-            [
-              -129.15889,
-              59.754379
-            ],
-            [
-              -129.157545,
-              59.753838
-            ],
-            [
-              -129.156799,
-              59.754121
-            ],
-            [
-              -129.155928,
-              59.754182
-            ],
-            [
-              -129.155172,
-              59.754063
-            ],
-            [
-              -129.154565,
-              59.754292
-            ],
-            [
-              -129.154132,
-              59.754813
-            ],
-            [
-              -129.153736,
-              59.755009
-            ],
-            [
-              -129.154634,
-              59.755223
-            ],
-            [
-              -129.155493,
-              59.755244
-            ],
-            [
-              -129.155323,
-              59.75566
-            ],
-            [
-              -129.154716,
-              59.755803
-            ],
-            [
-              -129.153397,
-              59.756446
-            ],
-            [
-              -129.154114,
-              59.756911
-            ],
-            [
-              -129.155858,
-              59.756903
-            ],
-            [
-              -129.158076,
-              59.756168
-            ],
-            [
-              -129.1583648,
-              59.75578973
-            ]
-          ]
-        ]
-      },
-      "geometry_name": "SHAPE",
-      "properties": {
-        "FIRE_NUMBER": "R90834",
-        "VERSION_NUMBER": 2026071501,
-        "FIRE_YEAR": 2026,
-        "FIRE_SIZE_HECTARES": 6.8,
-        "SOURCE": "Non-corrected ground GPS",
-        "TRACK_DATE": "2026-07-15Z",
-        "LOAD_DATE": "2026-07-15Z",
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=R90834",
-        "FEATURE_CODE": "JA70003000",
-        "FEATURE_AREA_SQM": 67511.6258,
-        "FEATURE_LENGTH_M": 1201.6595,
-        "OBJECTID": 27111570,
-        "SE_ANNO_CAD_DATA": null,
-        "DATA_SOURCE": "perimeter",
-        "INCIDENT_NAME": "R90834",
-        "INCIDENT_NUMBER_LABEL": "R90834",
-        "INCIDENT_FIRE_YEAR": 2026
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.V10108",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          [
-            [
-              -121.43104913,
-              49.77231191
-            ],
-            [
-              -121.43193761,
-              49.77198719
-            ],
-            [
-              -121.43251247,
-              49.77178687
-            ],
-            [
-              -121.43337035,
-              49.77145498
-            ],
-            [
-              -121.43340197,
-              49.77140856
-            ],
-            [
-              -121.43412679,
-              49.77076905
-            ],
-            [
-              -121.43419379,
-              49.77073113
-            ],
-            [
-              -121.43485683,
-              49.77023687
-            ],
-            [
-              -121.43550073,
-              49.77001405
-            ],
-            [
-              -121.43647587,
-              49.76921816
-            ],
-            [
-              -121.43717625,
-              49.76826146
-            ],
-            [
-              -121.43741262,
-              49.7676926
-            ],
-            [
-              -121.43728004,
-              49.76732127
-            ],
-            [
-              -121.43671958,
-              49.76614882
-            ],
-            [
-              -121.43571329,
-              49.76619582
-            ],
-            [
-              -121.43141377,
-              49.76356557
-            ],
-            [
-              -121.43036616,
-              49.7630631
-            ],
-            [
-              -121.42960333,
-              49.76337334
-            ],
-            [
-              -121.42973791,
-              49.76361903
-            ],
-            [
-              -121.42950901,
-              49.76388815
-            ],
-            [
-              -121.42914474,
-              49.76375152
-            ],
-            [
-              -121.4284991,
-              49.76438679
-            ],
-            [
-              -121.42798876,
-              49.76441547
-            ],
-            [
-              -121.42804737,
-              49.76489733
-            ],
-            [
-              -121.42765618,
-              49.76544724
-            ],
-            [
-              -121.42670966,
-              49.76516107
-            ],
-            [
-              -121.42613934,
-              49.76500904
-            ],
-            [
-              -121.42572531,
-              49.76501866
-            ],
-            [
-              -121.42523167,
-              49.76543268
-            ],
-            [
-              -121.42487494,
-              49.76593163
-            ],
-            [
-              -121.4242822,
-              49.76656183
-            ],
-            [
-              -121.42396537,
-              49.76689938
-            ],
-            [
-              -121.4237003,
-              49.76713928
-            ],
-            [
-              -121.42368021,
-              49.76741062
-            ],
-            [
-              -121.4241419,
-              49.76793839
-            ],
-            [
-              -121.42474635,
-              49.76860048
-            ],
-            [
-              -121.42501027,
-              49.76922813
-            ],
-            [
-              -121.42538208,
-              49.7696954
-            ],
-            [
-              -121.42563907,
-              49.77025114
-            ],
-            [
-              -121.42696615,
-              49.77042535
-            ],
-            [
-              -121.42837553,
-              49.77065824
-            ],
-            [
-              -121.42845019,
-              49.77121367
-            ],
-            [
-              -121.42869433,
-              49.77159594
-            ],
-            [
-              -121.42908603,
-              49.77200424
-            ],
-            [
-              -121.42914864,
-              49.77236028
-            ],
-            [
-              -121.43030447,
-              49.77234765
-            ],
-            [
-              -121.43045749,
-              49.77234031
-            ],
-            [
-              -121.43104913,
-              49.77231191
-            ]
-          ]
-        ]
-      },
-      "geometry_name": "SHAPE",
-      "properties": {
-        "FIRE_NUMBER": "V10108",
-        "VERSION_NUMBER": 2026050401,
-        "FIRE_YEAR": 2026,
-        "FIRE_SIZE_HECTARES": 61.6,
-        "SOURCE": "Non-corrected airborne GPS",
-        "TRACK_DATE": "2026-05-04Z",
-        "LOAD_DATE": "2026-05-06Z",
-        "FIRE_STATUS": "Under Control",
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V10108",
-        "FEATURE_CODE": "JA70003000",
-        "FEATURE_AREA_SQM": 615598.4459,
-        "FEATURE_LENGTH_M": 3233.9856,
-        "OBJECTID": 27111571,
-        "SE_ANNO_CAD_DATA": null,
-        "DATA_SOURCE": "perimeter",
-        "INCIDENT_NAME": "Ferrabee",
-        "INCIDENT_NUMBER_LABEL": "V10108",
         "INCIDENT_FIRE_YEAR": 2026
       }
     },
@@ -11782,7 +11438,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 35776657.4567,
         "FEATURE_LENGTH_M": 50813.9062,
-        "OBJECTID": 27111576,
+        "OBJECTID": 27113878,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter"
       }
@@ -13841,7 +13497,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 165747573.4932,
         "FEATURE_LENGTH_M": 100810.4738,
-        "OBJECTID": 27111578,
+        "OBJECTID": 27113880,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter"
       }
@@ -14266,7 +13922,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 389218.7653,
         "FEATURE_LENGTH_M": 3067.1998,
-        "OBJECTID": 27111583,
+        "OBJECTID": 27113885,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "Signal Hill",
@@ -14658,7 +14314,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 28766.3665,
         "FEATURE_LENGTH_M": 933.121,
-        "OBJECTID": 27111543,
+        "OBJECTID": 27113845,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "K50824",
@@ -24030,7 +23686,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 6556246.3908,
         "FEATURE_LENGTH_M": 17737.7276,
-        "OBJECTID": 27111550,
+        "OBJECTID": 27113852,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "Saw Creek",
@@ -24620,7 +24276,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 729048.4774,
         "FEATURE_LENGTH_M": 6468.3383,
-        "OBJECTID": 27111551,
+        "OBJECTID": 27113853,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "Riley Creek",
@@ -27376,7 +27032,7 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 22728624.1212,
         "FEATURE_LENGTH_M": 23630.54,
-        "OBJECTID": 27111552,
+        "OBJECTID": 27113854,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "French Bar Creek",
@@ -28312,11 +27968,355 @@
         "FEATURE_CODE": "JA70003000",
         "FEATURE_AREA_SQM": 1118722.7852,
         "FEATURE_LENGTH_M": 5713.0376,
-        "OBJECTID": 27111556,
+        "OBJECTID": 27113858,
         "SE_ANNO_CAD_DATA": null,
         "DATA_SOURCE": "perimeter",
         "INCIDENT_NAME": "Lussier River ",
         "INCIDENT_NUMBER_LABEL": "N20809",
+        "INCIDENT_FIRE_YEAR": 2026
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.R90834",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -129.1583648,
+              59.75578973
+            ],
+            [
+              -129.15837032,
+              59.75578249
+            ],
+            [
+              -129.158544,
+              59.755555
+            ],
+            [
+              -129.158925,
+              59.755342
+            ],
+            [
+              -129.15865,
+              59.754933
+            ],
+            [
+              -129.15889,
+              59.754379
+            ],
+            [
+              -129.157545,
+              59.753838
+            ],
+            [
+              -129.156799,
+              59.754121
+            ],
+            [
+              -129.155928,
+              59.754182
+            ],
+            [
+              -129.155172,
+              59.754063
+            ],
+            [
+              -129.154565,
+              59.754292
+            ],
+            [
+              -129.154132,
+              59.754813
+            ],
+            [
+              -129.153736,
+              59.755009
+            ],
+            [
+              -129.154634,
+              59.755223
+            ],
+            [
+              -129.155493,
+              59.755244
+            ],
+            [
+              -129.155323,
+              59.75566
+            ],
+            [
+              -129.154716,
+              59.755803
+            ],
+            [
+              -129.153397,
+              59.756446
+            ],
+            [
+              -129.154114,
+              59.756911
+            ],
+            [
+              -129.155858,
+              59.756903
+            ],
+            [
+              -129.158076,
+              59.756168
+            ],
+            [
+              -129.1583648,
+              59.75578973
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "SHAPE",
+      "properties": {
+        "FIRE_NUMBER": "R90834",
+        "VERSION_NUMBER": 2026071501,
+        "FIRE_YEAR": 2026,
+        "FIRE_SIZE_HECTARES": 6.8,
+        "SOURCE": "Non-corrected ground GPS",
+        "TRACK_DATE": "2026-07-15Z",
+        "LOAD_DATE": "2026-07-15Z",
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=R90834",
+        "FEATURE_CODE": "JA70003000",
+        "FEATURE_AREA_SQM": 67511.6258,
+        "FEATURE_LENGTH_M": 1201.6595,
+        "OBJECTID": 27113872,
+        "SE_ANNO_CAD_DATA": null,
+        "DATA_SOURCE": "perimeter",
+        "INCIDENT_NAME": "R90834",
+        "INCIDENT_NUMBER_LABEL": "R90834",
+        "INCIDENT_FIRE_YEAR": 2026
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "WHSE_LAND_AND_NATURAL_RESOURCE.PROT_CURRENT_FIRE_POLYS_SP.V10108",
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -121.43104913,
+              49.77231191
+            ],
+            [
+              -121.43193761,
+              49.77198719
+            ],
+            [
+              -121.43251247,
+              49.77178687
+            ],
+            [
+              -121.43337035,
+              49.77145498
+            ],
+            [
+              -121.43340197,
+              49.77140856
+            ],
+            [
+              -121.43412679,
+              49.77076905
+            ],
+            [
+              -121.43419379,
+              49.77073113
+            ],
+            [
+              -121.43485683,
+              49.77023687
+            ],
+            [
+              -121.43550073,
+              49.77001405
+            ],
+            [
+              -121.43647587,
+              49.76921816
+            ],
+            [
+              -121.43717625,
+              49.76826146
+            ],
+            [
+              -121.43741262,
+              49.7676926
+            ],
+            [
+              -121.43728004,
+              49.76732127
+            ],
+            [
+              -121.43671958,
+              49.76614882
+            ],
+            [
+              -121.43571329,
+              49.76619582
+            ],
+            [
+              -121.43141377,
+              49.76356557
+            ],
+            [
+              -121.43036616,
+              49.7630631
+            ],
+            [
+              -121.42960333,
+              49.76337334
+            ],
+            [
+              -121.42973791,
+              49.76361903
+            ],
+            [
+              -121.42950901,
+              49.76388815
+            ],
+            [
+              -121.42914474,
+              49.76375152
+            ],
+            [
+              -121.4284991,
+              49.76438679
+            ],
+            [
+              -121.42798876,
+              49.76441547
+            ],
+            [
+              -121.42804737,
+              49.76489733
+            ],
+            [
+              -121.42765618,
+              49.76544724
+            ],
+            [
+              -121.42670966,
+              49.76516107
+            ],
+            [
+              -121.42613934,
+              49.76500904
+            ],
+            [
+              -121.42572531,
+              49.76501866
+            ],
+            [
+              -121.42523167,
+              49.76543268
+            ],
+            [
+              -121.42487494,
+              49.76593163
+            ],
+            [
+              -121.4242822,
+              49.76656183
+            ],
+            [
+              -121.42396537,
+              49.76689938
+            ],
+            [
+              -121.4237003,
+              49.76713928
+            ],
+            [
+              -121.42368021,
+              49.76741062
+            ],
+            [
+              -121.4241419,
+              49.76793839
+            ],
+            [
+              -121.42474635,
+              49.76860048
+            ],
+            [
+              -121.42501027,
+              49.76922813
+            ],
+            [
+              -121.42538208,
+              49.7696954
+            ],
+            [
+              -121.42563907,
+              49.77025114
+            ],
+            [
+              -121.42696615,
+              49.77042535
+            ],
+            [
+              -121.42837553,
+              49.77065824
+            ],
+            [
+              -121.42845019,
+              49.77121367
+            ],
+            [
+              -121.42869433,
+              49.77159594
+            ],
+            [
+              -121.42908603,
+              49.77200424
+            ],
+            [
+              -121.42914864,
+              49.77236028
+            ],
+            [
+              -121.43030447,
+              49.77234765
+            ],
+            [
+              -121.43045749,
+              49.77234031
+            ],
+            [
+              -121.43104913,
+              49.77231191
+            ]
+          ]
+        ]
+      },
+      "geometry_name": "SHAPE",
+      "properties": {
+        "FIRE_NUMBER": "V10108",
+        "VERSION_NUMBER": 2026050401,
+        "FIRE_YEAR": 2026,
+        "FIRE_SIZE_HECTARES": 61.6,
+        "SOURCE": "Non-corrected airborne GPS",
+        "TRACK_DATE": "2026-05-04Z",
+        "LOAD_DATE": "2026-05-06Z",
+        "FIRE_STATUS": "Under Control",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V10108",
+        "FEATURE_CODE": "JA70003000",
+        "FEATURE_AREA_SQM": 615598.4459,
+        "FEATURE_LENGTH_M": 3233.9856,
+        "OBJECTID": 27113873,
+        "SE_ANNO_CAD_DATA": null,
+        "DATA_SOURCE": "perimeter",
+        "INCIDENT_NAME": "Ferrabee",
+        "INCIDENT_NUMBER_LABEL": "V10108",
         "INCIDENT_FIRE_YEAR": 2026
       }
     }
@@ -28324,7 +28324,7 @@
   "totalFeatures": 16,
   "numberMatched": 16,
   "numberReturned": 16,
-  "timeStamp": "2026-07-17T04:25:00.850Z",
+  "timeStamp": "2026-07-17T09:21:24.606Z",
   "crs": {
     "type": "name",
     "properties": {
@@ -28337,7 +28337,7 @@
     "incident_names_url": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_names_enriched_count": 13,
     "excluded_status": "Out",
-    "generated_at_utc": "2026-07-17T04:25:01+00:00",
+    "generated_at_utc": "2026-07-17T09:21:25+00:00",
     "note": "Reference only. This file contains published current-fire perimeters."
   }
 }
