@@ -255,34 +255,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-R81064",
-      "geometry": {
-        "bbox": [
-          -129.654166,
-          54.191383,
-          -129.654166,
-          54.191383
-        ],
-        "type": "Point",
-        "coordinates": [
-          -129.654166,
-          54.191383
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "R81064",
-        "INCIDENT_NAME": "R81064",
-        "INCIDENT_NUMBER_LABEL": "R81064",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=R81064",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-C10981",
       "geometry": {
         "bbox": [
@@ -719,7 +691,7 @@
       },
       "properties": {
         "FIRE_NUMBER": "N10944",
-        "INCIDENT_NAME": "N10944",
+        "INCIDENT_NAME": "Tower Creek ",
         "INCIDENT_NUMBER_LABEL": "N10944",
         "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Out of Control",
@@ -2160,8 +2132,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 77,
-    "generated_at_utc": "2026-07-20T04:52:12+00:00",
+    "incident_point_count": 76,
+    "generated_at_utc": "2026-07-20T10:20:33+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
