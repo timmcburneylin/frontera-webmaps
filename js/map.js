@@ -1,6 +1,5 @@
 // Frontera community webmap.
-// To add communities later, add a point feature to data/communities.geojson
-// and place its graph PNG in graphs/<slug>.png.
+// Community risk comparison charts are rendered from data/communities.geojson.
 
 const COMMUNITY_DATA_URL = "data/communities.geojson";
 const WUI_POLYGON_DATA_URL = "data/wui-polygons.geojson";
@@ -8,7 +7,6 @@ const CURRENT_FIRE_DATA_URL = "data/current-fire-perimeters.geojson";
 const CURRENT_FIRE_INCIDENT_DATA_URL = "data/current-fire-incidents.geojson";
 const HILLSHADE_IMAGE_URL = "data/hillshade.png";
 const BURN_PROBABILITY_TILE_URL = "tiles/burn-probability/{z}/{x}/{y}.png";
-const GRAPH_ASSET_VERSION = "20260714-density-curves";
 const BC_CENTER = [54.3, -125.2];
 const DEFAULT_ZOOM = 5;
 const SELECTED_ZOOM = 10;
@@ -148,12 +146,15 @@ fireStatusLegend.addTo(map);
 
 const sidebar = document.querySelector("#community-sidebar");
 const searchInput = document.querySelector("#community-search");
-const searchOptions = document.querySelector("#community-options");
 const clearButton = document.querySelector("#clear-search");
 const fireSelect = document.querySelector("#fire-select");
 const clearFireButton = document.querySelector("#clear-fire");
 const graphModal = document.querySelector("#graph-modal");
 const graphModalContent = document.querySelector("#graph-modal-content");
+const riskChartTooltip = document.createElement("div");
+riskChartTooltip.className = "risk-chart-tooltip";
+riskChartTooltip.setAttribute("role", "tooltip");
+document.body.appendChild(riskChartTooltip);
 
 const communitiesBySlug = new Map();
 const communitiesByName = new Map();
@@ -172,11 +173,37 @@ let selectedFireMarker = null;
 let selectedFireFeature = null;
 let selectedWuiLayer = null;
 let selectedWuiFeature = null;
+let communityRiskRows = [];
 
 function normalize(value) {
   return String(value || "")
     .trim()
     .toLowerCase();
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#39;");
+}
+
+function formatOrdinal(value) {
+  const remainder100 = value % 100;
+  const remainder10 = value % 10;
+  const suffix =
+    remainder100 >= 11 && remainder100 <= 13
+      ? "th"
+      : remainder10 === 1
+        ? "st"
+        : remainder10 === 2
+          ? "nd"
+          : remainder10 === 3
+            ? "rd"
+            : "th";
+  return `${value}${suffix}`;
 }
 
 function fireLegendIcon(className) {
@@ -455,8 +482,10 @@ function sidebarCloseButton(label = "Close details") {
 function renderDefaultSidebar() {
   sidebar.innerHTML = `
     <div class="sidebar-empty">
-      <h1>Frontera Wildfire Risk</h1>
-      <p>Select a community or active wildfire to view its details.</p>
+      <h1>Frontera Provincial Wildfire Prediction Mapping</h1>
+      <p>Compare median burn probability and population across 100 WUI communities. Select a community to highlight it.</p>
+      ${riskComparisonChartHtml(null, "is-clickable")}
+      <button class="sidebar-action" type="button" data-open-overview>View larger</button>
     </div>
   `;
 }
@@ -730,39 +759,146 @@ function formatCommunity(feature) {
     slug,
     wui_name: wuiName,
     wui_population: wuiPopulation,
-    wui_population_rank: wuiPopulationRank,
+    burn_probability_rank: burnProbabilityRank,
+    median_bp: medianBurnProbability,
     wui_places: wuiPlaces = [],
-    graph,
-    has_graph: hasGraph
   } = feature.properties;
 
   return {
     name,
     slug,
     wuiName,
-    graph,
-    hasGraph: Boolean(hasGraph && graph),
+    population: wuiPopulation,
+    medianBurnProbability,
+    burnProbabilityRank,
     places: wuiPlaces,
     placesLabel: wuiPlaces.length ? wuiPlaces.join(", ") : "Not listed",
     populationLabel:
       typeof wuiPopulation === "number" ? wuiPopulation.toLocaleString() : "Needs lookup",
-    rankLabel: wuiPopulationRank ? `#${wuiPopulationRank} of 100` : "Unavailable"
+    rankLabel: burnProbabilityRank ? `#${burnProbabilityRank} of ${communityRiskRows.length || 100}` : "Unavailable",
+    standingLabel: burnProbabilityRank
+      ? `${formatOrdinal(
+          Math.round(
+            ((communityRiskRows.length - burnProbabilityRank + 1) / communityRiskRows.length) * 100
+          )
+        )} percentile among communities`
+      : "Relative standing unavailable"
   };
 }
 
-function graphImageHtml(details, className = "") {
-  if (!details.hasGraph) {
+function riskComparisonChartHtml(details = null, className = "") {
+  if (
+    !communityRiskRows.length ||
+    (details && typeof details.medianBurnProbability !== "number")
+  ) {
     return `
       <div class="graph-missing">
-        <strong>Graph pending</strong>
-        <span>No wildfire risk graph PNG has been added for this WUI yet.</span>
+        <strong>Comparison unavailable</strong>
+        <span>Community burn probability data could not be loaded.</span>
       </div>
     `;
   }
 
+  const width = 920;
+  const height = 500;
+  const margin = { left: 92, right: 42, top: 38, bottom: 70 };
+  const plotWidth = width - margin.left - margin.right;
+  const plotHeight = height - margin.top - margin.bottom;
+  const populations = communityRiskRows.map((row) => row.population);
+  const probabilities = communityRiskRows.map((row) => row.medianBp);
+  const logMin = Math.log10(Math.min(...populations));
+  const logMax = Math.log10(Math.max(...populations));
+  const bpMax = Math.max(...probabilities) * 1.06;
+  const x = (value) => margin.left + (value / bpMax) * plotWidth;
+  const y = (value) =>
+    margin.top + plotHeight - ((Math.log10(value) - logMin) / (logMax - logMin)) * plotHeight;
+  const percent = (value) => `${(value * 100).toFixed(2)}%`;
+  const number = (value) => Math.round(value).toLocaleString();
+  const grid = Array.from({ length: 6 }, (_, index) => {
+    const fraction = index / 5;
+    const gridX = margin.left + fraction * plotWidth;
+    const gridY = margin.top + plotHeight - fraction * plotHeight;
+    const populationTick = 10 ** (logMin + (logMax - logMin) * fraction);
+    return `
+      <line x1="${gridX}" y1="${margin.top}" x2="${gridX}" y2="${margin.top + plotHeight}" class="risk-chart-grid" />
+      <line x1="${margin.left}" y1="${gridY}" x2="${margin.left + plotWidth}" y2="${gridY}" class="risk-chart-grid" />
+      <text x="${margin.left - 12}" y="${gridY + 4}" text-anchor="end" class="risk-chart-tick">${number(populationTick)}</text>
+    `;
+  }).join("");
+  const points = communityRiskRows
+    .filter((row) => !details || row.wuiName !== details.wuiName)
+    .map(
+      (row) => `
+        <circle
+          cx="${x(row.medianBp)}"
+          cy="${y(row.population)}"
+          r="5"
+          class="risk-chart-point"
+          tabindex="0"
+          data-risk-tooltip="${escapeHtml(
+            `${row.name}|${percent(row.medianBp)}|${number(row.population)}|#${row.rank} of ${communityRiskRows.length}`
+          )}"
+        >
+          <title>${escapeHtml(row.name)}: ${percent(row.medianBp)} median burn probability; population ${number(row.population)}; rank #${row.rank}</title>
+        </circle>
+      `
+    )
+    .join("");
+  let selectedMarkup = "";
+  if (details) {
+    const selectedX = x(details.medianBurnProbability);
+    const selectedY = y(details.population);
+    const labelOnRight = selectedX < margin.left + plotWidth * 0.68;
+    const labelX = Math.max(
+      margin.left + 70,
+      Math.min(margin.left + plotWidth - 70, selectedX + (labelOnRight ? 46 : -46))
+    );
+    const labelY = Math.max(
+      margin.top + 20,
+      Math.min(margin.top + plotHeight - 16, selectedY - 34)
+    );
+    selectedMarkup = `
+      <line x1="${selectedX}" y1="${selectedY}" x2="${labelX}" y2="${labelY}" class="risk-chart-leader" />
+      <circle cx="${selectedX}" cy="${selectedY}" r="12" class="risk-chart-selected-halo" />
+      <circle
+        cx="${selectedX}"
+        cy="${selectedY}"
+        r="7"
+        class="risk-chart-selected"
+        tabindex="0"
+        data-risk-tooltip="${escapeHtml(
+          `${details.name}|${percent(details.medianBurnProbability)}|${details.populationLabel}|${details.rankLabel}`
+        )}"
+      ><title>${escapeHtml(details.name)}: ${percent(details.medianBurnProbability)}; ${details.rankLabel}</title></circle>
+      <text x="${labelX + (labelOnRight ? 6 : -6)}" y="${labelY - 4}" text-anchor="${labelOnRight ? "start" : "end"}" class="risk-chart-label">${escapeHtml(details.name)}</text>
+    `;
+  }
+
   return `
-    <div class="graph-frame ${className}">
-      <img src="${details.graph}?v=${GRAPH_ASSET_VERSION}" alt="Wildfire risk graph for ${details.name}" />
+    <div class="graph-frame risk-chart-frame ${className}">
+      ${
+        details
+          ? `<div class="risk-chart-stats">
+              <div><span>Burn probability rank</span><strong>${details.rankLabel}</strong></div>
+              <div><span>Community risk percentile</span><strong>${details.standingLabel}</strong></div>
+              <div><span>WUI population</span><strong>${details.populationLabel}</strong></div>
+            </div>`
+          : ""
+      }
+      <svg class="risk-chart" viewBox="0 0 ${width} ${height}" role="img" aria-label="${
+        details
+          ? `${escapeHtml(details.name)} compared with 100 WUI communities by median burn probability and population`
+          : "All 100 WUI communities compared by median burn probability and population"
+      }">
+        ${grid}
+        <line x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}" class="risk-chart-axis" />
+        <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + plotHeight}" class="risk-chart-axis" />
+        <text x="${margin.left + plotWidth / 2}" y="${height - 18}" text-anchor="middle" class="risk-chart-axis-title">Median annual burn probability</text>
+        <text x="22" y="${margin.top + plotHeight / 2}" transform="rotate(-90 22 ${margin.top + plotHeight / 2})" text-anchor="middle" class="risk-chart-axis-title">WUI population (log scale)</text>
+        ${points}
+        ${selectedMarkup}
+      </svg>
+      <p class="graph-caption">Each point is one WUI community. Population uses a logarithmic scale so communities of very different sizes remain visible.</p>
     </div>
   `;
 }
@@ -774,7 +910,7 @@ function popupHtml(feature) {
     <div class="community-popup">
       <strong>${details.name}</strong>
       <span>WUI population ${details.populationLabel}</span><br />
-      <span>WUI Population Rank ${details.rankLabel}</span>
+      <span>Burn probability rank ${details.rankLabel}</span>
     </div>
   `;
 }
@@ -788,14 +924,14 @@ function renderSidebar(feature) {
       ${sidebarCloseButton("Close community details")}
       <div class="detail-meta" aria-label="Community metadata">
         <span>WUI population: ${details.populationLabel}</span>
-        <span>WUI Population Rank: ${details.rankLabel}</span>
+        <span>Burn probability rank: ${details.rankLabel}</span>
       </div>
       <section class="wui-places" aria-label="Populated places included in this WUI">
         <h2>Included places</h2>
         <p>${details.placesLabel}</p>
       </section>
-      ${graphImageHtml(details, "is-clickable")}
-      ${details.hasGraph ? `<button class="sidebar-action" type="button" data-open-modal="${details.slug}">View larger</button>` : ""}
+      ${riskComparisonChartHtml(details, "is-clickable")}
+      <button class="sidebar-action" type="button" data-open-modal="${details.slug}">View larger</button>
     </article>
   `;
 }
@@ -808,10 +944,26 @@ function openGraphModal(feature) {
       <div class="graph-card-header">
         <div>
           <h1 id="graph-modal-title">${details.name}</h1>
-          <p>WUI population ${details.populationLabel} | WUI Population Rank ${details.rankLabel}</p>
+          <p>Burn probability rank ${details.rankLabel} | WUI population ${details.populationLabel}</p>
         </div>
       </div>
-      ${graphImageHtml(details)}
+      ${riskComparisonChartHtml(details)}
+    </div>
+  `;
+  graphModal.classList.add("is-open");
+  graphModal.setAttribute("aria-hidden", "false");
+}
+
+function openOverviewGraphModal() {
+  graphModalContent.innerHTML = `
+    <div class="graph-modal-body">
+      <div class="graph-card-header">
+        <div>
+          <h1 id="graph-modal-title">Frontera Provincial Wildfire Prediction Mapping</h1>
+          <p>Comparison of median burn probability and population across 100 WUI communities.</p>
+        </div>
+      </div>
+      ${riskComparisonChartHtml()}
     </div>
   `;
   graphModal.classList.add("is-open");
@@ -876,7 +1028,14 @@ function registerCommunity(feature, layer) {
 
   const option = document.createElement("option");
   option.value = name;
-  searchOptions.appendChild(option);
+  option.textContent = name;
+  searchInput.appendChild(option);
+}
+
+function sortCommunityOptions() {
+  const options = [...searchInput.options].slice(1);
+  options.sort((a, b) => a.textContent.localeCompare(b.textContent));
+  options.forEach((option) => searchInput.appendChild(option));
 }
 
 function loadCommunities() {
@@ -889,9 +1048,18 @@ function loadCommunities() {
       return response.json();
     })
     .then((geojson) => {
-      geojson.features = [...(geojson.features || [])].sort((a, b) =>
-        String(a.properties?.name || "").localeCompare(String(b.properties?.name || ""))
+      geojson.features = [...(geojson.features || [])].sort(
+        (a, b) =>
+          Number(a.properties?.burn_probability_rank || Infinity) -
+          Number(b.properties?.burn_probability_rank || Infinity)
       );
+      communityRiskRows = geojson.features.map((feature) => ({
+        name: feature.properties.name,
+        wuiName: feature.properties.wui_name,
+        population: feature.properties.wui_population,
+        medianBp: feature.properties.median_bp,
+        rank: feature.properties.burn_probability_rank
+      }));
       const communityLayer = L.geoJSON(geojson, {
         pointToLayer: communityMarkerForFeature,
         onEachFeature: (feature, layer) => {
@@ -903,10 +1071,14 @@ function loadCommunities() {
           layer.on("click", () => showCommunity(feature, layer));
         }
       }).addTo(map);
+      sortCommunityOptions();
 
       layerControl.addOverlay(communityLayer, "Communities");
       requestAnimationFrame(() => map.invalidateSize());
       map.fitBounds(RASTER_BOUNDS);
+      if (!selectedFeature && !selectedFireFeature && !selectedWuiFeature) {
+        renderDefaultSidebar();
+      }
     })
     .catch((error) => {
       sidebar.innerHTML = `
@@ -920,13 +1092,14 @@ function loadCommunities() {
 }
 
 searchInput.addEventListener("change", () => {
-  selectCommunityByName(searchInput.value);
-});
-
-searchInput.addEventListener("keydown", (event) => {
-  if (event.key === "Enter") {
-    event.preventDefault();
+  if (searchInput.value) {
     selectCommunityByName(searchInput.value);
+  } else {
+    const hadSelectedCommunity = Boolean(selectedFeature);
+    clearSelectedCommunity();
+    if (hadSelectedCommunity) {
+      renderDefaultSidebar();
+    }
   }
 });
 
@@ -963,10 +1136,16 @@ clearFireButton.addEventListener("click", () => {
 sidebar.addEventListener("click", (event) => {
   const closeButton = event.target.closest("[data-close-sidebar]");
   const modalButton = event.target.closest("[data-open-modal]");
+  const overviewButton = event.target.closest("[data-open-overview]");
   const graphFrame = event.target.closest(".graph-frame.is-clickable");
 
   if (closeButton) {
     closeSidebarPane();
+    return;
+  }
+
+  if (overviewButton || (graphFrame && !selectedFeature)) {
+    openOverviewGraphModal();
     return;
   }
 
@@ -980,6 +1159,52 @@ sidebar.addEventListener("click", (event) => {
 graphModal.addEventListener("click", (event) => {
   if (event.target.closest("[data-close-modal]")) {
     closeGraphModal();
+  }
+});
+
+function showRiskChartTooltip(point, clientX, clientY) {
+  const [name, burnProbability, population, rank] = point.dataset.riskTooltip.split("|");
+  riskChartTooltip.innerHTML = `
+    <strong>${escapeHtml(name)}</strong>
+    <span>Median burn probability: ${escapeHtml(burnProbability)}</span>
+    <span>WUI population: ${escapeHtml(population)}</span>
+    <span>Burn probability rank: ${escapeHtml(rank)}</span>
+  `;
+  riskChartTooltip.classList.add("is-visible");
+
+  const padding = 14;
+  const tooltipRect = riskChartTooltip.getBoundingClientRect();
+  let left = clientX + 14;
+  let top = clientY - tooltipRect.height / 2;
+  if (left + tooltipRect.width > window.innerWidth - padding) {
+    left = clientX - tooltipRect.width - 14;
+  }
+  top = Math.max(padding, Math.min(window.innerHeight - tooltipRect.height - padding, top));
+  riskChartTooltip.style.left = `${left}px`;
+  riskChartTooltip.style.top = `${top}px`;
+}
+
+document.addEventListener("pointermove", (event) => {
+  const point = event.target.closest("[data-risk-tooltip]");
+  if (point) {
+    showRiskChartTooltip(point, event.clientX, event.clientY);
+  } else {
+    riskChartTooltip.classList.remove("is-visible");
+  }
+});
+
+document.addEventListener("focusin", (event) => {
+  const point = event.target.closest("[data-risk-tooltip]");
+  if (!point) {
+    return;
+  }
+  const rect = point.getBoundingClientRect();
+  showRiskChartTooltip(point, rect.right, rect.top + rect.height / 2);
+});
+
+document.addEventListener("focusout", (event) => {
+  if (event.target.closest("[data-risk-tooltip]")) {
+    riskChartTooltip.classList.remove("is-visible");
   }
 });
 

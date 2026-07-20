@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Community burn probability chart options</title>
+  <style>
+    :root { color-scheme: light; --ink:#17211c; --muted:#637068; --paper:#f6f4ee; --card:#fff; --green:#245b45; --gold:#f0a61a; --red:#c8322b; }
+    * { box-sizing:border-box; }
+    body { margin:0; padding:32px 18px; background:var(--paper); color:var(--ink); font:15px/1.45 system-ui,sans-serif; }
+    main { max-width:1080px; margin:auto; }
+    h1 { margin:0 0 6px; font:700 clamp(26px,4vw,42px)/1.05 Georgia,serif; }
+    .intro { max-width:760px; color:var(--muted); margin:0 0 24px; }
+    .controls,.modes { display:flex; flex-wrap:wrap; gap:10px; align-items:end; }
+    label { display:grid; gap:5px; font-weight:650; }
+    select,button { font:inherit; border:1px solid #c9cec9; border-radius:7px; background:white; padding:9px 12px; }
+    select { min-width:240px; }
+    button { cursor:pointer; color:var(--green); font-weight:700; }
+    button.active { background:var(--green); color:white; border-color:var(--green); }
+    .modes { margin:18px 0 10px; }
+    .card { background:var(--card); border:1px solid #dfe2dd; border-radius:12px; box-shadow:0 10px 30px #26372a10; overflow:hidden; }
+    .summary { display:grid; grid-template-columns:repeat(3,1fr); border-bottom:1px solid #e6e8e4; }
+    .stat { padding:15px 20px; }
+    .stat + .stat { border-left:1px solid #e6e8e4; }
+    .stat span { display:block; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.05em; }
+    .stat strong { font:700 20px/1.3 Georgia,serif; }
+    #chart { width:100%; min-height:520px; display:block; }
+    .axis { stroke:#738078; stroke-width:1; }
+    .grid { stroke:#e8ebe7; stroke-width:1; }
+    .tick { fill:#68736d; font-size:11px; }
+    .axis-title { fill:#26342c; font-size:13px; font-weight:700; }
+    .point { fill:#e6a52f; fill-opacity:.58; stroke:#725c21; stroke-width:.65; transition:opacity .15s; }
+    .point:hover { fill-opacity:1; stroke-width:1.5; }
+    .selected-halo { fill:white; stroke:var(--ink); stroke-width:2.5; }
+    .selected { fill:var(--red); stroke:white; stroke-width:2; }
+    .leader { stroke:var(--ink); stroke-width:1.2; }
+    .label { fill:var(--ink); font-size:13px; font-weight:750; paint-order:stroke; stroke:white; stroke-width:4px; }
+    .median { stroke:#66736b; stroke-width:1; stroke-dasharray:5 5; }
+    .quadrant { fill:#edf3ed; }
+    .note { color:var(--muted); margin:12px 2px 0; font-size:13px; }
+    #tooltip { position:fixed; pointer-events:none; background:#17211cf2; color:#fff; padding:8px 10px; border-radius:6px; font-size:12px; opacity:0; transform:translate(10px,-50%); z-index:5; }
+    @media(max-width:620px){ body{padding:18px 8px}.summary{grid-template-columns:1fr}.stat+.stat{border-left:0;border-top:1px solid #e6e8e4}#chart{min-height:430px} }
+  </style>
+</head>
+<body>
+<main>
+  <h1>How does this community compare?</h1>
+  <p class="intro">Explore three ways to place a selected community among the 100 WUI communities. Hover any point for its exact values.</p>
+  <div class="controls"><label>Selected community<select id="community"></select></label></div>
+  <div class="modes" aria-label="Chart option">
+    <button data-mode="scatter" class="active">A · Population + probability</button>
+    <button data-mode="percentiles">B · Comparable percentiles</button>
+    <button data-mode="rank">C · Risk rank only</button>
+  </div>
+  <section class="card">
+    <div class="summary">
+      <div class="stat"><span>Median burn probability</span><strong id="bp"></strong></div>
+      <div class="stat"><span>Higher than peers</span><strong id="risk-rank"></strong></div>
+      <div class="stat"><span>Population</span><strong id="pop"></strong></div>
+    </div>
+    <svg id="chart" viewBox="0 0 1000 540" role="img"></svg>
+  </section>
+  <p class="note" id="note"></p>
+</main>
+<div id="tooltip"></div>
+<script>
+const svg=document.querySelector("#chart"), ns="http://www.w3.org/2000/svg", fmtInt=new Intl.NumberFormat("en-CA");
+let data=[], selected, mode="scatter";
+const el=(tag,attrs={},text="")=>{const n=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,v));n.textContent=text;svg.append(n);return n};
+const pct=(value,field)=>Math.round(100*data.filter(d=>d[field]<=value).length/data.length);
+const bpText=v=>(v*100).toFixed(3)+"%";
+const log=v=>Math.log10(v), clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+function draw(){
+  svg.innerHTML="";
+  const W=1000,H=540,m={l:92,r:55,t:42,b:78},pw=W-m.l-m.r,ph=H-m.t-m.b;
+  const bps=data.map(d=>d.median_bp), pops=data.map(d=>d.population), minBp=0,maxBp=Math.max(...bps)*1.06;
+  let x,y,xTitle,yTitle,note;
+  if(mode==="scatter"){
+    const lo=log(Math.min(...pops)),hi=log(Math.max(...pops));
+    x=d=>m.l+(d.median_bp-minBp)/(maxBp-minBp)*pw; y=d=>m.t+ph-(log(d.population)-lo)/(hi-lo)*ph;
+    xTitle="Median annual burn probability"; yTitle="Population (log scale)";
+    note="Option A preserves the actual measurements. The log population scale is essential because Vancouver is roughly 3,800 times larger than the smallest community.";
+  } else if(mode==="percentiles"){
+    x=d=>m.l+pct(d.median_bp,"median_bp")/100*pw; y=d=>m.t+ph-pct(d.population,"population")/100*ph;
+    xTitle="Burn probability percentile among these 100"; yTitle="Population percentile among these 100";
+    note="Option B makes both axes immediately comparable, but hides the size of the real gaps. Best for a plain-language “relative standing” view.";
+    el("rect",{x:m.l+pw/2,y:m.t,width:pw/2,height:ph/2,class:"quadrant"});
+    el("line",{x1:m.l+pw/2,y1:m.t,x2:m.l+pw/2,y2:m.t+ph,class:"median"});
+    el("line",{x1:m.l,y1:m.t+ph/2,x2:m.l+pw,y2:m.t+ph/2,class:"median"});
+  } else {
+    const ordered=[...data].sort((a,b)=>a.median_bp-b.median_bp); ordered.forEach((d,i)=>d._rank=i);
+    x=d=>m.l+d._rank/(data.length-1)*pw; y=d=>m.t+ph/2+(((d._rank*47)%17)-8)*2.1;
+    xTitle="Relative burn probability rank"; yTitle="";
+    note="Option C is the clearest small chart for a map sidebar. Population becomes tooltip/detail-card context instead of competing with the main risk message.";
+  }
+  for(let i=0;i<=5;i++){
+    const xx=m.l+pw*i/5, yy=m.t+ph-ph*i/5;
+    el("line",{x1:xx,y1:m.t,x2:xx,y2:m.t+ph,class:"grid"});
+    if(mode!=="rank") el("line",{x1:m.l,y1:yy,x2:m.l+pw,y2:yy,class:"grid"});
+    let xt;
+    if(mode==="scatter") xt=bpText(maxBp*i/5);
+    else xt=(i*20)+"th";
+    el("text",{x:xx,y:m.t+ph+25,"text-anchor":"middle",class:"tick"},xt);
+    if(mode==="scatter"){
+      const lo=log(Math.min(...pops)),hi=log(Math.max(...pops));
+      el("text",{x:m.l-12,y:yy+4,"text-anchor":"end",class:"tick"},fmtInt.format(Math.round(10**(lo+(hi-lo)*i/5))));
+    }
+    if(mode==="percentiles") el("text",{x:m.l-12,y:yy+4,"text-anchor":"end",class:"tick"},(i*20)+"th");
+  }
+  el("line",{x1:m.l,y1:m.t+ph,x2:m.l+pw,y2:m.t+ph,class:"axis"});
+  if(mode!=="rank") el("line",{x1:m.l,y1:m.t,x2:m.l,y2:m.t+ph,class:"axis"});
+  el("text",{x:m.l+pw/2,y:H-22,"text-anchor":"middle",class:"axis-title"},xTitle);
+  if(yTitle) el("text",{x:22,y:m.t+ph/2,transform:`rotate(-90 22 ${m.t+ph/2})`,"text-anchor":"middle",class:"axis-title"},yTitle);
+  const tip=document.querySelector("#tooltip");
+  data.filter(d=>d!==selected).forEach(d=>{
+    const c=el("circle",{cx:x(d),cy:y(d),r:mode==="rank"?4.5:5.2,class:"point",tabindex:"0"});
+    c.addEventListener("pointermove",e=>{tip.style.opacity=1;tip.style.left=e.clientX+"px";tip.style.top=e.clientY+"px";tip.innerHTML=`<b>${d.name}</b><br>${bpText(d.median_bp)} median BP<br>${fmtInt.format(d.population)} people`;});
+    c.addEventListener("pointerleave",()=>tip.style.opacity=0);
+  });
+  const sx=x(selected),sy=y(selected),labelRight=sx<m.l+pw*.68, lx=clamp(sx+(labelRight?45:-45),m.l+70,m.l+pw-70),ly=clamp(sy-34,m.t+18,m.t+ph-14);
+  el("line",{x1:sx,y1:sy,x2:lx,y2:ly,class:"leader"});
+  el("circle",{cx:sx,cy:sy,r:12,class:"selected-halo"});
+  el("circle",{cx:sx,cy:sy,r:7,class:"selected"});
+  el("text",{x:lx+(labelRight?6:-6),y:ly-4,"text-anchor":labelRight?"start":"end",class:"label"},selected.name);
+  document.querySelector("#bp").textContent=bpText(selected.median_bp);
+  document.querySelector("#risk-rank").textContent=pct(selected.median_bp,"median_bp")+"%";
+  document.querySelector("#pop").textContent=fmtInt.format(selected.population);
+  document.querySelector("#note").textContent=note;
+}
+fetch("data/wuis-risk-comparison.json").then(r=>r.json()).then(rows=>{
+  data=rows;
+  const select=document.querySelector("#community");
+  [...data].sort((a,b)=>a.name.localeCompare(b.name)).forEach(d=>select.add(new Option(d.name,d.name)));
+  selected=data.find(d=>d.name==="Williams Lake")||data[0]; select.value=selected.name;
+  select.addEventListener("change",()=>{selected=data.find(d=>d.name===select.value);draw()});
+  document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>{mode=b.dataset.mode;document.querySelectorAll("[data-mode]").forEach(x=>x.classList.toggle("active",x===b));draw()}));
+  draw();
+}).catch(()=>document.querySelector(".card").innerHTML="<p style='padding:24px'>Serve this folder with a local web server so the data file can load.</p>");
+</script>
+</body>
+</html>

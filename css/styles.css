@@ -168,11 +168,12 @@ input {
   margin-bottom: clamp(6px, 0.8vw, 10px);
 }
 
+.search-row,
 .fire-row {
   margin-bottom: 0;
 }
 
-.search-row input,
+.search-row select,
 .fire-row select {
   width: 100%;
   min-width: 0;
@@ -183,7 +184,7 @@ input {
   font-size: clamp(0.78rem, 1.1vw, 1rem);
 }
 
-.search-row input:focus,
+.search-row select:focus,
 .fire-row select:focus {
   border-color: var(--accent);
   outline: 3px solid rgba(45, 106, 79, 0.18);
@@ -209,10 +210,35 @@ input {
 }
 
 .sidebar {
+  position: relative;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   border-left: 1px solid var(--line);
   background: var(--panel);
+  overflow: hidden;
+}
+
+.sidebar-content {
+  min-height: 0;
+  flex: 1 1 auto;
+  padding-bottom: 155px;
   overflow-y: auto;
+}
+
+.sidebar-brand {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 2;
+  width: 137px;
+  pointer-events: none;
+}
+
+.sidebar-brand img {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .sidebar-empty,
@@ -388,17 +414,119 @@ input {
   color: var(--ink);
 }
 
-.graph-frame.is-clickable img {
+.graph-frame.is-clickable {
   cursor: zoom-in;
 }
 
-.graph-frame img {
+.graph-frame img,
+.risk-chart {
   display: block;
   width: 100%;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 8px;
   background: #ffffff;
+}
+
+.risk-chart-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--line);
+  border-bottom: 0;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.risk-chart-stats div {
+  padding: 10px 12px;
+}
+
+.risk-chart-stats div + div {
+  border-left: 1px solid var(--line);
+}
+
+.risk-chart-stats span,
+.risk-chart-stats strong {
+  display: block;
+}
+
+.community-detail .risk-chart-stats {
+  grid-template-columns: 1fr;
+}
+
+.community-detail .risk-chart-stats div + div {
+  border-top: 1px solid var(--line);
+  border-left: 0;
+}
+
+.risk-chart-stats span {
+  color: var(--muted);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.risk-chart-stats strong {
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.risk-chart-frame .risk-chart {
+  border-radius: 0 0 8px 8px;
+}
+
+.sidebar-empty .risk-chart {
+  border-radius: 8px;
+}
+
+.risk-chart-grid { stroke: #e8ebe7; stroke-width: 1; }
+.risk-chart-axis { stroke: #738078; stroke-width: 1; }
+.risk-chart-tick { fill: #68736d; font-size: 11px; }
+.risk-chart-axis-title { fill: #26342c; font-size: 13px; font-weight: 700; }
+.risk-chart-point { fill: #e6a52f; fill-opacity: 0.58; stroke: #725c21; stroke-width: 0.65; }
+.risk-chart-point:hover { fill-opacity: 1; stroke-width: 1.5; }
+.risk-chart-leader { stroke: var(--ink); stroke-width: 1.2; }
+.risk-chart-selected-halo { fill: #ffffff; stroke: var(--ink); stroke-width: 2.5; }
+.risk-chart-selected { fill: #c8322b; stroke: #ffffff; stroke-width: 2; }
+.risk-chart-label {
+  fill: var(--ink);
+  font-size: 13px;
+  font-weight: 750;
+  paint-order: stroke;
+  stroke: #ffffff;
+  stroke-width: 4px;
+}
+
+.risk-chart-tooltip {
+  position: fixed;
+  z-index: 1200;
+  display: grid;
+  gap: 2px;
+  max-width: 250px;
+  border-radius: 7px;
+  padding: 9px 11px;
+  background: rgba(23, 33, 28, 0.96);
+  box-shadow: 0 5px 18px rgba(15, 23, 42, 0.28);
+  color: #ffffff;
+  font-size: 0.78rem;
+  line-height: 1.35;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(2px);
+  transition:
+    opacity 100ms ease,
+    transform 100ms ease;
+}
+
+.risk-chart-tooltip.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.risk-chart-tooltip strong {
+  margin-bottom: 2px;
 }
 
 .graph-caption {
@@ -616,6 +744,18 @@ input {
   padding: 24px 28px 32px;
 }
 
+.graph-modal-body .risk-chart-frame {
+  width: min(100%, 1180px);
+  margin: 0 auto;
+}
+
+.graph-modal-body .risk-chart {
+  width: auto;
+  max-width: 100%;
+  max-height: calc(90vh - 245px);
+  margin: 0 auto;
+}
+
 .graph-modal-body img {
   display: block;
   width: min(100%, 1180px);
@@ -738,6 +878,15 @@ input {
     min-height: 38vh;
     border-top: 1px solid var(--line);
     border-left: 0;
+  }
+
+  .sidebar-content {
+    padding-bottom: 130px;
+    overflow-y: visible;
+  }
+
+  .sidebar-brand {
+    width: 114px;
   }
 
   .map-search-panel {

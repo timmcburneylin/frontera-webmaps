@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Frontera Wildfire Risk Webmap</title>
+    <title>Frontera Provincial Wildfire Prediction Mapping</title>
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <link rel="stylesheet" href="css/styles.css?v=20260702-1" />
+    <link rel="stylesheet" href="css/styles.css?v=20260720-corner-logo-1" />
   </head>
   <body>
     <main class="app-shell">
@@ -15,16 +15,11 @@
           <div class="search-panel">
             <label for="community-search">Community</label>
             <div class="search-row">
-              <input
-                id="community-search"
-                type="search"
-                autocomplete="off"
-                list="community-options"
-                placeholder="Search BC communities"
-              />
+              <select id="community-search">
+                <option value="">Select a community</option>
+              </select>
               <button id="clear-search" type="button" aria-label="Clear selected community">Clear</button>
             </div>
-            <datalist id="community-options"></datalist>
           </div>
 
           <div class="fire-panel">
@@ -41,10 +36,20 @@
         <div id="map" aria-label="BC community wildfire risk map"></div>
       </section>
 
-      <aside id="community-sidebar" class="sidebar" aria-live="polite">
-        <div class="sidebar-empty">
-          <h1>Frontera Wildfire Risk</h1>
-          <p>Select a community or active wildfire to view its details.</p>
+      <aside class="sidebar">
+        <div id="community-sidebar" class="sidebar-content" aria-live="polite">
+          <div class="sidebar-empty">
+            <h1>Frontera Provincial Wildfire Prediction Mapping</h1>
+            <p>Compare median burn probability and population across 100 WUI communities.</p>
+          </div>
+        </div>
+        <div class="sidebar-brand">
+          <img
+            src="assets/frontera-logo.jpeg"
+            alt="Frontera Forest Solutions Inc."
+            width="720"
+            height="720"
+          />
         </div>
       </aside>
     </main>
@@ -58,6 +63,6 @@
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="js/map.js?v=20260702-1"></script>
+    <script src="js/map.js?v=20260720-title-1"></script>
   </body>
 </html>

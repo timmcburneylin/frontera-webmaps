@@ -1,4 +1,4 @@
-# Frontera Wildfire Risk Webmap
+# BC Burn Probability Webmap
 
 This repository is a static Leaflet webmap designed for GitHub Pages. Wix should
 embed the published GitHub Pages URL and does not need to contain any map logic.
@@ -12,11 +12,7 @@ js/map.js
 data/communities.geojson
 data/current-fire-perimeters.geojson
 data/wui-polygons.geojson
-data/graph-manifest.json
-graphs/
-  kamloops.png
-  kelowna.png
-  prince-george.png
+data/communities.geojson
 tiles/
   burn-probability/
     {z}/{x}/{y}.png
@@ -32,13 +28,10 @@ Statistics Canada Census subdivision boundary shapefile. Each feature needs:
   "name": "Kamloops",
   "slug": "kamloops",
   "population": 97902,
-  "population_rank": 3,
-  "graph": "graphs/kamloops.png"
+  "burn_probability_rank": 15,
+  "median_bp": 0.002380487
 }
 ```
-
-The `slug` should match the PNG filename in `graphs/`. For example,
-`slug: "prince-george"` should use `graphs/prince-george.png`.
 
 To regenerate `data/communities.geojson` from the local Census shapefile, run:
 
@@ -53,11 +46,13 @@ the extension:
 python scripts\generate_communities_geojson.py --csd-prefix C:\path\to\lcsd000b21a_e
 ```
 
-## WUI Population And Graph Data
+## WUI Population And Risk Comparison Data
 
-Community graph PNGs are stored in `graphs/` with slug filenames. The
-source-of-truth population table is `C:\Users\Teej\Downloads\wuis_top100.xlsx`,
-which ranks the 100 most populous WUI communities by 2021 Census population.
+Community comparison charts are rendered directly in the browser from
+`data/communities.geojson`. The source-of-truth table is
+`C:\Users\Teej\Downloads\wuis_top100.xlsx`. Communities are ordered and ranked
+by median burn probability, from highest to lowest. The chart compares median
+burn probability with WUI population on a logarithmic population axis.
 Some WUI populations aggregate multiple populated places, such as Vancouver or
 Chilliwack, so the sidebar labels these as `WUI population` rather than city
 population.
@@ -79,7 +74,10 @@ Refresh the cached locality points and `data/communities.geojson` with:
 python scripts\refresh_community_geocoded_points.py --force
 ```
 
-The map has graph PNGs for all 100 WUI communities.
+The display name can differ from the source WUI polygon name. For example, the
+source WUI named `Kimberley` contains Cranbrook and Kimberley, but its map marker
+and community-facing label are `Cranbrook`; the original WUI name remains the
+stable key used to attach its risk values.
 
 ## WUI Polygons
 

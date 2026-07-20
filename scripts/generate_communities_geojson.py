@@ -59,7 +59,10 @@ def slugify(value: str) -> str:
 def clean_wui_display_name(value: str) -> str:
     display_aliases = {
         "Kimberley": "Cranbrook",
-        "Queen Charlotte, Village Of": "Village of Queen Charlotte",
+        "Kamloops 1": "Kamloops Reserve",
+        "Penticton 1": "Penticton Reserve",
+        "Skidegate 1": "Skidegate",
+        "Queen Charlotte, Village Of": "Daajing Giids",
         "Hudson'S Hope": "Hudson's Hope",
         "Hudson’s Hope": "Hudson's Hope",
     }
@@ -124,7 +127,7 @@ def read_wui_workbook(path: Path) -> list[dict[str, str | int | float | list[str
 
         record["population"] = int(round(float(record["POPULATION"])))
         record["places"] = [
-            place.strip()
+            clean_wui_display_name(place.strip())
             for place in str(record.get("COMMUNITIES") or "").split(",")
             if place.strip()
         ]
@@ -133,6 +136,10 @@ def read_wui_workbook(path: Path) -> list[dict[str, str | int | float | list[str
     records.sort(key=lambda item: int(item["population"]), reverse=True)
     for index, record in enumerate(records, start=1):
         record["population_rank"] = index
+
+    records.sort(key=lambda item: float(item.get("median_bp") or 0), reverse=True)
+    for index, record in enumerate(records, start=1):
+        record["burn_probability_rank"] = index
 
     return records
 
@@ -355,6 +362,7 @@ def build_geojson(
             "wui_name": raw_wui_name,
             "wui_population": record["population"],
             "wui_population_rank": record["population_rank"],
+            "burn_probability_rank": record["burn_probability_rank"],
             "wui_places": record["places"],
             "population": record["population"],
             "population_rank": record["population_rank"],
