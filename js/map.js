@@ -806,6 +806,10 @@ function riskComparisonChartHtml(details = null, className = "") {
   const plotHeight = height - margin.top - margin.bottom;
   const populations = communityRiskRows.map((row) => row.population);
   const probabilities = communityRiskRows.map((row) => row.medianBp);
+  const sortedProbabilities = [...probabilities].sort((a, b) => a - b);
+  const medianIndex = (sortedProbabilities.length - 1) / 2;
+  const medianProbability =
+    (sortedProbabilities[Math.floor(medianIndex)] + sortedProbabilities[Math.ceil(medianIndex)]) / 2;
   const logMin = Math.log10(Math.min(...populations));
   const logMax = Math.log10(Math.max(...populations));
   const bpMax = Math.max(...probabilities) * 1.06;
@@ -825,6 +829,21 @@ function riskComparisonChartHtml(details = null, className = "") {
       <text x="${margin.left - 12}" y="${gridY + 4}" text-anchor="end" class="risk-chart-tick">${number(populationTick)}</text>
     `;
   }).join("");
+  const medianX = x(medianProbability);
+  const medianLine = `
+    <line
+      x1="${medianX}"
+      y1="${margin.top}"
+      x2="${medianX}"
+      y2="${margin.top + plotHeight}"
+      class="risk-chart-percentile-line"
+    />
+    <text
+      x="${medianX + 8}"
+      y="${margin.top + 15}"
+      class="risk-chart-percentile-label"
+    >50th percentile burn probability</text>
+  `;
   const points = communityRiskRows
     .filter((row) => !details || row.wuiName !== details.wuiName)
     .map(
@@ -835,12 +854,15 @@ function riskComparisonChartHtml(details = null, className = "") {
           r="5"
           class="risk-chart-point"
           tabindex="0"
+          role="button"
+          aria-label="${escapeHtml(
+            `Select ${row.name}: ${percent(row.medianBp)} median burn probability; population ${number(row.population)}; rank #${row.rank}`
+          )}"
+          data-community-slug="${escapeHtml(row.slug)}"
           data-risk-tooltip="${escapeHtml(
             `${row.name}|${percent(row.medianBp)}|${number(row.population)}|#${row.rank} of ${communityRiskRows.length}`
           )}"
-        >
-          <title>${escapeHtml(row.name)}: ${percent(row.medianBp)} median burn probability; population ${number(row.population)}; rank #${row.rank}</title>
-        </circle>
+        ></circle>
       `
     )
     .join("");
@@ -866,10 +888,15 @@ function riskComparisonChartHtml(details = null, className = "") {
         r="7"
         class="risk-chart-selected"
         tabindex="0"
+        role="button"
+        aria-label="${escapeHtml(
+          `Select ${details.name}: ${percent(details.medianBurnProbability)} median burn probability; ${details.rankLabel}`
+        )}"
+        data-community-slug="${escapeHtml(details.slug)}"
         data-risk-tooltip="${escapeHtml(
           `${details.name}|${percent(details.medianBurnProbability)}|${details.populationLabel}|${details.rankLabel}`
         )}"
-      ><title>${escapeHtml(details.name)}: ${percent(details.medianBurnProbability)}; ${details.rankLabel}</title></circle>
+      ></circle>
       <text x="${labelX + (labelOnRight ? 6 : -6)}" y="${labelY - 4}" text-anchor="${labelOnRight ? "start" : "end"}" class="risk-chart-label">${escapeHtml(details.name)}</text>
     `;
   }
@@ -891,6 +918,7 @@ function riskComparisonChartHtml(details = null, className = "") {
           : "All 100 WUI communities compared by median burn probability and population"
       }">
         ${grid}
+        ${medianLine}
         <line x1="${margin.left}" y1="${margin.top + plotHeight}" x2="${margin.left + plotWidth}" y2="${margin.top + plotHeight}" class="risk-chart-axis" />
         <line x1="${margin.left}" y1="${margin.top}" x2="${margin.left}" y2="${margin.top + plotHeight}" class="risk-chart-axis" />
         <text x="${margin.left + plotWidth / 2}" y="${height - 18}" text-anchor="middle" class="risk-chart-axis-title">Median annual burn probability</text>
@@ -999,6 +1027,18 @@ function showCommunity(feature, layer) {
   renderSidebar(feature);
 }
 
+function selectCommunityBySlug(slug) {
+  const feature = communitiesBySlug.get(slug);
+  const layer = layersBySlug.get(slug);
+  if (!feature || !layer) {
+    return;
+  }
+
+  closeGraphModal();
+  riskChartTooltip.classList.remove("is-visible");
+  showCommunity(feature, layer);
+}
+
 function selectCommunityByName(name) {
   const query = normalize(name);
   const feature =
@@ -1055,6 +1095,7 @@ function loadCommunities() {
       );
       communityRiskRows = geojson.features.map((feature) => ({
         name: feature.properties.name,
+        slug: feature.properties.slug,
         wuiName: feature.properties.wui_name,
         population: feature.properties.wui_population,
         medianBp: feature.properties.median_bp,
@@ -1135,9 +1176,15 @@ clearFireButton.addEventListener("click", () => {
 
 sidebar.addEventListener("click", (event) => {
   const closeButton = event.target.closest("[data-close-sidebar]");
+  const chartPoint = event.target.closest("[data-community-slug]");
   const modalButton = event.target.closest("[data-open-modal]");
   const overviewButton = event.target.closest("[data-open-overview]");
   const graphFrame = event.target.closest(".graph-frame.is-clickable");
+
+  if (chartPoint) {
+    selectCommunityBySlug(chartPoint.dataset.communitySlug);
+    return;
+  }
 
   if (closeButton) {
     closeSidebarPane();
@@ -1159,6 +1206,12 @@ sidebar.addEventListener("click", (event) => {
 graphModal.addEventListener("click", (event) => {
   if (event.target.closest("[data-close-modal]")) {
     closeGraphModal();
+    return;
+  }
+
+  const chartPoint = event.target.closest("[data-community-slug]");
+  if (chartPoint) {
+    selectCommunityBySlug(chartPoint.dataset.communitySlug);
   }
 });
 
@@ -1209,6 +1262,13 @@ document.addEventListener("focusout", (event) => {
 });
 
 window.addEventListener("keydown", (event) => {
+  const chartPoint = event.target.closest?.("[data-community-slug]");
+  if (chartPoint && (event.key === "Enter" || event.key === " ")) {
+    event.preventDefault();
+    selectCommunityBySlug(chartPoint.dataset.communitySlug);
+    return;
+  }
+
   if (event.key === "Escape") {
     closeGraphModal();
   }
