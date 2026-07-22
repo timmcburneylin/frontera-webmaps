@@ -139,7 +139,7 @@ fireStatusLegend.onAdd = () => {
     </div>
     <div class="fire-status-legend-item is-outline">
       <svg class="wui-outline-swatch" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true">
-        <rect x="2" y="2" width="14" height="10" rx="2" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="3 2" />
+        <rect x="2" y="2" width="14" height="10" rx="2" fill="none" stroke="#92400e" stroke-opacity="0.78" stroke-width="2" />
       </svg>
       <span>WUI Risk Class polygon</span>
     </div>
