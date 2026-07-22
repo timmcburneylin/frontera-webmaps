@@ -672,7 +672,12 @@ input {
   border-top: 1px solid var(--line);
 }
 
-.fire-perimeter-swatch {
+.fire-status-legend-item.is-outline {
+  margin-top: 6px;
+}
+
+.fire-perimeter-swatch,
+.wui-outline-swatch {
   width: 18px;
   height: 14px;
   flex: 0 0 18px;

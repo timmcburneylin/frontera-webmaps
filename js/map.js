@@ -137,6 +137,12 @@ fireStatusLegend.onAdd = () => {
       </svg>
       <span>Current fire perimeter</span>
     </div>
+    <div class="fire-status-legend-item is-outline">
+      <svg class="wui-outline-swatch" width="18" height="14" viewBox="0 0 18 14" aria-hidden="true">
+        <rect x="2" y="2" width="14" height="10" rx="2" fill="none" stroke="#2563eb" stroke-width="2" stroke-dasharray="3 2" />
+      </svg>
+      <span>WUI Risk Class polygon</span>
+    </div>
   `;
   L.DomEvent.disableClickPropagation(container);
   L.DomEvent.disableScrollPropagation(container);
@@ -482,8 +488,15 @@ function sidebarCloseButton(label = "Close details") {
 function renderDefaultSidebar() {
   sidebar.innerHTML = `
     <div class="sidebar-empty">
-      <h1>Frontera Provincial Wildfire Prediction Mapping</h1>
-      <p>Compare median burn probability and population across 100 WUI communities. Select a community to highlight it.</p>
+      <h1>Provincial Wildfire Prediction Mapping</h1>
+      <p>
+        Compare burn probability across BC's 100 most populated Wildland Urban Interface (WUI) communities.
+        WUI communities are places where people and wildland vegetation meet, while burn probability shows how
+        likely an area could experience wildfire. Population is included because the potential impacts of
+        wildfire depend not only on wildfire likelihood, but also on how many people and homes could be affected.
+        Each blue dot represents one community. Select a community in the scatterplot to highlight it and the map
+        will move directly to that community.
+      </p>
       ${riskComparisonChartHtml(null, "is-clickable")}
       <button class="sidebar-action" type="button" data-open-overview>View larger</button>
     </div>
@@ -987,8 +1000,11 @@ function openOverviewGraphModal() {
     <div class="graph-modal-body">
       <div class="graph-card-header">
         <div>
-          <h1 id="graph-modal-title">Frontera Provincial Wildfire Prediction Mapping</h1>
-          <p>Comparison of median burn probability and population across 100 WUI communities.</p>
+          <h1 id="graph-modal-title">Provincial Wildfire Prediction Mapping</h1>
+          <p>
+            Compare burn probability across BC's 100 most populated Wildland Urban Interface (WUI) communities.
+            Select a community in the scatterplot to highlight it and move the map directly there.
+          </p>
         </div>
       </div>
       ${riskComparisonChartHtml()}
