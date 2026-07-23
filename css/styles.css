@@ -639,6 +639,10 @@ input {
   font-weight: 700;
 }
 
+.fire-status-legend-item[hidden] {
+  display: none;
+}
+
 .fire-status-swatch {
   width: 15px;
   height: 15px;
