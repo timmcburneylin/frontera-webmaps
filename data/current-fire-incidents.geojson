@@ -3,230 +3,6 @@
   "features": [
     {
       "type": "Feature",
-      "id": "bcws-incident-N51266",
-      "geometry": {
-        "bbox": [
-          -117.422,
-          50.763333,
-          -117.422,
-          50.763333
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.422,
-          50.763333
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N51266",
-        "INCIDENT_NAME": "N51266",
-        "INCIDENT_NUMBER_LABEL": "N51266",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51266",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N51275",
-      "geometry": {
-        "bbox": [
-          -117.759217,
-          49.924917,
-          -117.759217,
-          49.924917
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.759217,
-          49.924917
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N51275",
-        "INCIDENT_NAME": "N51275",
-        "INCIDENT_NUMBER_LABEL": "N51275",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51275",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N41279",
-      "geometry": {
-        "bbox": [
-          -118.271467,
-          51.59555,
-          -118.271467,
-          51.59555
-        ],
-        "type": "Point",
-        "coordinates": [
-          -118.271467,
-          51.59555
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N41279",
-        "INCIDENT_NAME": "N41279",
-        "INCIDENT_NUMBER_LABEL": "N41279",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N41279",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N51284",
-      "geometry": {
-        "bbox": [
-          -117.705367,
-          49.857383,
-          -117.705367,
-          49.857383
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.705367,
-          49.857383
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N51284",
-        "INCIDENT_NAME": "N51284",
-        "INCIDENT_NUMBER_LABEL": "N51284",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51284",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-K21312",
-      "geometry": {
-        "bbox": [
-          -119.715783,
-          51.38635,
-          -119.715783,
-          51.38635
-        ],
-        "type": "Point",
-        "coordinates": [
-          -119.715783,
-          51.38635
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "K21312",
-        "INCIDENT_NAME": "K21312",
-        "INCIDENT_NUMBER_LABEL": "K21312",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K21312",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N61304",
-      "geometry": {
-        "bbox": [
-          -118.436533,
-          49.566417,
-          -118.436533,
-          49.566417
-        ],
-        "type": "Point",
-        "coordinates": [
-          -118.436533,
-          49.566417
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N61304",
-        "INCIDENT_NAME": "N61304",
-        "INCIDENT_NUMBER_LABEL": "N61304",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N61304",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N51068",
-      "geometry": {
-        "bbox": [
-          -117.635283,
-          50.77395,
-          -117.635283,
-          50.77395
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.635283,
-          50.77395
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N51068",
-        "INCIDENT_NAME": "N51068",
-        "INCIDENT_NUMBER_LABEL": "N51068",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51068",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N51066",
-      "geometry": {
-        "bbox": [
-          -117.64555,
-          50.772383,
-          -117.64555,
-          50.772383
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.64555,
-          50.772383
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N51066",
-        "INCIDENT_NAME": "N51066",
-        "INCIDENT_NUMBER_LABEL": "N51066",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51066",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-K61186",
       "geometry": {
         "bbox": [
@@ -255,57 +31,29 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-N61319",
+      "id": "bcws-incident-N41279",
       "geometry": {
         "bbox": [
-          -118.154333,
-          49.246583,
-          -118.154333,
-          49.246583
+          -118.271467,
+          51.59555,
+          -118.271467,
+          51.59555
         ],
         "type": "Point",
         "coordinates": [
-          -118.154333,
-          49.246583
+          -118.271467,
+          51.59555
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "N61319",
-        "INCIDENT_NAME": "N61319",
-        "INCIDENT_NUMBER_LABEL": "N61319",
+        "FIRE_NUMBER": "N41279",
+        "INCIDENT_NAME": "N41279",
+        "INCIDENT_NUMBER_LABEL": "N41279",
         "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N61319",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-G31323",
-      "geometry": {
-        "bbox": [
-          -119.214167,
-          52.269166,
-          -119.214167,
-          52.269166
-        ],
-        "type": "Point",
-        "coordinates": [
-          -119.214167,
-          52.269166
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "G31323",
-        "INCIDENT_NAME": "G31323",
-        "INCIDENT_NUMBER_LABEL": "G31323",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G31323",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N41279",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -367,62 +115,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-N11326",
-      "geometry": {
-        "bbox": [
-          -115.593417,
-          49.124167,
-          -115.593417,
-          49.124167
-        ],
-        "type": "Point",
-        "coordinates": [
-          -115.593417,
-          49.124167
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N11326",
-        "INCIDENT_NAME": "N11326",
-        "INCIDENT_NUMBER_LABEL": "N11326",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N11326",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N71327",
-      "geometry": {
-        "bbox": [
-          -117.444367,
-          50.549533,
-          -117.444367,
-          50.549533
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.444367,
-          50.549533
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N71327",
-        "INCIDENT_NAME": "N71327",
-        "INCIDENT_NUMBER_LABEL": "N71327",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N71327",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-K21320",
       "geometry": {
         "bbox": [
@@ -446,34 +138,6 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K21320",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N71328",
-      "geometry": {
-        "bbox": [
-          -117.049967,
-          49.305717,
-          -117.049967,
-          49.305717
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.049967,
-          49.305717
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N71328",
-        "INCIDENT_NAME": "N71328",
-        "INCIDENT_NUMBER_LABEL": "N71328",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N71328",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -507,141 +171,337 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-V81131",
+      "id": "bcws-incident-N51275",
       "geometry": {
         "bbox": [
-          -126.199417,
-          50.0455,
-          -126.199417,
-          50.0455
+          -117.759217,
+          49.924917,
+          -117.759217,
+          49.924917
         ],
         "type": "Point",
         "coordinates": [
-          -126.199417,
-          50.0455
+          -117.759217,
+          49.924917
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "V81131",
-        "INCIDENT_NAME": "V81131",
-        "INCIDENT_NUMBER_LABEL": "V81131",
+        "FIRE_NUMBER": "N51275",
+        "INCIDENT_NAME": "N51275",
+        "INCIDENT_NUMBER_LABEL": "N51275",
         "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
+        "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V81131",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51275",
         "DATA_SOURCE": "incident-point"
       }
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-VA1126",
+      "id": "bcws-incident-N51284",
       "geometry": {
         "bbox": [
-          -126.815117,
-          52.119917,
-          -126.815117,
-          52.119917
+          -117.705367,
+          49.857383,
+          -117.705367,
+          49.857383
         ],
         "type": "Point",
         "coordinates": [
-          -126.815117,
-          52.119917
+          -117.705367,
+          49.857383
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "VA1126",
-        "INCIDENT_NAME": "VA1126",
-        "INCIDENT_NUMBER_LABEL": "VA1126",
+        "FIRE_NUMBER": "N51284",
+        "INCIDENT_NAME": "N51284",
+        "INCIDENT_NUMBER_LABEL": "N51284",
         "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
+        "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=VA1126",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51284",
         "DATA_SOURCE": "incident-point"
       }
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-K51313",
+      "id": "bcws-incident-N71328",
       "geometry": {
         "bbox": [
-          -119.47,
-          49.422267,
-          -119.47,
-          49.422267
+          -117.049967,
+          49.305717,
+          -117.049967,
+          49.305717
         ],
         "type": "Point",
         "coordinates": [
-          -119.47,
-          49.422267
+          -117.049967,
+          49.305717
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "K51313",
-        "INCIDENT_NAME": "K51313",
-        "INCIDENT_NUMBER_LABEL": "K51313",
+        "FIRE_NUMBER": "N71328",
+        "INCIDENT_NAME": "N71328",
+        "INCIDENT_NUMBER_LABEL": "N71328",
         "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
+        "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K51313",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N71328",
         "DATA_SOURCE": "incident-point"
       }
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-C10988",
+      "id": "bcws-incident-N61304",
       "geometry": {
         "bbox": [
-          -120.91,
-          53.17,
-          -120.91,
-          53.17
+          -118.436533,
+          49.566417,
+          -118.436533,
+          49.566417
         ],
         "type": "Point",
         "coordinates": [
-          -120.91,
-          53.17
+          -118.436533,
+          49.566417
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "C10988",
-        "INCIDENT_NAME": "C10988",
-        "INCIDENT_NUMBER_LABEL": "C10988",
+        "FIRE_NUMBER": "N61304",
+        "INCIDENT_NAME": "N61304",
+        "INCIDENT_NUMBER_LABEL": "N61304",
         "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
+        "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C10988",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N61304",
         "DATA_SOURCE": "incident-point"
       }
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-N51164",
+      "id": "bcws-incident-N61319",
       "geometry": {
         "bbox": [
-          -117.9435,
-          49.348867,
-          -117.9435,
-          49.348867
+          -118.154333,
+          49.246583,
+          -118.154333,
+          49.246583
         ],
         "type": "Point",
         "coordinates": [
-          -117.9435,
-          49.348867
+          -118.154333,
+          49.246583
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "N51164",
-        "INCIDENT_NAME": "N51164",
-        "INCIDENT_NUMBER_LABEL": "N51164",
+        "FIRE_NUMBER": "N61319",
+        "INCIDENT_NAME": "N61319",
+        "INCIDENT_NUMBER_LABEL": "N61319",
         "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
+        "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51164",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N61319",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-K21312",
+      "geometry": {
+        "bbox": [
+          -119.715783,
+          51.38635,
+          -119.715783,
+          51.38635
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.715783,
+          51.38635
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K21312",
+        "INCIDENT_NAME": "K21312",
+        "INCIDENT_NUMBER_LABEL": "K21312",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K21312",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N51068",
+      "geometry": {
+        "bbox": [
+          -117.635283,
+          50.77395,
+          -117.635283,
+          50.77395
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.635283,
+          50.77395
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N51068",
+        "INCIDENT_NAME": "N51068",
+        "INCIDENT_NUMBER_LABEL": "N51068",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51068",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N51066",
+      "geometry": {
+        "bbox": [
+          -117.64555,
+          50.772383,
+          -117.64555,
+          50.772383
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.64555,
+          50.772383
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N51066",
+        "INCIDENT_NAME": "N51066",
+        "INCIDENT_NUMBER_LABEL": "N51066",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51066",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N51266",
+      "geometry": {
+        "bbox": [
+          -117.422,
+          50.763333,
+          -117.422,
+          50.763333
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.422,
+          50.763333
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N51266",
+        "INCIDENT_NAME": "N51266",
+        "INCIDENT_NUMBER_LABEL": "N51266",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51266",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N71327",
+      "geometry": {
+        "bbox": [
+          -117.444367,
+          50.549533,
+          -117.444367,
+          50.549533
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.444367,
+          50.549533
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N71327",
+        "INCIDENT_NAME": "N71327",
+        "INCIDENT_NUMBER_LABEL": "N71327",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N71327",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N11326",
+      "geometry": {
+        "bbox": [
+          -115.593417,
+          49.124167,
+          -115.593417,
+          49.124167
+        ],
+        "type": "Point",
+        "coordinates": [
+          -115.593417,
+          49.124167
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N11326",
+        "INCIDENT_NAME": "N11326",
+        "INCIDENT_NUMBER_LABEL": "N11326",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N11326",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-G31323",
+      "geometry": {
+        "bbox": [
+          -119.214167,
+          52.269166,
+          -119.214167,
+          52.269166
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.214167,
+          52.269166
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "G31323",
+        "INCIDENT_NAME": "G31323",
+        "INCIDENT_NUMBER_LABEL": "G31323",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G31323",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -675,34 +535,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-N51228",
-      "geometry": {
-        "bbox": [
-          -117.683533,
-          49.161833,
-          -117.683533,
-          49.161833
-        ],
-        "type": "Point",
-        "coordinates": [
-          -117.683533,
-          49.161833
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N51228",
-        "INCIDENT_NAME": "N51228",
-        "INCIDENT_NUMBER_LABEL": "N51228",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51228",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-N61170",
       "geometry": {
         "bbox": [
@@ -731,85 +563,29 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-N71251",
+      "id": "bcws-incident-G80916",
       "geometry": {
         "bbox": [
-          -117.170117,
-          49.682967,
-          -117.170117,
-          49.682967
+          -122.932667,
+          57.6855,
+          -122.932667,
+          57.6855
         ],
         "type": "Point",
         "coordinates": [
-          -117.170117,
-          49.682967
+          -122.932667,
+          57.6855
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "N71251",
-        "INCIDENT_NAME": "N71251",
-        "INCIDENT_NUMBER_LABEL": "N71251",
+        "FIRE_NUMBER": "G80916",
+        "INCIDENT_NAME": "G80916",
+        "INCIDENT_NUMBER_LABEL": "G80916",
         "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Being Held",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N71251",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N41250",
-      "geometry": {
-        "bbox": [
-          -118.167667,
-          51.729,
-          -118.167667,
-          51.729
-        ],
-        "type": "Point",
-        "coordinates": [
-          -118.167667,
-          51.729
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N41250",
-        "INCIDENT_NAME": "N41250",
-        "INCIDENT_NUMBER_LABEL": "N41250",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N41250",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-N41249",
-      "geometry": {
-        "bbox": [
-          -118.0983,
-          51.651383,
-          -118.0983,
-          51.651383
-        ],
-        "type": "Point",
-        "coordinates": [
-          -118.0983,
-          51.651383
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "N41249",
-        "INCIDENT_NAME": "N41249",
-        "INCIDENT_NUMBER_LABEL": "N41249",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N41249",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G80916",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -843,29 +619,253 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-G80916",
+      "id": "bcws-incident-C10988",
       "geometry": {
         "bbox": [
-          -122.932667,
-          57.6855,
-          -122.932667,
-          57.6855
+          -120.91,
+          53.17,
+          -120.91,
+          53.17
         ],
         "type": "Point",
         "coordinates": [
-          -122.932667,
-          57.6855
+          -120.91,
+          53.17
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "G80916",
-        "INCIDENT_NAME": "G80916",
-        "INCIDENT_NUMBER_LABEL": "G80916",
+        "FIRE_NUMBER": "C10988",
+        "INCIDENT_NAME": "C10988",
+        "INCIDENT_NUMBER_LABEL": "C10988",
         "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Being Held",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G80916",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C10988",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-K51313",
+      "geometry": {
+        "bbox": [
+          -119.47,
+          49.422267,
+          -119.47,
+          49.422267
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.47,
+          49.422267
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K51313",
+        "INCIDENT_NAME": "K51313",
+        "INCIDENT_NUMBER_LABEL": "K51313",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K51313",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N51228",
+      "geometry": {
+        "bbox": [
+          -117.683533,
+          49.161833,
+          -117.683533,
+          49.161833
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.683533,
+          49.161833
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N51228",
+        "INCIDENT_NAME": "N51228",
+        "INCIDENT_NUMBER_LABEL": "N51228",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51228",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N41249",
+      "geometry": {
+        "bbox": [
+          -118.0983,
+          51.651383,
+          -118.0983,
+          51.651383
+        ],
+        "type": "Point",
+        "coordinates": [
+          -118.0983,
+          51.651383
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N41249",
+        "INCIDENT_NAME": "N41249",
+        "INCIDENT_NUMBER_LABEL": "N41249",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N41249",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N41250",
+      "geometry": {
+        "bbox": [
+          -118.167667,
+          51.729,
+          -118.167667,
+          51.729
+        ],
+        "type": "Point",
+        "coordinates": [
+          -118.167667,
+          51.729
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N41250",
+        "INCIDENT_NAME": "N41250",
+        "INCIDENT_NUMBER_LABEL": "N41250",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N41250",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N51164",
+      "geometry": {
+        "bbox": [
+          -117.9435,
+          49.348867,
+          -117.9435,
+          49.348867
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.9435,
+          49.348867
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N51164",
+        "INCIDENT_NAME": "N51164",
+        "INCIDENT_NUMBER_LABEL": "N51164",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N51164",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-N71251",
+      "geometry": {
+        "bbox": [
+          -117.170117,
+          49.682967,
+          -117.170117,
+          49.682967
+        ],
+        "type": "Point",
+        "coordinates": [
+          -117.170117,
+          49.682967
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "N71251",
+        "INCIDENT_NAME": "N71251",
+        "INCIDENT_NUMBER_LABEL": "N71251",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N71251",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-VA1126",
+      "geometry": {
+        "bbox": [
+          -126.815117,
+          52.119917,
+          -126.815117,
+          52.119917
+        ],
+        "type": "Point",
+        "coordinates": [
+          -126.815117,
+          52.119917
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "VA1126",
+        "INCIDENT_NAME": "VA1126",
+        "INCIDENT_NUMBER_LABEL": "VA1126",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=VA1126",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-V81131",
+      "geometry": {
+        "bbox": [
+          -126.199417,
+          50.0455,
+          -126.199417,
+          50.0455
+        ],
+        "type": "Point",
+        "coordinates": [
+          -126.199417,
+          50.0455
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "V81131",
+        "INCIDENT_NAME": "V81131",
+        "INCIDENT_NUMBER_LABEL": "V81131",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V81131",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -1993,7 +1993,7 @@
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_point_count": 71,
-    "generated_at_utc": "2026-07-30T12:03:28+00:00",
+    "generated_at_utc": "2026-07-30T15:23:10+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
