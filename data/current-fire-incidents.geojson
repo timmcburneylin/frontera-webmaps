@@ -679,14 +679,14 @@
       "geometry": {
         "bbox": [
           -121.046817,
-          49.7244,
+          49.730917,
           -121.046817,
-          49.7244
+          49.730917
         ],
         "type": "Point",
         "coordinates": [
           -121.046817,
-          49.7244
+          49.730917
         ]
       },
       "properties": {
@@ -2525,7 +2525,7 @@
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_point_count": 90,
-    "generated_at_utc": "2026-08-24T08:03:36+00:00",
+    "generated_at_utc": "2026-08-24T10:53:15+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
