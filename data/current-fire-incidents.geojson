@@ -31,34 +31,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-R52225",
-      "geometry": {
-        "bbox": [
-          -128.440033,
-          54.534883,
-          -128.440033,
-          54.534883
-        ],
-        "type": "Point",
-        "coordinates": [
-          -128.440033,
-          54.534883
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "R52225",
-        "INCIDENT_NAME": "R52225",
-        "INCIDENT_NUMBER_LABEL": "R52225",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=R52225",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-K42113",
       "geometry": {
         "bbox": [
@@ -110,6 +82,62 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V31813",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-C42232",
+      "geometry": {
+        "bbox": [
+          -121.338833,
+          51.5375,
+          -121.338833,
+          51.5375
+        ],
+        "type": "Point",
+        "coordinates": [
+          -121.338833,
+          51.5375
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "C42232",
+        "INCIDENT_NAME": "C42232",
+        "INCIDENT_NUMBER_LABEL": "C42232",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C42232",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-G12231",
+      "geometry": {
+        "bbox": [
+          -122.51265,
+          54.626733,
+          -122.51265,
+          54.626733
+        ],
+        "type": "Point",
+        "coordinates": [
+          -122.51265,
+          54.626733
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "G12231",
+        "INCIDENT_NAME": "G12231",
+        "INCIDENT_NUMBER_LABEL": "G12231",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Being Held",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=G12231",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -334,6 +362,34 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=N12064",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-R52225",
+      "geometry": {
+        "bbox": [
+          -128.440033,
+          54.534883,
+          -128.440033,
+          54.534883
+        ],
+        "type": "Point",
+        "coordinates": [
+          -128.440033,
+          54.534883
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "R52225",
+        "INCIDENT_NAME": "R52225",
+        "INCIDENT_NUMBER_LABEL": "R52225",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Under Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=R52225",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -648,8 +704,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 23,
-    "generated_at_utc": "2026-09-15T17:40:10+00:00",
+    "incident_point_count": 25,
+    "generated_at_utc": "2026-09-15T22:13:23+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
