@@ -31,57 +31,29 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-V62254",
+      "id": "bcws-incident-V72265",
       "geometry": {
         "bbox": [
-          -124.546383,
-          49.02645,
-          -124.546383,
-          49.02645
+          -124.761333,
+          49.255717,
+          -124.761333,
+          49.255717
         ],
         "type": "Point",
         "coordinates": [
-          -124.546383,
-          49.02645
+          -124.761333,
+          49.255717
         ]
       },
       "properties": {
-        "FIRE_NUMBER": "V62254",
-        "INCIDENT_NAME": "V62254",
-        "INCIDENT_NUMBER_LABEL": "V62254",
+        "FIRE_NUMBER": "V72265",
+        "INCIDENT_NAME": "V72265",
+        "INCIDENT_NUMBER_LABEL": "V72265",
         "INCIDENT_FIRE_YEAR": 2026,
         "FIRE_STATUS": "Out of Control",
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V62254",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-V62262",
-      "geometry": {
-        "bbox": [
-          -123.77135,
-          48.487433,
-          -123.77135,
-          48.487433
-        ],
-        "type": "Point",
-        "coordinates": [
-          -123.77135,
-          48.487433
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "V62262",
-        "INCIDENT_NAME": "V62262",
-        "INCIDENT_NUMBER_LABEL": "V62262",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Out of Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V62262",
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V72265",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -110,6 +82,62 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V62256",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-K52270",
+      "geometry": {
+        "bbox": [
+          -119.760366,
+          49.944417,
+          -119.760366,
+          49.944417
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.760366,
+          49.944417
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K52270",
+        "INCIDENT_NAME": "K52270",
+        "INCIDENT_NUMBER_LABEL": "K52270",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K52270",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-C42269",
+      "geometry": {
+        "bbox": [
+          -121.125833,
+          51.656917,
+          -121.125833,
+          51.656917
+        ],
+        "type": "Point",
+        "coordinates": [
+          -121.125833,
+          51.656917
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "C42269",
+        "INCIDENT_NAME": "C42269",
+        "INCIDENT_NUMBER_LABEL": "C42269",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C42269",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -760,8 +788,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 27,
-    "generated_at_utc": "2026-09-21T20:25:13+00:00",
+    "incident_point_count": 28,
+    "generated_at_utc": "2026-09-22T00:50:06+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
