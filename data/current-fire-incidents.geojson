@@ -3,6 +3,34 @@
   "features": [
     {
       "type": "Feature",
+      "id": "bcws-incident-K42278",
+      "geometry": {
+        "bbox": [
+          -119.193767,
+          50.715483,
+          -119.193767,
+          50.715483
+        ],
+        "type": "Point",
+        "coordinates": [
+          -119.193767,
+          50.715483
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "K42278",
+        "INCIDENT_NAME": "K42278",
+        "INCIDENT_NUMBER_LABEL": "K42278",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K42278",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "bcws-incident-K22268",
       "geometry": {
         "bbox": [
@@ -110,34 +138,6 @@
         "FIRE_SIZE_HECTARES": null,
         "TRACK_DATE": null,
         "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V31813",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
-      "id": "bcws-incident-V32275",
-      "geometry": {
-        "bbox": [
-          -122.72655,
-          50.3175,
-          -122.72655,
-          50.3175
-        ],
-        "type": "Point",
-        "coordinates": [
-          -122.72655,
-          50.3175
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "V32275",
-        "INCIDENT_NAME": "V32275",
-        "INCIDENT_NUMBER_LABEL": "V32275",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Being Held",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V32275",
         "DATA_SOURCE": "incident-point"
       }
     },
@@ -395,6 +395,34 @@
     },
     {
       "type": "Feature",
+      "id": "bcws-incident-V32275",
+      "geometry": {
+        "bbox": [
+          -122.72655,
+          50.3175,
+          -122.72655,
+          50.3175
+        ],
+        "type": "Point",
+        "coordinates": [
+          -122.72655,
+          50.3175
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "V32275",
+        "INCIDENT_NAME": "V32275",
+        "INCIDENT_NUMBER_LABEL": "V32275",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Under Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=V32275",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "bcws-incident-V72237",
       "geometry": {
         "bbox": [
@@ -647,34 +675,6 @@
     },
     {
       "type": "Feature",
-      "id": "bcws-incident-K22276",
-      "geometry": {
-        "bbox": [
-          -120.474716,
-          50.620667,
-          -120.474716,
-          50.620667
-        ],
-        "type": "Point",
-        "coordinates": [
-          -120.474716,
-          50.620667
-        ]
-      },
-      "properties": {
-        "FIRE_NUMBER": "K22276",
-        "INCIDENT_NAME": "K22276",
-        "INCIDENT_NUMBER_LABEL": "K22276",
-        "INCIDENT_FIRE_YEAR": 2026,
-        "FIRE_STATUS": "Under Control",
-        "FIRE_SIZE_HECTARES": null,
-        "TRACK_DATE": null,
-        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=K22276",
-        "DATA_SOURCE": "incident-point"
-      }
-    },
-    {
-      "type": "Feature",
       "id": "bcws-incident-V12186",
       "geometry": {
         "bbox": [
@@ -761,7 +761,7 @@
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_point_count": 27,
-    "generated_at_utc": "2026-09-23T17:51:17+00:00",
+    "generated_at_utc": "2026-09-23T22:17:23+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
