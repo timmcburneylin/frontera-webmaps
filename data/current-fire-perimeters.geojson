@@ -121702,7 +121702,7 @@
   "totalFeatures": 17,
   "numberMatched": 17,
   "numberReturned": 17,
-  "timeStamp": "2026-11-08T16:39:54.932Z",
+  "timeStamp": "2026-11-08T22:52:59.147Z",
   "crs": {
     "type": "name",
     "properties": {
@@ -121715,7 +121715,7 @@
     "incident_names_url": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
     "incident_names_enriched_count": 16,
     "excluded_status": "Out",
-    "generated_at_utc": "2026-11-08T16:39:56+00:00",
+    "generated_at_utc": "2026-11-08T22:53:00+00:00",
     "note": "Reference only. This file contains published current-fire perimeters."
   }
 }
