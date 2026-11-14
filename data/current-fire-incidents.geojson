@@ -3,6 +3,62 @@
   "features": [
     {
       "type": "Feature",
+      "id": "bcws-incident-C32392",
+      "geometry": {
+        "bbox": [
+          -121.772479,
+          52.486131,
+          -121.772479,
+          52.486131
+        ],
+        "type": "Point",
+        "coordinates": [
+          -121.772479,
+          52.486131
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "C32392",
+        "INCIDENT_NAME": "C32392",
+        "INCIDENT_NUMBER_LABEL": "C32392",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C32392",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "bcws-incident-C32391",
+      "geometry": {
+        "bbox": [
+          -120.9268,
+          52.572767,
+          -120.9268,
+          52.572767
+        ],
+        "type": "Point",
+        "coordinates": [
+          -120.9268,
+          52.572767
+        ]
+      },
+      "properties": {
+        "FIRE_NUMBER": "C32391",
+        "INCIDENT_NAME": "C32391",
+        "INCIDENT_NUMBER_LABEL": "C32391",
+        "INCIDENT_FIRE_YEAR": 2026,
+        "FIRE_STATUS": "Out of Control",
+        "FIRE_SIZE_HECTARES": null,
+        "TRACK_DATE": null,
+        "FIRE_URL": "https://wildfiresituation.nrs.gov.bc.ca/incidents?fireYear=2026&incidentNumber=C32391",
+        "DATA_SOURCE": "incident-point"
+      }
+    },
+    {
+      "type": "Feature",
       "id": "bcws-incident-V62369",
       "geometry": {
         "bbox": [
@@ -144,8 +200,8 @@
   ],
   "metadata": {
     "source": "https://wildfiresituation.nrs.gov.bc.ca/wfnews-api/publicPublishedIncident/features",
-    "incident_point_count": 5,
-    "generated_at_utc": "2026-11-13T20:29:00+00:00",
+    "incident_point_count": 7,
+    "generated_at_utc": "2026-11-14T02:26:41+00:00",
     "note": "Active BCWS incidents without a published perimeter."
   }
 }
